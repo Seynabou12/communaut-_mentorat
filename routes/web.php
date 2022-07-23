@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.app');
+    return view('site.index');
+});
+Route::get('/dashbord/welcome', function () {
+    return view('dashbord.welcome',['profil' => 'mentor']);
 });
