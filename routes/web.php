@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MentorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,8 @@ Route::get('/', function () {
 Route::get('/dashbord/welcome', function () {
     return view('dashbord.welcome',['profil' => 'mentor']);
 });
+Route::get('/mentors/create', function () {
+    return view('mentors.create');
+});
+
+Route::post("/mentors/create",[MentorController::class, 'store']);
