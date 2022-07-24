@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\MentorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MentorController;
+use App\Http\Controllers\UtilisateurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,7 @@ Route::get('/mentors/create', function () {
     return view('mentors.create');
 });
 
+Route::get('/mentors', [MentorController::class, 'index']);
+
 Route::post("/mentors/create",[MentorController::class, 'store']);
+Route::get("/auth/login",[UtilisateurController::class, 'formLogin'])->name('auth.formLogin');

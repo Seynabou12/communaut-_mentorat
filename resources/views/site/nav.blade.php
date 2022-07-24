@@ -104,6 +104,7 @@
             margin-left:50px;
             margin-bottom: 15px;
         }
+       
         
     </style>
     <!-- Header Start -->
@@ -120,12 +121,9 @@
                     <li class="nav__item"><a href="#">Devenir Mentoré</a></li>
                     <li class="nav__item"><a href="#">Questions/Reponses</a></li>
                     <li class="nav__item">
-                        <div class="col-lg-8 ms-auto">
-                            <button type="submit" class="btn " style="background-color: #C15DFB; color: white; margin-top: 10px;">Connexion</button>
-                        </div>
+                        <a href="{{route('auth.formLogin')}}">
+                        <button type="submit" class="btn " style="background-color: #C15DFB; color: white;">Connexion</button></a>
                     </li>
-{{--                     
-                    <li class="nav__item" style=""><a href="#">Connection</a></li> --}}
                 </ul>
             </nav>
         </div>

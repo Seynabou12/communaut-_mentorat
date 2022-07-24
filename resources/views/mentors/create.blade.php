@@ -19,7 +19,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Formulaire</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #C15DFB;">Formulaire</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Validation</a></li>
                 </ol>
             </div>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST">
+                                <form class="needs-validation" novalidate="" method="POST" action="/mentors/index">
                                     @csrf
                                     <div class="row">
                                         <div class="col-xl-6">

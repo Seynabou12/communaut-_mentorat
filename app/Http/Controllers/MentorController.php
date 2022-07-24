@@ -10,7 +10,7 @@ class MentorController extends Controller
     public function index()
     {
         $mentors = Mentor::all();
-        return view('mentors.index')->with('mentors', $mentors);
+        return view('mentors.index',compact('mentors'));
     }
 
     public function create()
@@ -39,7 +39,6 @@ class MentorController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $mentor = Mentor::find($id);
         $input = $request->all();
         $mentor->update($input);

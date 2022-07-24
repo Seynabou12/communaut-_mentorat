@@ -41,49 +41,26 @@
                     </a>
                 </div>
             </li>
-            @if ($profil == "admin")
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            {{-- @if ($profil == "admin") --}}
+                {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="flaticon-025-dashboard"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
-                    <ul aria-expanded="false">
-                        <li><a href="index.html">Dashboard Light</a></li>
-                        <li><a href="index-2.html">Dashboard Dark</a></li>
-                        <li><a href="my-wallet.html">My Wallet</a></li>
-                        <li><a href="page-invoices.html">Invoices</a></li>
-                        <li><a href="cards-center.html">Cards Center</a></li>
-                        <li><a href="page-transaction.html">Transaction</a></li>
-                        <li><a href="transaction-details.html">Transaction Details</a></li>
-                    </ul>
 
-                </li>
-            @endif
+                </li> --}}
+                 <li><a href="#" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-025-dashboard"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            {{-- @endif --}}
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-050-info"></i>
-                    <span class="nav-text">Apps</span>
+                    <span class="nav-text">Mentorés</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="app-profile.html">Profile</a></li>
-                    <li><a href="post-details.html">Post Details</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                        <ul aria-expanded="false">
-                            <li><a href="email-compose.html">Compose</a></li>
-                            <li><a href="email-inbox.html">Inbox</a></li>
-                            <li><a href="email-read.html">Read</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="app-calender.html">Calendar</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                        <ul aria-expanded="false">
-                            <li><a href="ecom-product-grid.html">Product Grid</a></li>
-                            <li><a href="ecom-product-list.html">Product List</a></li>
-                            <li><a href="ecom-product-detail.html">Product Details</a></li>
-                            <li><a href="ecom-product-order.html">Order</a></li>
-                            <li><a href="ecom-checkout.html">Checkout</a></li>
-                            <li><a href="ecom-invoice.html">Invoice</a></li>
-                            <li><a href="ecom-customers.html">Customers</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="app-profile.html">Listes des Mentoré</a></li>
+                 
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -156,11 +133,11 @@
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Table</span>
+                    <span class="nav-text">Mentors</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                    <li><a href="table-datatable-basic.html">Datatable</a></li>
+                    <li><a href="/mentors">Liste des mentores</a></li>
+                    <li><a href="table-datatable-basic.html">Liste des mentoré</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
