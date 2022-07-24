@@ -74,7 +74,7 @@
 @import url(../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
 @import url(../vendor/metismenu/css/metisMenu.min.css);
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -259,7 +259,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #5bcfc5;
+  --bs-primary: #C15DFB;
   --bs-secondary: #709fba;
   --bs-success: #68e365;
   --bs-info: #b48dd3;
@@ -420,7 +420,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #5bcfc5;
+  color: #C15DFB;
   text-decoration: underline; }
   a:hover {
     color: #49a69e; }
@@ -1978,15 +1978,15 @@ textarea.form-control {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(91, 207, 197, 0.25); }
   .form-check-input:checked {
-    background-color: #5bcfc5;
-    border-color: #5bcfc5; }
+    background-color: #C15DFB;
+    border-color: #C15DFB; }
     .form-check-input:checked[type="checkbox"] {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e"); }
     .form-check-input:checked[type="radio"] {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e"); }
   .form-check-input[type="checkbox"]:indeterminate {
-    background-color: #5bcfc5;
-    border-color: #5bcfc5;
+    background-color: #C15DFB;
+    border-color: #C15DFB;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e"); }
   .form-check-input:disabled {
     pointer-events: none;
@@ -2044,7 +2044,7 @@ textarea.form-control {
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;
-    background-color: #5bcfc5;
+    background-color: #C15DFB;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2065,7 +2065,7 @@ textarea.form-control {
   .form-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #5bcfc5;
+    background-color: #C15DFB;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2390,8 +2390,8 @@ textarea.form-control {
 
 .btn-primary {
   color: #000;
-  background-color: #5bcfc5;
-  border-color: #5bcfc5; }
+  background-color: #C15DFB;
+  border-color: #C15DFB; }
   .btn-primary:hover {
     color: #000;
     background-color: #74d6ce;
@@ -2413,8 +2413,8 @@ textarea.form-control {
       box-shadow: 0 0 0 0.25rem rgba(77, 176, 167, 0.5); }
   .btn-primary:disabled, .btn-primary.disabled {
     color: #000;
-    background-color: #5bcfc5;
-    border-color: #5bcfc5; }
+    background-color: #C15DFB;
+    border-color: #C15DFB; }
 
 .btn-secondary {
   color: #000;
@@ -2613,11 +2613,11 @@ textarea.form-control {
     border-color: #6e6e6e; }
 
 .btn-outline-primary {
-  color: #5bcfc5;
-  border-color: #5bcfc5; }
+  color: #C15DFB;
+  border-color: #C15DFB; }
   .btn-outline-primary:hover {
     color: #000;
-    background-color: #5bcfc5;
+    background-color: #C15DFB;
     border-color: #5bcfc5; }
   .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
     box-shadow: 0 0 0 0.25rem rgba(91, 207, 197, 0.5); }
@@ -12344,7 +12344,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   width: 50vw; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -12538,7 +12538,7 @@ The smaller device rules always should write below the bigger device rules
 Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Component
 */
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -12763,7 +12763,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     transform: rotate(-45deg) translateY(-50%); } }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -14314,7 +14314,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --nav-headbg: #6610f2; }
 
 [data-nav-headerbg="color_3"] {
-  --nav-headbg: #5bcfc5; }
+  --nav-headbg: #C15DFB; }
 
 [data-nav-headerbg="color_4"] {
   --nav-headbg: #4d06a5; }
@@ -18855,7 +18855,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   font-family: 'HelveticaNeue'; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -18992,7 +18992,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -21051,7 +21051,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   height: auto; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -21519,7 +21519,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   color: #969ba0; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -21769,7 +21769,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   border-bottom-right-radius: 0; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -21814,7 +21814,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     font-weight: 700; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -21871,7 +21871,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   font-size: 2rem; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;
@@ -30363,7 +30363,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   padding-right: 9.375rem; }
 
 :root {
-  --primary: #5bcfc5;
+  --primary: #C15DFB;
   --secondary: #709fba;
   --primary-hover: #38bfb3;
   --primary-dark: #217069;

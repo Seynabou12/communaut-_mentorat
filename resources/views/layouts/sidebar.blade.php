@@ -41,17 +41,25 @@
                     </a>
                 </div>
             </li>
-            {{-- @if ($profil == "admin") --}}
-                {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            {{-- @if ($profil == 'admin') --}}
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="flaticon-025-dashboard"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
 
                 </li> --}}
-                 <li><a href="#" class="ai-icon" aria-expanded="false">
+            <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-025-dashboard"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
+            </li>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-043-menu"></i>
+                    <span class="nav-text">Mentors</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="/mentors">Liste des Mentors</a></li>
+                </ul>
             </li>
             {{-- @endif --}}
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -59,11 +67,11 @@
                     <span class="nav-text">Mentorés</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="app-profile.html">Listes des Mentoré</a></li>
-                 
+                    <li><a href="app-profile.html">Listes des Mentorés</a></li>
+
                 </ul>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-041-graph"></i>
                     <span class="nav-text">Charts</span>
                 </a>
@@ -75,8 +83,8 @@
                     <li><a href="chart-sparkline.html">Sparkline</a></li>
                     <li><a href="chart-peity.html">Peity</a></li>
                 </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            </li> --}}
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-086-star"></i>
                     <span class="nav-text">Bootstrap</span>
                 </a>
@@ -99,8 +107,8 @@
                     <li><a href="ui-grid.html">Grid</a></li>
 
                 </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            </li> --}}
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-045-heart"></i>
                     <span class="nav-text">Plugins</span>
                 </a>
@@ -113,13 +121,13 @@
                     <li><a href="map-jqvmap.html">Jqv Map</a></li>
                     <li><a href="uc-lightgallery.html">Light Gallery</a></li>
                 </ul>
-            </li>
-            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+            </li> --}}
+            {{-- <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>
                     <span class="nav-text">Widget</span>
                 </a>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            </li> --}}
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-072-printer"></i>
                     <span class="nav-text">Forms</span>
                 </a>
@@ -130,17 +138,9 @@
                     <li><a href="form-pickers.html">Pickers</a></li>
                     <li><a href="form-validation.html">Form Validate</a></li>
                 </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Mentors</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="/mentors">Liste des mentores</a></li>
-                    <li><a href="table-datatable-basic.html">Liste des mentoré</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            </li> --}}
+
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-022-copy"></i>
                     <span class="nav-text">Pages</span>
                 </a>
@@ -159,7 +159,7 @@
                     <li><a href="page-lock-screen.html">Lock Screen</a></li>
                     <li><a href="empty-page.html">Empty Page</a></li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
         <div class="copyright">
             <p><strong>Dompet Payment Admin Dashboard</strong> © 2022 All Rights Reserved</p>

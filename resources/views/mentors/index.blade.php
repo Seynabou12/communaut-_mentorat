@@ -41,35 +41,37 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php $no=1; ?>
+                                        <?php $no = 1; ?>
                                         @foreach ($mentors as $mentor)
-                                        <tr>
-                                            <td>{{ $no++ }}</td>
-                                            <td>
-                                                <img src="{{ asset($mentor->photo) }}" alt="" srcset="" width="35" height="35" class="img img-responsive">
-                                            </td>
-                                            {{-- <td >{{ $mentor->photo }}</td> --}}
-                                            <td>{{ $mentor->prenom }}</td>
-                                            <td>{{ $mentor->nom }}</td>
-                                            <td>{{ $mentor->adresse }}</td>
-                                            <td>{{ $mentor->region }}</td>
-                                            <td>{{ $mentor->telephone }}</td>
-                                            <td>{{ $mentor->email }}</td>
-                                            <td>{{ $mentor->motDePasse }}</td>
-                                            <td>{{ $mentor->confirmeMdp }}</td>
-                                            <td>{{ $mentor->parcours }}</td>
-                                            <td>{{ $mentor->nombreAnneeExperience }}</td>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i
-                                                            class="fas fa-pencil-alt"></i></a>
-                                                    <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
-                                                            class="fa fa-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td>{{ $no++ }}</td>
+                                                <td>
+                                                    <img src="{{ asset($mentor->photo) }}" alt="" srcset=""
+                                                        width="35" height="35" class="img img-responsive">
+                                                </td>
+                                                {{-- <td >{{ $mentor->photo }}</td> --}}
+                                                <td>{{ $mentor->prenom }}</td>
+                                                <td>{{ $mentor->nom }}</td>
+                                                <td>{{ $mentor->adresse }}</td>
+                                                <td>{{ $mentor->region }}</td>
+                                                <td>{{ $mentor->telephone }}</td>
+                                                <td>{{ $mentor->email }}</td>
+                                                <td>{{ $mentor->motDePasse }}</td>
+                                                <td>{{ $mentor->confirmeMdp }}</td>
+                                                <td>{{ $mentor->parcours }}</td>
+                                                <td>{{ $mentor->nombreAnneeExperience }}</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="#"
+                                                            class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                                class="fas fa-pencil-alt"></i></a>
+                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
+                                                                class="fa fa-trash"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         @endforeach
-                                        
+
                                     </tbody>
                                 </table>
                             </div>

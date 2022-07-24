@@ -26,6 +26,6 @@ Route::get('/mentors/create', function () {
 });
 
 Route::get('/mentors', [MentorController::class, 'index']);
-
+Route::get('/mentors/profil', [MentorController::class, 'profil']);
 Route::post("/mentors/create",[MentorController::class, 'store']);
 Route::get("/auth/login",[UtilisateurController::class, 'formLogin'])->name('auth.formLogin');

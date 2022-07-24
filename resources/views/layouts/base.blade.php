@@ -46,8 +46,6 @@
 
     </div>
 
-
-
     <script src="/vendor/global/global.min.js"></script>
     <script src="/vendor/chart.js/Chart.bundle.min.js"></script>
     <script src="/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
