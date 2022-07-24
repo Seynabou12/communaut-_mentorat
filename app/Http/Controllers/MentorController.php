@@ -10,7 +10,7 @@ class MentorController extends Controller
     public function index()
     {
         $mentors = Mentor::all();
-        return view('mentors.index',compact('mentors'));
+        return view('mentors.index', compact('mentors'));
     }
 
     public function create()
@@ -21,8 +21,11 @@ class MentorController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $mentor = Mentor::create($input);
-        return redirect('mentor')->with('flash-message', 'Votre inscription à été bien enregistré');
+        $fileName = time() . $request->file('photo')->getClientOriginalName();
+        $path = $request->file('photo')->storeAs('images', $fileName, 'public');
+        $input['photo'] = '/storage/' . $path;
+        Mentor::create($input);
+        return redirect('/mentors')->with('flash-message', 'Votre inscription à été bien enregistré');
     }
 
     public function show($id)

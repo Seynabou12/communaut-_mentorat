@@ -45,7 +45,10 @@
                                         @foreach ($mentors as $mentor)
                                         <tr>
                                             <td>{{ $no++ }}</td>
-                                            <td width="35">{{ $mentor->photo }}</td>
+                                            <td>
+                                                <img src="{{ asset($mentor->photo) }}" alt="" srcset="" width="35" height="35" class="img img-responsive">
+                                            </td>
+                                            {{-- <td >{{ $mentor->photo }}</td> --}}
                                             <td>{{ $mentor->prenom }}</td>
                                             <td>{{ $mentor->nom }}</td>
                                             <td>{{ $mentor->adresse }}</td>
@@ -58,7 +61,7 @@
                                             <td>{{ $mentor->nombreAnneeExperience }}</td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="# " class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                    <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                             class="fas fa-pencil-alt"></i></a>
                                                     <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
                                                             class="fa fa-trash"></i></a>

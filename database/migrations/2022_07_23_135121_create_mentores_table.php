@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('motDePasse');
             $table->string('confirmeMotPasse');
-            $table->string('photo');
+            $table->string('photo', 300);
             $table->string('attente');
             $table->timestamps();
         });

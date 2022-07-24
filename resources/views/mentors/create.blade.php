@@ -32,7 +32,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="/mentors/index">
+                                <form class="needs-validation" novalidate="" method="POST" action="/mentors/create" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="col-xl-6">
