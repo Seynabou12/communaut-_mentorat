@@ -9,12 +9,15 @@ class Mentore extends Model
 {
     use HasFactory;
     protected $table = 'mentores';
-    protected $primarykey = 'id'; 
+    protected $primarykey = 'id';
     protected $guarded = ['id'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-
+    public function niveau()
+    {
+        return $this->belongsTo(Niveau::class);
+    }
 }

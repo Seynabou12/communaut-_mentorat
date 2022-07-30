@@ -5,16 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sessions extends Model
+class Niveau extends Model
 {
     use HasFactory;
 
-    protected $table = 'sessions';
+    protected $table = 'niveaux';
     protected $primarykey = 'id'; 
     protected $guarded = ['id'];
-
-    public function connexion()
-    {
-        return $this->belongsTo(Connexion::class);
-    }
 }

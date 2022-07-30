@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\MentoreController;
+use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\UtilisateurController;
 
@@ -49,6 +50,8 @@ Route::get('/sessions', [SessionsController::class, 'index']);
 Route::get('/sessions/create', [SessionsController::class, 'create']);
 Route::post('/sessions/create', [SessionsController::class, 'store']);
 
+Route::get('/niveaux/create', [NiveauController::class, 'create']);
+Route::post('/niveaux/create', [NiveauController::class, 'store']);
 
 Route::get("/login",[UtilisateurController::class, 'formLogin'])->name('auth.formLogin');
 Route::post("/login",[UtilisateurController::class, 'login'])->name('auth.login');

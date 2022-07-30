@@ -61,6 +61,11 @@
                             <span class="nav-text">Liste Mentors</span>
                         </a>
                     </li>
+                    <li><a href="/niveaux/create" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-072-printer"></i>
+                        <span class="nav-text">Niveaux Etudes</span>
+                    </a>
+                </li>
                 @endif
 
                 @if (Auth::user()->profil == 'mentor')
@@ -80,8 +85,6 @@
                     <span class="nav-text">Domaines</span>
                 </a>
             </li>
-
-
 
             <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>

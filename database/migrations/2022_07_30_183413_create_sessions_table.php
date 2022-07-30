@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('sessions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titre');
             $table->date('date');
+            $table->string('titre');
             $table->string('description');
-           
-            // $table->foreignId('id_connexion')->constrained('connexions');
+            $table->foreignId('connexion_id')->constrained('connexions');
             $table->timestamps();
         });
     }

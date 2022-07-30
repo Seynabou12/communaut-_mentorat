@@ -25,7 +25,10 @@ class UtilisateurController extends Controller
             if ($user->profil == 'mentor') {
                 return redirect('/mentors/accueil');
             } else if ($user->profil == 'mentore') {
-                return redirect('/mentores');
+                return redirect('/mentores/accueil');
+            }
+            else if ($user->profil == 'admin') {
+                return redirect('/mentors/liste');
             }
             dd('user simple');
         }

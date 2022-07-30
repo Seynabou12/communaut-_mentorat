@@ -57,7 +57,7 @@
                                     </form>
                                     <div class="new-account mt-3">
                                         <p>Vous n'avez pas de compte? <a class="text-primary"
-                                                href="/mentors/create">S'inscrire</a></p>
+                                            href="/mentors/create">S'inscrire</a></p>
                                     </div>
 
                                 </div>
