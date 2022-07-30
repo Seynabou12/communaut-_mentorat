@@ -90,4 +90,5 @@ class MentorController extends Controller
         Mentor::destroy($id);
         return redirect('mentor')->with('flash-message', 'Mentor supprimé avec succés');
     }
+    
 }

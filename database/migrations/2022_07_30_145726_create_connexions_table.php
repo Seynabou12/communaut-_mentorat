@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('connexions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titre');
+            $table->string('status');
             $table->date('date');
-            $table->string('description');
-           
-            // $table->foreignId('id_connexion')->constrained('connexions');
+            $table->foreignId('mentor_id')->constrained('mentors');
+            $table->foreignId('mentore_id')->constrained('mentores');
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists('connexions');
     }
 };

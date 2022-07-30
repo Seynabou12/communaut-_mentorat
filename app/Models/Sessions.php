@@ -12,4 +12,9 @@ class Sessions extends Model
     protected $table = 'sessions';
     protected $primarykey = 'id'; 
     protected $guarded = ['id'];
+
+    // public function connexion()
+    // {
+    //     return $this->belongsTo(Connexion::class);
+    // }
 }

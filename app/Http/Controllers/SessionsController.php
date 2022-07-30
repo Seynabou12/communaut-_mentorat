@@ -10,7 +10,6 @@ class SessionsController extends Controller
 
     public function index()
     {
-
         $sessions = Sessions::all();
         return view('sessions.index', compact('sessions'));
     }
@@ -23,12 +22,8 @@ class SessionsController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $session = Sessions::create([
-            'titre' => $request->name,
-            'descritpion' => $request->adresse,
-        ]);
-
-        return redirect('/sessions')->with('flash-message', 'Votre entrprise à été bien enregistré');
+        Sessions::create($input);
+        return redirect('/sessions')->with('flash-message', 'Votre sessions à été bien enregistré');
     }
 
     public function edit($id)

@@ -49,19 +49,27 @@
             </li>
             @auth
                 @if ($Auth::user()->profil == 'admin' || $Auth::user()->profil == 'mentor')
-                    <li><a href="/mentores" class="ai-icon" aria-expanded="false">
+                    <li><a href="/mentores/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentorés</span>
                         </a>
                     </li>
                 @endif
                 @if ($Auth::user()->profil == 'admin')
-                    <li><a href="/mentors" class="ai-icon" aria-expanded="false">
+                    <li><a href="/mentors/listes" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentors</span>
                         </a>
                     </li>
                 @endif
+
+                @if ($Auth::user()->profil == 'mentor')
+                <li><a href="#" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-043-menu"></i>
+                        <span class="nav-text">Sessions</span>
+                    </a>
+                </li>
+            @endif
             @endauth
             <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-043-menu"></i>
@@ -69,13 +77,7 @@
                 </a>
             </li>
             
-            @if ($Auth::user()->profil == 'mentor')
-                <li><a href="#" class="ai-icon" aria-expanded="false">
-                        <i class="flaticon-043-menu"></i>
-                        <span class="nav-text">Sessions</span>
-                    </a>
-                </li>
-            @endif
+          
 
             <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>

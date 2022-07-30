@@ -23,11 +23,9 @@ class UtilisateurController extends Controller
             session()->regenerate();
             $user = Auth::user();
             if ($user->profil == 'mentor') {
-                dd('mentor');
-                return redirect('/entreprises');
+                return redirect('/mentors/accueil');
             } else if ($user->profil == 'mentore') {
-                dd('mentore');
-                return redirect('/utilisateurs');
+                return redirect('/mentores');
             }
             dd('user simple');
         }

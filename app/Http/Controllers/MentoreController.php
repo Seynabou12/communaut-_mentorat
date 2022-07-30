@@ -90,4 +90,9 @@ class MentoreController extends Controller
         Mentore::destroy($id);
         return redirect('mentore')->with('flash-message', 'Mentoré supprimé avec succés');
     }
+
+    public function home()
+    {
+        return view('mentores.accueil');
+    }
 }

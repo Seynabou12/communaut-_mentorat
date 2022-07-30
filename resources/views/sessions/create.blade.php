@@ -15,18 +15,19 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form>
+                            <form  novalidate="" method="POST" action="/sessions/create" enctype="multipart/form-data" >
+                                @csrf
                                 <div class="mb-3">
                                     <input class="form-control form-control-lg" type="text"
-                                        placeholder="Titre de la session">
+                                        placeholder="Titre de la session" name="titre">
                                 </div>
                                 <div class="mb-3">
-                                    <input class="form-control" type="text" placeholder="Description de la session">
+                                    <input class="form-control" type="text" placeholder="Description de la session" name="description">
                                 </div>
                                 <div class="mb-3">
                                     <label for="">Date de la session"</label>
                                     <input class="form-control form-control-sm" type="date"
-                                        placeholder="Date de la session">
+                                        placeholder="Date de la session" name="date">
                                 </div>
                                 <div class="mb-3 row">
                                     <div class="col-lg-8 ms-auto">

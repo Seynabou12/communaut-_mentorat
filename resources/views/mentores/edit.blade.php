@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
     <!-- Style css -->
     <link href="/css/style.css" rel="stylesheet">
+    	<!-- FAVICONS ICON -->
+	<link rel="/shortcut icon" type="image/png" href="images/favicon.png">
+   
+
 </head>
 
 <body>
@@ -176,6 +180,13 @@
             </div>
         </div>
     </div>
+
+    <script src="/vendor/global/global.min.js"></script>
+	<script src="/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="/js/custom.min.js"></script>
+	<script src="/js/dlabnav-init.js"></script>
+	<script src="/js/demo.js"></script>
+    <script src="/js/styleSwitcher.js"></script>	
 </body>
 
 </html>

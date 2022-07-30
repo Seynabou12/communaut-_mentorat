@@ -9,8 +9,6 @@
 </head>
 <style>
     img {
-        width: 100%;
-        height: 800px;
         background-color: (0deg, rgba(193, 93, 251, 0.3), rgba(193, 93, 251, 0.3));
         position: relative;
     }
@@ -18,7 +16,7 @@
     .style-card-header {
         height: 150px;
 
-        width: 150px;   
+        width: 150px;
         background: #FFFFFF;
         border-radius: 50%;
         margin: auto;
@@ -31,7 +29,7 @@
         margin: 30px 2%;
         background: rgba(255, 255, 255, 0.21);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-       
+
     }
 
     .card-text {
@@ -49,7 +47,7 @@
 
     .cart {
         align-items: flex-start;
-        
+
     }
 </style>
 
@@ -57,7 +55,7 @@
     @include('site.nav')
 
     <section class="banniere">
-        <div class="row container-fluid">
+        <div class="row ">
 
             <img src="/images/filles.jpg" alt="" srcset="">
             <div class="texte_centrer h3 row"
@@ -77,7 +75,6 @@
             text-transform: uppercase;
             transform: translate(-50%, -50%);
           ">
-                Trouvez le mentor qui vous fera grandir
             </div>
             <div class="texte"
                 style="position: absolute;
@@ -94,11 +91,71 @@
             
             color: #FFFFFF;
             ">
-                Nos services de mentorat sont disponibles pour les filliéres scientifiques quels que soient votre
-                âge...</div>
+            </div>
         </div>
     </section>
-  
+    
+    <section style="margin-top: 200px;">
+      
+        @include('./layouts.dashbord')
+
+    <div class="container text-center" style="padding: -10px;">
+        <div class="row" >
+            <div class="col">
+                <div class="new-arrival-product card-body" style="width: 100%; height: 50%;">
+                    <div class="new-arrivals-img-contnent">
+                        <img class="img-fluid" src="images/product/1.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="new-arrival-product card-body">
+                    <div class="new-arrivals-img-contnent">
+                        <img class="img-fluid" src="images/product/1.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="new-arrival-product card-body">
+                    <div class="new-arrivals-img-contnent">
+                        <img class="img-fluid" src="images/product/1.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <div class="new-arrival-product card-body">
+                    <div class="new-arrivals-img-contnent">
+                        <img class="img-fluid" src="images/product/1.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="new-arrival-product card-body">
+                    <div class="new-arrivals-img-contnent">
+                        <img class="img-fluid" src="images/product/1.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="new-arrival-product card-body">
+                    <div class="new-arrivals-img-contnent">
+                        <img class="img-fluid" src="images/product/1.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 
 </html>
