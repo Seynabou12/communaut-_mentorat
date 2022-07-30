@@ -50,27 +50,28 @@
                 </li> --}}
             <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-025-dashboard"></i>
-                    <span class="nav-text">Dashboard</span>
+                    <span class="nav-text">Tableau de bord</span>
                 </a>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Mentors</span>
+                    <span class="nav-text">Liste Mentorés</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li><a href="/mentors">Liste des Mentors</a></li>
-                </ul>
             </li>
+            <li><a href="/mentors" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-043-menu"></i>
+                    <span class="nav-text">Liste Mentors</span>
+                </a>
+            </li>
+            <li><a href="#" class="ai-icon" aria-expanded="false">
+                <i class="flaticon-043-menu"></i>
+                <span class="nav-text">Domaines</span>
+            </a>
+        </li>
+       
+           
             {{-- @endif --}}
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-050-info"></i>
-                    <span class="nav-text">Mentorés</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="app-profile.html">Listes des Mentorés</a></li>
-
-                </ul>
-            </li>
+            
             {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-041-graph"></i>
                     <span class="nav-text">Charts</span>
@@ -161,9 +162,6 @@
                 </ul>
             </li> --}}
         </ul>
-        <div class="copyright">
-            <p><strong>Dompet Payment Admin Dashboard</strong> © 2022 All Rights Reserved</p>
-            <p class="fs-12">Made with <span class="heart"></span> by DexignLab</p>
-        </div>
+        
     </div>
 </div>

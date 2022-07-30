@@ -11,17 +11,11 @@ class Mentor extends Model
 
     protected $table = 'mentors';
     protected $primarykey = 'id'; 
-    protected $fillable = [
-        'prenom',
-        'nom',
-        'adresse',
-        'region',
-        'telephone',
-        'email',
-        'motDePasse',
-        'confirmeMdp',
-        'photo',
-        'parcours',
-        'nombreAnneeExperience',
-    ];
+    protected $guarded = ['id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

@@ -56,7 +56,7 @@
 <body style="margin: 0;font-family: 'Inter';">
     @include('site.nav')
 
-    <section class="banniere">
+    {{-- <section class="banniere">
         <div class="row container-fluid">
 
             <img src="/images/filles.jpg" alt="" srcset="">
@@ -123,7 +123,7 @@
                 </div>
             @endfor
         </div>
-    </section>
+    </section> --}}
 </body>
 
 </html>

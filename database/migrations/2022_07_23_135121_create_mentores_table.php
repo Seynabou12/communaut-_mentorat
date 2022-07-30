@@ -14,16 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('mentores', function (Blueprint $table) {
-            $table->id();
-            $table->string('premon');
-            $table->string('nom');
-            $table->string('adresse');
-            $table->string('telephone');
-            $table->string('email');
-            $table->string('motDePasse');
-            $table->string('confirmeMotPasse');
-            $table->string('photo', 300);
+            $table->bigIncrements('id');
             $table->string('attente');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

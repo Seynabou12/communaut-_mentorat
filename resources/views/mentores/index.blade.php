@@ -12,7 +12,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Listes des Mentors inscrit</h4>
+                            <h4 class="card-title">Listes des Mentorés inscrites</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -22,44 +22,40 @@
                                             <th>Id</th>
                                             <th>Profil</th>
                                             <th>Adresse</th>
-                                            <th>Region</th>
                                             <th>Telephone</th>
                                             <th>Email</th>
-                                            <th>Parcours</th>
-                                            <th>Nbre An Exp</th>
+                                            <th>Mot de Passe</th>
+                                            <th>Attentes</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $no = 1; ?>
-                                        @foreach ($mentors as $mentor)
+                                        @foreach ($mentores as $mentore)
                                             <tr>
                                                 <td>{{ $no++ }}</td>
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-4">
-                                                            <img src="{{ asset($mentor->user->photo) }}" alt=""
-                                                                srcset="" width="35" height="35"
-                                                                class="img img-responsive" style="border-radius: 50%;">
+                                                            <img src="{{ asset($mentore->photo) }}" alt="" srcset=""
+                                                            width="35" height="35" class="img img-responsive" style="border-radius: 50%;">
                                                         </div>
                                                         <div class="col-8">
-                                                            {{ $mentor->user->prenom }} {{ $mentor->user->nom }}
+                                                            {{ $mentore->prenom }} {{ $mentore->nom }}
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{{ $mentor->user->adresse }}</td>
-                                                <td>{{ $mentor->user->region }}</td>
-                                                <td>{{ $mentor->user->telephone }}</td>
-                                                <td>{{ $mentor->user->email }}</td>
-                                                <td>{{ $mentor->parcours }}</td>
-                                                <td>{{ $mentor->experience }}</td>
+                                                <td>{{ $mentore->adresse }}</td>
+                                                <td>{{ $mentore->telephone }}</td>
+                                                <td>{{ $mentore->email }}</td>
+                                                <td>{{ $mentore->motDePasse }}</td>
+                                                <td>{{ $mentore->attentes }}</td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="/mentors/edit/{{ $mentor->id }}"
+                                                        <a href="#"
                                                             class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
-                                                        <a href="/mentors/destroy/{{ $mentor->id }}"
-                                                            class="btn btn-danger shadow btn-xs sharp"><i
+                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>

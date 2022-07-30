@@ -310,13 +310,13 @@
                                 <div class="input-group search-area d-xl-inline-flex d-none">
                                     <input type="text" class="form-control" placeholder="Search here...">
                                     <span class="input-group-text"><a href="javascript:void(0)"><i
-                                                class="flaticon-381-search-2"></i></a></span>
+                                        class="flaticon-381-search-2"></i></a></span>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript:void(0);"
                                     class="btn btn-primary d-sm-inline-block d-none">Planifier une session<i
-                                        class="las la-signal ms-3 scale5"></i></a>
+                                    class="las la-signal ms-3 scale5"></i></a>
                             </li>
                         </ul>
                     </div>

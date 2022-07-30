@@ -14,18 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('mentors', function (Blueprint $table) {
-            $table->id();
-            $table->string('photo',300);
-            $table->string('prenom');
-            $table->string('nom');
-            $table->string('adresse');
-            $table->string('region');
-            $table->string('telephone');
-            $table->string('email');
-            $table->string('motDePasse');
-            $table->string('confirmeMdp');
+            $table->bigIncrements('id');
             $table->string('parcours');
-            $table->integer('nombreAnneeExperience');
+            $table->integer('experience');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

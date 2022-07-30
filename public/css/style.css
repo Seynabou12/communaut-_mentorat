@@ -20102,7 +20102,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: url(../images/profile/cover.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 15.625rem;
+    min-height: 17rem;
     width: 100%; }
 
 .profile .profile-photo {
@@ -26383,7 +26383,6 @@ table.dataTable.display tbody td {
   min-width: 0; }
 
 .authincation {
-  background: var(--rgba-primary-1);
   display: flex;
   min-height: 100vh; }
   .authincation .login-aside {

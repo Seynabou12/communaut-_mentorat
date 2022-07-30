@@ -63,7 +63,8 @@
                 right: 0;
                 left: 0;
                 z-index: -1;
-                background-color: #d9f0f7;
+                background-color: #f9f9fa;
+                box-shadow: 1ch;
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-100%);
@@ -96,33 +97,37 @@
                 position: absolute;
                 right: 1rem;
                 top: 1rem;
+                border: solid rgba(0, 0, 0, 0.0)
+                
             }
         }
+
         .wrapper img {
             width: 120px;
             height: 60px;
-            margin-left:50px;
+            margin-left: 50px;
             margin-bottom: 15px;
         }
-       
-        
     </style>
     <!-- Header Start -->
     <header class="site-header">
         <div class="wrapper site-header__wrapper">
-            <a href="#" class="brand"><img src="/images/wim-sbg.png" alt="" srcset=""></a>
+            <a href="#" class="brand"><img src="/images/wim-sbg.png" alt="" srcset=""
+                    style="margin-top: -10px;"></a>
             <nav class="nav">
-                <button class="nav__toggle" aria-expanded="false" type="button">
+                <button class="nav__toggle" aria-expanded="false" type="button" style="width: 50px; height: 50px;">
                     menu
                 </button>
                 <ul class="nav__wrapper">
-                    <li class="nav__item"><a href="#">Accueil</a></li>
+                    <li class="nav__item"><a href="/">Accueil</a></li>
                     <li class="nav__item"><a href="/mentors/create">Devenir Mentor</a></li>
-                    <li class="nav__item"><a href="#">Devenir Mentoré</a></li>
+                    
+                    <li class="nav__item"><a href="/mentores/create">Devenir Mentoré</a></li>
                     <li class="nav__item"><a href="#">Questions/Reponses</a></li>
                     <li class="nav__item">
-                        <a href="{{route('auth.formLogin')}}">
-                        <button type="submit" class="btn " style="background-color: #C15DFB; color: white;">Connexion</button></a>
+                        <a href="{{ route('auth.formLogin') }}">
+                            <button type="submit" class="btn"
+                                style="background-color: #C15DFB; color: white; height: 45px; width: 130px; border-radius: 20px; border: solid 0 gray; margin-top: -30px; margin-left: 10px;">Connexion</button></a>
                     </li>
                 </ul>
             </nav>
