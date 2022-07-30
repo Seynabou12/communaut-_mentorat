@@ -32,6 +32,7 @@ Route::get('/mentors/create', function () {
 // });
 
 Route::get('/mentors/liste', [MentorController::class, 'index']);
+Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
 Route::get('/mentors/profil', [MentorController::class, 'profil']);
 Route::post("/mentors/create",[MentorController::class, 'store']);
 Route::get("/mentors/edit/{id}",[MentorController::class, 'edit'])->where('id','[0-9]+');

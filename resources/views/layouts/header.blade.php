@@ -34,11 +34,11 @@
                         </div>
                     </li>
                     @auth
-                    @if ($Auth::user()->profil == 'mentor')
-                    <li class="nav-item">
-                        <a href="/sessions/create" class="btn  d-sm-inline-block d-none" style="background-color: #C15DFB; color: white;">Plannifier une session</a>
-                    </li>
-                    @endif
+                        @if (Auth::user()->profil == 'mentor')
+                            <li class="nav-item">
+                                <a href="/sessions/create" class="btn  d-sm-inline-block d-none" style="background-color: #C15DFB; color: white;">Plannifier une session</a>
+                            </li>
+                        @endif
                     @endauth
                    
                 </ul>

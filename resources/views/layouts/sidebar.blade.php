@@ -48,14 +48,14 @@
                 </a>
             </li>
             @auth
-                @if ($Auth::user()->profil == 'admin' || $Auth::user()->profil == 'mentor')
+                @if (Auth::user()->profil == 'admin' || Auth::user()->profil == 'mentor')
                     <li><a href="/mentores/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentorés</span>
                         </a>
                     </li>
                 @endif
-                @if ($Auth::user()->profil == 'admin')
+                @if (Auth::user()->profil == 'admin')
                     <li><a href="/mentors/listes" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentors</span>
@@ -63,21 +63,25 @@
                     </li>
                 @endif
 
-                @if ($Auth::user()->profil == 'mentor')
-                <li><a href="#" class="ai-icon" aria-expanded="false">
-                        <i class="flaticon-043-menu"></i>
-                        <span class="nav-text">Sessions</span>
-                    </a>
-                </li>
-            @endif
+                @if (Auth::user()->profil == 'mentor')
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-041-graph"></i>
+                            <span class="nav-text">Sessions</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/sessions/create">Ajout </a></li>
+                            <li><a href="/sessions">Liste</a></li>
+                        </ul>
+                    </li>
+                @endif
             @endauth
             <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-043-menu"></i>
                     <span class="nav-text">Domaines</span>
                 </a>
             </li>
-            
-          
+
+
 
             <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>
