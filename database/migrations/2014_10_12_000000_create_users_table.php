@@ -17,13 +17,13 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('prenom');
             $table->string('nom');
-            $table->string('adresse');
-            $table->string('telephone');
+            $table->string('adresse')->nullable();
+            $table->string('telephone')->nullable();
             $table->string('email');
             $table->string('password');
             $table->string('profil');
-            $table->date('dateNaissance');
-            $table->string('photo', 300);
+            $table->date('dateNaissance')->nullable();
+            $table->string('photo', 300)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

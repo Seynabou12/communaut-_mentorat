@@ -56,7 +56,7 @@
 <body style="margin: 0;font-family: 'Inter';">
     @include('site.nav')
 
-    {{-- <section class="banniere">
+    <section class="banniere">
         <div class="row container-fluid">
 
             <img src="/images/filles.jpg" alt="" srcset="">
@@ -98,32 +98,7 @@
                 âge...</div>
         </div>
     </section>
-    <section class="carte" style="background-color: hsla(0, 0%, 100%, 0.835); margin-bottom: 20px;">
-        <h4
-            style="
-        height: 48px;
-        margin-top: 50px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 48px;
-        text-align: center;
-        color: #000000;">
-            Bénéficier des Avantages du mentorat</h4>
-        <div style="display: flex; flex-direction: row; align-content: space-between; width: 100%">
-            @for ($i = 0; $i < 4; $i++)
-                <div class="card col-md-3  mb-3 style-card">
-                    <div class=" style-card-header"></div>
-                    <div class="card-body">
-                        <p class="card-text" style="margin-top:30px;">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                    </div>
-                </div>
-            @endfor
-        </div>
-    </section> --}}
+  
 </body>
 
 </html>

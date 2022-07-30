@@ -35,7 +35,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none" style="background-color: #C15DFB; color: white;">Communauté Mentorat<i class="las la-signal ms-3 scale5"></i></a>
+                        <a href="/sessions/create" class="btn  d-sm-inline-block d-none" style="background-color: #C15DFB; color: white;">Plannifier une session</a>
                     </li>
                 </ul>
             </div>

@@ -41,37 +41,52 @@
                     </a>
                 </div>
             </li>
-            {{-- @if ($profil == 'admin') --}}
-            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                        <i class="flaticon-025-dashboard"></i>
-                        <span class="nav-text">Dashboard</span>
-                    </a>
 
-                </li> --}}
             <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-025-dashboard"></i>
                     <span class="nav-text">Tableau de bord</span>
                 </a>
             </li>
+            @auth
+                @if ($Auth::user()->profil == 'admin' || $Auth::user()->profil == 'mentor')
+                    <li><a href="/mentores" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-043-menu"></i>
+                            <span class="nav-text">Liste Mentorés</span>
+                        </a>
+                    </li>
+                @endif
+                @if ($Auth::user()->profil == 'admin')
+                    <li><a href="/mentors" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-043-menu"></i>
+                            <span class="nav-text">Liste Mentors</span>
+                        </a>
+                    </li>
+                @endif
+            @endauth
             <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Liste Mentorés</span>
+                    <span class="nav-text">Domaines</span>
                 </a>
             </li>
-            <li><a href="/mentors" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Liste Mentors</span>
-                </a>
-            </li>
-            <li><a href="#" class="ai-icon" aria-expanded="false">
-                <i class="flaticon-043-menu"></i>
-                <span class="nav-text">Domaines</span>
-            </a>
-        </li>
-       
-           
-            {{-- @endif --}}
             
+            @if ($Auth::user()->profil == 'mentor')
+                <li><a href="#" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-043-menu"></i>
+                        <span class="nav-text">Sessions</span>
+                    </a>
+                </li>
+            @endif
+
+            <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-013-checkmark"></i>
+                    <span class="nav-text">Mon Profil</span>
+                </a>
+
+            </li>
+
+
+            {{-- @endif --}}
+
             {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-041-graph"></i>
                     <span class="nav-text">Charts</span>
@@ -162,6 +177,6 @@
                 </ul>
             </li> --}}
         </ul>
-        
+
     </div>
 </div>

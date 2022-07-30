@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\MentoreController;
+use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\UtilisateurController;
 
 /*
@@ -39,6 +40,12 @@ Route::post("/mentors/edit/{id}",[MentorController::class, 'update'])->where('id
 Route::get('/mentores', [MentoreController::class, 'index']);
 Route::get('/mentores/create',[MentoreController::class, 'create']);
 Route::post('/mentores/create',[MentoreController::class, 'store']);
+Route::get("/mentores/edit/{id}",[MentoreController::class, 'edit'])->where('id','[0-9]+');
+Route::post("/mentores/edit/{id}",[MentoreController::class, 'update'])->where('id','[0-9]+');
+
+Route::get('/sessions', [SessionsController::class, 'index']);
+Route::get('/sessions/create',[SessionsController::class, 'create']);
+Route::post('/mentores/create',[SessionsController::class, 'store']);
 
 
 Route::get("/login",[UtilisateurController::class, 'formLogin'])->name('auth.formLogin');

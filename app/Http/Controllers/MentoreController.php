@@ -59,10 +59,30 @@ class MentoreController extends Controller
 
     public function update(Request $request, $id)
     {
-        $mentore = Mentore::find($id);
+        $mentore = Mentore::findorFail($id);
+        $user = $mentore->user;
         $input = $request->all();
-        $mentore->update($input);
-        return redirect('mentore')->with('flash-message', 'Vos modifications ont été bien enregistré');
+        if ($request->file('photo') != null){
+
+            $fileName = time() . $request->file('photo')->getClientOriginalName();
+            $path = $request->file('photo')->storeAs('images', $fileName, 'public');
+            $input['photo'] = '/storage/' . $path;
+        } else {
+            $input['photo'] = $user->photo;
+        }
+
+        $user->prenom = $input['prenom'];
+        $user->nom = $input['nom'];
+        $user->adresse = $input['adresse'];
+        $user->telephone = $input['telephone'];
+        $user->dateNaissance = $input['dateNaissance'];
+        $user->photo = $input['photo'];
+        $user->email = $input['email'];
+        $user->save();
+        $mentore->attente =  $input['attente'];
+        $mentore->save();
+
+        return redirect('/mentores')->with('flash-message', 'Vos modifications ont été bien enregistré');
     }
 
     public function destroy($id)
