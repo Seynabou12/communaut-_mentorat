@@ -129,14 +129,13 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label"
-                                                    for="validationCustom08">Date Naissance
+                                                <label class="col-lg-4 col-form-label" for="validationCustom08">Date
+                                                    Naissance
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
                                                     <input type="date" class="form-control"
-                                                        id="validationCustom08" 
-                                                        required="" name="dateNaissance">
+                                                        id="validationCustom08" required="" name="dateNaissance">
                                                     <div class="invalid-feedback">
                                                         Enter votre date de naissance.
                                                     </div>
@@ -144,7 +143,33 @@
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label for="attente" class="control-label">Attentes</label>
-                                                <textarea name="attente" id="attente"  rows="3" class="form-control"></textarea>
+                                                <div class="col-lg-6">
+                                                    <textarea type="date" class="form-control" required="" name="attente" id="attente" rows="3"></textarea>
+                                                    <div class="invalid-feedback">
+                                                        Enter vos attentes
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label"
+                                                        for="validationCustom05">Votre niveau d'étude
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <select class="default-select wide form-control"
+                                                            id="validationCustom05" name="niveau_id">
+                                                            <option data-display="Select">Please select</option>
+                                                            @foreach ($niveaux as $niveau)
+                                                                <option value="{{ $niveau->id }}">
+                                                                    {{ $niveau->libelle }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Please select a one.
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">

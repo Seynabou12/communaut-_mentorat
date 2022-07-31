@@ -54,4 +54,12 @@ class User extends Authenticatable
             $this->attributes['password'] = Hash::make($password);
         }
     }
+
+    public function mentore(){
+        return $this->hasOne(Mentore::class);
+    }
+
+    public function mentor(){
+        return $this->hasOne(Mentor::class);
+    }
 }

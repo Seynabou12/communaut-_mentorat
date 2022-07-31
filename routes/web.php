@@ -39,12 +39,14 @@ Route::post("/mentors/create",[MentorController::class, 'store']);
 Route::get("/mentors/edit/{id}",[MentorController::class, 'edit'])->where('id','[0-9]+');
 Route::post("/mentors/edit/{id}",[MentorController::class, 'update'])->where('id','[0-9]+');
 
-Route::get('/mentores', [MentoreController::class, 'home']);
+Route::get('/mentores', [MentoreController::class, 'accueil']);
+Route::get('/mentores/{id}/mentors', [MentoreController::class, 'mentors'])->name('mentores.mentors')->where('id','[0-9]+');
 Route::get('/mentores/liste', [MentoreController::class, 'index']);
 Route::get('/mentores/create',[MentoreController::class, 'create']);
 Route::post('/mentores/create',[MentoreController::class, 'store']);
 Route::get("/mentores/edit/{id}",[MentoreController::class, 'edit'])->where('id','[0-9]+');
 Route::post("/mentores/edit/{id}",[MentoreController::class, 'update'])->where('id','[0-9]+');
+Route::get('/mentores/{id}/connecte/{idMentor}', [MentoreController::class, 'connecte'])->where('id','[0-9]+')->where('idMentor','[0-9]+');
 
 Route::get('/sessions', [SessionsController::class, 'index']);
 Route::get('/sessions/create', [SessionsController::class, 'create']);

@@ -2,22 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Connexion;
+use App\Models\Mentor;
 use App\Models\Mentore;
+use App\Models\Niveau;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MentoreController extends Controller
 {
 
     public function index()
+
     {
         $mentores = Mentore::all();
         return view('mentores.index', compact('mentores'));
     }
 
     public function create()
+
     {
-        return view('mentores.create');
+        $niveaux=Niveau::all();
+        return view('mentores.create',compact('niveaux'));
     }
 
     public function store(Request $request)
@@ -40,7 +48,8 @@ class MentoreController extends Controller
         ]);
         Mentore::create([
             'attente' => $input['attente'],
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'niveau_id' => $input['niveau_id']
         ]);
         return redirect('/login')->with('flash-message', 'Votre inscription à été bien enregistré');
     }
@@ -91,8 +100,29 @@ class MentoreController extends Controller
         return redirect('mentore')->with('flash-message', 'Mentoré supprimé avec succés');
     }
 
-    public function home()
+    public function accueil()
     {
-        return view('mentores.accueil');
+        $mentors = Mentor::all();
+        return view('mentores.accueil', compact('mentors'));
     }
+
+    public function mentors($id)
+    {
+        $connexions = Connexion::where('mentore_id',$id)->get();
+        return view('mentores.mentors', compact('connexions'));
+    }
+
+    public function connecte($id, $idMentor)
+    {
+        $mentor = Mentor::findOrFail($idMentor);
+        $mentore = Mentore::findOrFail($id);
+        $connexion = new Connexion();
+        $connexion->mentor_id = $mentor->id;
+        $connexion->mentore_id = $mentore->id;
+        $connexion->date = Carbon::now();
+        $connexion->status = 'en attente';
+        $connexion->save();
+        return redirect()->route('mentores.mentors', ['id' => $id]);
+    }
+
 }

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mentor;
+use App\Models\Mentore;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,14 +25,16 @@ class UtilisateurController extends Controller
             session()->regenerate();
             $user = Auth::user();
             if ($user->profil == 'mentor') {
-                return redirect('/mentors/accueil');
+                return redirect('/mentors');
             } else if ($user->profil == 'mentore') {
-                return redirect('/mentores/accueil');
+                return redirect('/mentores');
             }
             else if ($user->profil == 'admin') {
                 return redirect('/mentors/liste');
             }
             dd('user simple');
+        } else {
+            dd(Auth::user());
         }
     }
 }
