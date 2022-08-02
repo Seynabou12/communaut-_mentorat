@@ -8,7 +8,6 @@
     <div class="content-body">
         <div class="container-fluid">
             <h3>Des mentors recommandés pour vous</h3>
-
             <div class="row">
                 <div class="col-xl-12">
                     <div class="table-responsive fs-14">

@@ -25,7 +25,7 @@ class UtilisateurController extends Controller
             session()->regenerate();
             $user = Auth::user();
             if ($user->profil == 'mentor') {
-                return redirect('/mentors');
+                return redirect('/sessions');
             } else if ($user->profil == 'mentore') {
                 return redirect('/mentores');
             }

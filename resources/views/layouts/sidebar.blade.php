@@ -56,7 +56,7 @@
                     </li>
                 @endif
                 @if (Auth::user()->profil == 'admin')
-                    <li><a href="/mentors/listes" class="ai-icon" aria-expanded="false">
+                    <li><a href="/mentors/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentors</span>
                         </a>
@@ -74,17 +74,13 @@
                             <span class="nav-text">Sessions</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="/sessions/create">Ajout </a></li>
+                            <li><a href="/sessions/create">Ajout</a></li>
                             <li><a href="/sessions">Liste</a></li>
                         </ul>
                     </li>
                 @endif
             @endauth
-            <li><a href="#" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Domaines</span>
-                </a>
-            </li>
+          
 
             <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>

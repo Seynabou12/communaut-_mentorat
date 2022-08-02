@@ -22,7 +22,7 @@ Route::get('/', function () {
     return view('site.index');
 });
 Route::get('/dashbord/welcome', function () {
-    return view('dashbord.welcome',['profil' => 'mentor']);
+    return view('dashbord.welcome', ['profil' => 'mentor']);
 });
 Route::get('/mentors/create', function () {
     return view('mentors.create');
@@ -32,28 +32,33 @@ Route::get('/mentors/create', function () {
 //     return view('mentores.create');
 // });
 
-Route::get('/mentors/liste', [MentorController::class, 'index']);
-Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
-Route::get('/mentors/profil', [MentorController::class, 'profil']);
-Route::post("/mentors/create",[MentorController::class, 'store']);
-Route::get("/mentors/edit/{id}",[MentorController::class, 'edit'])->where('id','[0-9]+');
-Route::post("/mentors/edit/{id}",[MentorController::class, 'update'])->where('id','[0-9]+');
+Route::middleware('authentification')->group(
+    function () {
+        Route::get('/mentors/liste', [MentorController::class, 'index']);
+        Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
+        Route::get('/mentors/profil', [MentorController::class, 'profil']);
+        Route::post("/mentors/create", [MentorController::class, 'store']);
+        Route::get("/mentors/edit/{id}", [MentorController::class, 'edit'])->where('id', '[0-9]+');
+        Route::post("/mentors/edit/{id}", [MentorController::class, 'update'])->where('id', '[0-9]+');
 
-Route::get('/mentores', [MentoreController::class, 'accueil']);
-Route::get('/mentores/{id}/mentors', [MentoreController::class, 'mentors'])->name('mentores.mentors')->where('id','[0-9]+');
-Route::get('/mentores/liste', [MentoreController::class, 'index']);
-Route::get('/mentores/create',[MentoreController::class, 'create']);
-Route::post('/mentores/create',[MentoreController::class, 'store']);
-Route::get("/mentores/edit/{id}",[MentoreController::class, 'edit'])->where('id','[0-9]+');
-Route::post("/mentores/edit/{id}",[MentoreController::class, 'update'])->where('id','[0-9]+');
-Route::get('/mentores/{id}/connecte/{idMentor}', [MentoreController::class, 'connecte'])->where('id','[0-9]+')->where('idMentor','[0-9]+');
+        Route::get('/mentores', [MentoreController::class, 'accueil']);
+        Route::get('/mentores/{id}/mentors', [MentoreController::class, 'mentors'])->name('mentores.mentors')->where('id', '[0-9]+');
+        Route::get('/mentores/liste', [MentoreController::class, 'index']);
+        Route::get('/mentores/create', [MentoreController::class, 'create']);
+        Route::post('/mentores/create', [MentoreController::class, 'store']);
+        Route::get("/mentores/edit/{id}", [MentoreController::class, 'edit'])->where('id', '[0-9]+');
+        Route::post("/mentores/edit/{id}", [MentoreController::class, 'update'])->where('id', '[0-9]+');
+        Route::get('/mentores/{id}/connecte/{idMentor}', [MentoreController::class, 'connecte'])->where('id', '[0-9]+')->where('idMentor', '[0-9]+');
 
-Route::get('/sessions', [SessionsController::class, 'index']);
-Route::get('/sessions/create', [SessionsController::class, 'create']);
-Route::post('/sessions/create', [SessionsController::class, 'store']);
+        Route::get('/sessions', [SessionsController::class, 'index']);
+        Route::get('/sessions/create', [SessionsController::class, 'create']);
+        Route::post('/sessions/create', [SessionsController::class, 'store']);
 
-Route::get('/niveaux/create', [NiveauController::class, 'create']);
-Route::post('/niveaux/create', [NiveauController::class, 'store']);
+        Route::get('/niveaux/create', [NiveauController::class, 'create']);
+        Route::post('/niveaux/create', [NiveauController::class, 'store']);
+    }
+);
 
-Route::get("/login",[UtilisateurController::class, 'formLogin'])->name('auth.formLogin');
-Route::post("/login",[UtilisateurController::class, 'login'])->name('auth.login');
+
+Route::get("/login", [UtilisateurController::class, 'formLogin'])->name('auth.formLogin');
+Route::post("/login", [UtilisateurController::class, 'login'])->name('auth.login');
