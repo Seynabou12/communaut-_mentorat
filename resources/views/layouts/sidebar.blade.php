@@ -41,13 +41,14 @@
                     </a>
                 </div>
             </li>
-
-            <li><a href="#" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-025-dashboard"></i>
-                    <span class="nav-text">Tableau de bord</span>
-                </a>
-            </li>
             @auth
+                @if (Auth::user()->profil == 'admin' || Auth::user()->profil == 'mentore' || Auth::user()->profil == 'mentor')
+                    <li><a href="#" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-025-dashboard"></i>
+                            <span class="nav-text">Dashbord</span>
+                        </a>
+                    </li>
+                @endif
                 @if (Auth::user()->profil == 'admin' || Auth::user()->profil == 'mentor')
                     <li><a href="/mentores/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
@@ -62,10 +63,10 @@
                         </a>
                     </li>
                     <li><a href="/niveaux/create" class="ai-icon" aria-expanded="false">
-                        <i class="flaticon-072-printer"></i>
-                        <span class="nav-text">Niveaux Etudes</span>
-                    </a>
-                </li>
+                            <i class="flaticon-072-printer"></i>
+                            <span class="nav-text">Niveaux Etudes</span>
+                        </a>
+                    </li>
                 @endif
 
                 @if (Auth::user()->profil == 'mentor')
@@ -79,15 +80,17 @@
                         </ul>
                     </li>
                 @endif
+
+                @if (Auth::user()->profil == 'admin' || Auth::user()->profil == 'mentore' || Auth::user()->profil == 'mentor')
+                    <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-013-checkmark"></i>
+                            <span class="nav-text">Mon Profil</span>
+                        </a>
+
+                    </li>
+                @endif
             @endauth
-          
 
-            <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-013-checkmark"></i>
-                    <span class="nav-text">Mon Profil</span>
-                </a>
-
-            </li>
 
 
             {{-- @endif --}}

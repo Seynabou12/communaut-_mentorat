@@ -140,11 +140,359 @@
         position: relative;
         width: 269px;
     }
+
+    .allcourse-section {
+        padding: 40px 0;
+    }
+
+    .bg-grey {
+        background-color: #FAFAFA;
+    }
+
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    nav,
+    section {
+        display: block;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-lg-4,
+    .col-md-4 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .allcourse-card {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .allcourse-card {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .allcourse-img img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    .mb-3,
+    . {
+        margin-bottom: 1rem !important;
+    }
+
+    h4 {
+        display: block;
+        margin-block-start: 1.33em;
+        margin-block-end: 1.33em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-top: 0;
+
+    }
+
+    .text-warning,
+    .dropdown-menu>li>a.text-warning {
+        color: #C15DFB;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        .btn {
+            font-size: 0.875rem;
+        }
+    }
+
+    .btn {
+        letter-spacing: 0.02em;
+    }
+
+    .btn-course {
+        background: #009DA6;
+        border-radius: 30px;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    .bg-grey {
+        background-color: #FAFAFA;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .instructor-section {
+            padding: 30px 0;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .align-items-center {
+        align-items: center !important;
+    }
+
+    .d-flex {
+        display: flex !important;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    .heading-content {
+        position: relative;
+    }
+
+    .heading-content h2 {
+        font-size: 26px;
+    }
+
+    h2 {
+        margin-top: 0;
+        line-height: 1.2;
+        margin-bottom: 0.5rem
+    }
+    }
+
+    .heading-content p {
+        color: #969696;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-md-12,
+    .col-lg-6 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .instructor-card {
+            margin-bottom: 20px;
+        }
+    }
+
+    .instructor-card {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px rgb(183 183 183 / 25%);
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .instructor-profile {
+            display: block;
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .instructor-profile {
+            text-align: center;
+            padding: 33px 21px;
+        }
+
+    }
+
+    .align-items-center {
+        -ms-flex-align: center !important;
+        align-items: center !important;
+    }
+
+    .instructor-img img {
+        width: 160px;
+        border-radius: 50%;
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .instructor-desc {
+            margin-top: 15px;
+        }
+    }
+
+    .text-warning,
+    .dropdown-menu>li>a.text-warning {
+        color: #FF9C27 !important;
+    }
+
+    .mb-0,
+    .my-0 {
+        margin-bottom: 0 !important;
+    }
+
+    h3 {
+        line-height: 1.2;
+        margin-top: 0;
+    }
+
+    .text-primary,
+    .dropdown-menu>li>a.text-primary {
+        color: #009DA6 !important;
+    }
+
+    .instructor-desc p {
+        line-height: 24px;
+        margin-top: 12px;
+    }
+
+    <style>p:last-child {
+        margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .instructor-content {
+            padding: 0 15px 20px;
+        }
+    }
+
+    .ml-auto,
+    .mx-auto {
+        margin-left: auto !important;
+    }
+
+    .ic-right a {
+        font-weight: 500;
+        color: #009DA6;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .instructor-profile {
+            text-align: center;
+            padding: 33px 21px;
+        }
+    }
 </style>
 
 <body style="font-family: 'Inter'; background: white;">
-    @include('site.nav')
-    <section class="section section-search">
+   
+    {{-- <section class="section section-search">
         <div class="container content">
             <div class="banner-wrapper m-auto text-center aos aos-init aos-animate" data-aos="fade-up">
                 <div class="banner-header">
@@ -155,21 +503,22 @@
                 <div class="search-box">
                     <form action="search.html">
                         <div class="form-group search-location">
-                            <button type="button" class="btn  btn-lg" style="background-color: #C15DFB; color: white; border-radius: 20px; border: solid 0 gray;">Devenir Mentoré</button>
-                            
+                            <button type="button" class="btn  btn-lg"
+                                style="background-color: #C15DFB; color: white; border-radius: 20px; border: solid 0 gray;">Devenir
+                                Mentoré</button>
+
                         </div>
                         <div class="form-group search-info">
-                            <button type="button" class="btn  btn-lg" style="background: white; color: #C15DFB;">Devenir Mentor</button>
-                           
-                            
+                            <button type="button" class="btn  btn-lg"
+                                style="background: white; color: #C15DFB;">Devenir Mentor</button>
                         </div>
                     </form>
                 </div>
 
             </div>
         </div>
-    </section>
- 
+    </section> --}}
+
     <div class="container-fluid" style="background: #FFFF; margin-top: -15%; color: black;">
         <div class="texte" style="margin-top: 20%;">
             <div class="row" style="text-align: center;">
@@ -185,110 +534,95 @@
                     avec le mentorat</h5>
             </div>
         </div>
-        <div class="row" style="flex-direction: row; justify-content: center; margin-top: 50px;">
-
-            <div class="card text-white bg-white mb-3"
-                style="max-width: 18rem; margin-left: 10px; box-shadow: 0 0 13px rgb(0 0 0 / 10%); margin: 0 40px 0 40px;">
-                <div class="">
-                    <img src="/images/icon-1.png" alt="" srcset=""
-                        style="border: 4px solid white; border-radius: 50%; width: 100px; height: 100px;
-                    margin-left: 90px; margin-top: 20px; background-color: #C15DFB">
-                </div>
-                <div class="card-body" style="text-align: center;">
-                    <h5 class="card-title" style="font-weight: bold;">S'inscrire</h5>
-                    <p class="card-text">Vous cherchez à rejoindre l'apprentissage en ligne? Maintenant c'est très
-                        simple, Inscrivez-vous maintenant.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-white mb-3"
-                style="max-width: 18rem;margin-left: 10px; box-shadow: 0 0 13px rgb(0 0 0 / 10%); margin: 0 40px 0 40px;">
-                <div class="">
-                    <img src="/images/icon-2.png" alt="" srcset=""
-                        style="border: 4px solid white; border-radius: 50%; width: 100px; height: 100px;
-                    margin-left: 90px; margin-top: 20px; background-color: #C15DFB">
-                </div>
-                <div class="card-body" style="text-align: center;">
-                    <h5 class="card-title" style="font-weight: bold;">Collaborer</h5>
-                    <p class="card-text">Collaborez selon votre propre timing, en planifiant avec la réservation d'un
-                        mentor.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-white mb-3"
-                style="max-width: 18rem;margin-left: 10px; box-shadow: 0 0 13px rgb(0 0 0 / 10%); margin: 0 40px 0 40px;">
-                <div class="">
-                    <img src="/images/icon-3.png" alt="" srcset=""
-                        style="border: 4px solid white; border-radius: 50%; width: 100px; height: 100px;
-                    margin-left: 90px; margin-top: 20px;background-color: #C15DFB">
-                </div>
-                <div class="card-body" style="text-align: center;">
-                    <h5 class="card-title" style="font-weight: bold;">Amméliorer </h5>
-                    <p class="card-text">vous pouvez rassembler différentes compétences et vous pouvez également devenir
-                        mentor.</p>
-                </div>
-            </div>
-        </div>
+        
     </div>
-    <section style="margin-top: 100px; background-color: #FFFFFF" class="container">
+  
 
-        @include('./layouts.dashbord')
 
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <div class="new-arrival-product card-body" style="width: 100%; height: 50%;">
-                        <div class="new-arrivals-img-contnent">
-                            <img class="img-fluid" src="images/product/1.jpg" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="new-arrival-product card-body">
-                        <div class="new-arrivals-img-contnent">
-                            <img class="img-fluid" src="images/product/1.jpg" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="new-arrival-product card-body">
-                        <div class="new-arrivals-img-contnent">
-                            <img class="img-fluid" src="images/product/1.jpg" alt="">
-                        </div>
-
-                    </div>
+    <section class="allcourse-section bg-grey">
+        <div class="container">
+            <div style="text-align: center !important; position: relative;">
+                <div class="section-title  "
+                    style=" margin-bottom: 16px !important;position: relative;
+            max-width: 640px;">
+                    <p class="subtitle " style="  margin: 0 0 20px;">
+                        CHOOSE THE</p>
+                    <h2 class="title "
+                        style="font-weight: 500;
+                font-size: 32px;
+                line-height: 1.2;
+                position: relative;
+                color: #2F2D51;overflow-wrap: break-word;">
+                        Different All Learning Paths </h2>
                 </div>
             </div>
-        </div>
-        <div class="container text-center">
+
             <div class="row">
-                <div class="col">
-                    <div class="new-arrival-product card-body">
-                        <div class="new-arrivals-img-contnent">
-                            <img class="img-fluid" src="images/product/1.jpg" alt="">
+                <div class="col-md-4 col-lg-4 d-flex flex-wrap">
+                    <div class="allcourse-card">
+                        <div class="allcourse-img"><img src="/images/filles.jpg" alt="" class="img-fluid"></div>
+                        <div class="allcourse-content">
+                            <h4 class="mb-3">Design</h4>
+                            <p>Over <span class="text-warning">2,500</span> Courses</p>
                         </div>
-
                     </div>
                 </div>
-                <div class="col">
-                    <div class="new-arrival-product card-body">
-                        <div class="new-arrivals-img-contnent">
-                            <img class="img-fluid" src="images/product/1.jpg" alt="">
+                <div class="col-md-4 col-lg-4 d-flex flex-wrap">
+                    <div class="allcourse-card">
+                        <div class="allcourse-img"><img src="/images/filles.jpg" alt="" class="img-fluid"></div>
+                        <div class="allcourse-content">
+                            <h4 class="mb-3">Digital Marketer</h4>
+                            <p>Over <span class="text-warning">5,500</span> Courses</p>
                         </div>
-
                     </div>
                 </div>
-                <div class="col">
-                    <div class="new-arrival-product card-body">
-                        <div class="new-arrivals-img-contnent">
-                            <img class="img-fluid" src="images/product/1.jpg" alt="">
+                <div class="col-md-4 col-lg-4 d-flex flex-wrap">
+                    <div class="allcourse-card">
+                        <div class="allcourse-img"><img src="/images/filles.jpg" alt="" class="img-fluid">
                         </div>
-
+                        <div class="allcourse-content">
+                            <h4 class="mb-3">Photography</h4>
+                            <p>Over <span class="text-warning">2,540</span> Courses</p>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-4 col-lg-4 d-flex flex-wrap">
+                    <div class="allcourse-card">
+                        <div class="allcourse-img"><img src="/images/filles.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="allcourse-content">
+                            <h4 class="mb-3">IT Security</h4>
+                            <p>Over <span class="text-warning">2,750</span> Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 d-flex flex-wrap">
+                    <div class="allcourse-card">
+                        <div class="allcourse-img"><img src="/images/filles.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="allcourse-content">
+                            <h4 class="mb-3">Research</h4>
+                            <p>Over <span class="text-warning">2,120</span> Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 d-flex flex-wrap">
+                    <div class="allcourse-card">
+                        <div class="allcourse-img"><img src="/images/filles.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="allcourse-content">
+                            <h4 class="mb-3">Finance</h4>
+                            <p>Over <span class="text-warning">2,840</span> Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-btn m-auto"><button class="btn btn-course"
+                        style="background-color: #C15DFB; color: white; ">View all Courses <i
+                            class="fas fa-caret-right right-nav-white"></i></button></div>
             </div>
         </div>
     </section>
+
 
 </body>
 

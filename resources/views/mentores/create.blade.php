@@ -85,6 +85,16 @@
                                                 </div>
                                             </div>
 
+                                            <div class="mb-3 row ">
+                                                <label for="attente" class="col-lg-4 col-form-label">Attentes</label>
+                                                <div class="col-lg-6">
+                                                    <textarea type="date" class="form-control" required="" name="attente" id="attente" rows="3"></textarea>
+                                                    <div class="invalid-feedback">
+                                                        Enter vos attentes
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">
@@ -141,15 +151,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group mb-3">
-                                                <label for="attente" class="control-label">Attentes</label>
-                                                <div class="col-lg-6">
-                                                    <textarea type="date" class="form-control" required="" name="attente" id="attente" rows="3"></textarea>
-                                                    <div class="invalid-feedback">
-                                                        Enter vos attentes
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="form-group mb-3">
                                                 <div class="mb-3 row">
                                                     <label class="col-lg-4 col-form-label"

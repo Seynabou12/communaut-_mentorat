@@ -8266,7 +8266,8 @@ a {
 .content-body .container-fluid, .content-body .container-sm, .content-body .container-md, .content-body .container-lg, .content-body .container-xl, .content-body .container-xxl {
   padding-top: 20px;
   padding-right: 40px;
-  padding-left: 40px; }
+  padding-left: 40px;
+margin-top: 100px;}
   @media only screen and (max-width: 1200px) {
     .content-body .container-fluid, .content-body .container-sm, .content-body .container-md, .content-body .container-lg, .content-body .container-xl, .content-body .container-xxl {
       padding-top: 30px;

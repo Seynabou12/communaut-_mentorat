@@ -1,153 +1,87 @@
-    <style>
-        header {
-            height: 90px;
-            background: #FFFFFF;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-            max-width: 96wh;
-            margin-bottom: 0px;
-            position: fixed;
-        }
+<!DOCTYPE html>
+<html lang="en">
 
-        .nav {
-            margin-right: 140px;
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .brand {
-            font-weight: bold;
-            font-size: 20px;
-        }
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-        .nav__wrapper {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
-            text-decoration: none;
-        }
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        .nav__wrapper li a {
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: black;
-            margin-left: 12px;
-        }
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
 
-        .site-header {
-            position: relative;
-        }
+</head>
 
-        .site-header__wrapper {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
 
-        @media (min-width: 600px) {
-            .site-header__wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 0;
-                padding-bottom: 0;
-            }
-        }
+            <img src="/images/wim-sbg.png" alt="" srcset="" style="width: 100px; height: auto;">
+            {{-- <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1> --}}
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        @media (min-width: 600px) {
-            .nav__wrapper {
-                display: flex;
-            }
-        }
+            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 200px;">
+                <ul>
+                    <li><a class="active" href="/">Acceuil</a></li>
+                    <li><a href="/mentors/create">Devenir Mentor</a></li>
+                    <li><a href="/mentores/create">Devenir Mentoré</a></li>
+                    <li><a href="#">Admin</a></li>
 
-        @media (max-width: 599px) {
-            .nav__wrapper {
-                position: absolute;
-                top: 100%;
-                right: 0;
-                left: 0;
-                z-index: -1;
-                background-color: #f9f9fa;
-                box-shadow: 1ch;
-                visibility: hidden;
-                opacity: 0;
-                transform: translateY(-100%);
-                transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-            }
-
-            .nav__toggle li {
-                text-decoration: none;
-            }
-
-            .nav__wrapper.active {
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .nav__item a {
-            display: block;
-            padding: 1.5rem 1rem;
-        }
-
-        .nav__toggle {
-            display: none;
-        }
-
-        @media (max-width: 599px) {
-            .nav__toggle {
-                display: block;
-                position: absolute;
-                right: 1rem;
-                top: 1rem;
-                border: solid rgba(0, 0, 0, 0.0)
-            }
-        }
-
-        .wrapper img {
-            width: 120px;
-            height: 60px;
-            margin-left: 50px;
-            margin-bottom: 15px;
-        }
-    </style>
-    <!-- Header Start -->
-    <header class="site-header">
-        <div class="wrapper site-header__wrapper">
-            <a href="#" class="brand"><img src="/images/wim-sbg.png" alt="" srcset=""
-                    style="margin-top: -10px; margin-left: 60px;" ></a>
-            <nav class="nav">
-                <button class="nav__toggle" aria-expanded="false" type="button" style="width: 50px; height: 50px;">
-                    menu
-                </button>
-                <ul class="nav__wrapper" style="font-size: 17px; margin-left: 60px;">
-                    <li class="nav__item"><a href="/">Accueil</a></li>
-                    <li class="nav__item"><a href="/mentors/create">Devenir Mentor</a></li>
-
-                    <li class="nav__item"><a href="/mentores/create">Devenir Mentoré</a></li>
-                    <li class="nav__item"><a href="#">Questions/Reponses</a></li>
-                    <li class="nav__item"><a href="/mentors/liste">Admin</a></li>
-                    <li class="nav__item">
-                        <a href="{{ route('auth.formLogin') }}">
-
-                            <button type="submit" class="btn" style="background-color: #C15DFB; color: white; border-radius: 20px; border: solid 0 gray; text-align: center; margin-top: -10px;"
-                                >Connexion</button></a>
+                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
                     </li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href="/login" class="get-started-btn">Connexion</a>
+
         </div>
     </header>
 
-    <script>
-        let navToggle = document.querySelector(".nav__toggle");
-        let navWrapper = document.querySelector(".nav__wrapper");
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
 
-        navToggle.addEventListener("click", function() {
-            if (navWrapper.classList.contains("active")) {
-                this.setAttribute("aria-expanded", "false");
-                this.setAttribute("aria-label", "menu");
-                navWrapper.classList.remove("active");
-            } else {
-                navWrapper.classList.add("active");
-                this.setAttribute("aria-label", "close menu");
-                this.setAttribute("aria-expanded", "true");
-            }
-        });
-    </script>
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

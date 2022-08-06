@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Connexion;
 use App\Models\Mentor;
+use App\Models\Mentore;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class MentorController extends Controller
@@ -41,7 +44,8 @@ class MentorController extends Controller
             'parcours' => $input['parcours'],
             'experience' => $input['experience'],
             'user_id' => $user->id
-        ]);;
+        ]);
+        
         return redirect('/login')->with('flash-message', 'Votre inscription à été bien enregistré');
     }
 
@@ -94,6 +98,31 @@ class MentorController extends Controller
     public function accueil()
     {
         return view('mentors.accueil');
+    }
+
+    public function details()
+    {
+        $mentors = Mentor::all();
+        return view('mentors.details', compact('mentors'));
+    }
+
+    public function mentores($id)
+    {
+        $connexions = Connexion::where('mentor_id',$id)->get();
+        return view('mentors.mentores', compact('connexions'));
+    }
+
+    public function connecte($id, $idMentore)
+    {
+        $mentore = Mentore::findOrFail($idMentore);
+        $mentor  = Mentor::findOrFail($id);
+        $connexion = new Connexion();
+        $connexion->mentore_id = $mentore->id;
+        $connexion->mentor_id = $mentor->id;
+        $connexion->date = Carbon::now();
+        $connexion->status = 'en attente';
+        $connexion->save();
+        return redirect()->route('mentors.mentores', ['id' => $id]);
     }
 
 }

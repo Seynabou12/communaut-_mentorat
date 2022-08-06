@@ -22,7 +22,6 @@ class NiveauController extends Controller
     {
         $input = $request->all();
         Niveau::create($input);
-        return redirect('/niveaux')->with('flash-message', 'Votre niveaux à été bien enregistré');
+        return redirect('/niveau/create')->with('flash-message', 'Votre niveaux à été bien enregistré');
     }
-    
 }

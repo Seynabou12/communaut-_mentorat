@@ -28,13 +28,9 @@ class UtilisateurController extends Controller
                 return redirect('/sessions');
             } else if ($user->profil == 'mentore') {
                 return redirect('/mentores');
-            }
-            else if ($user->profil == 'admin') {
+            } else if ($user->profil == 'admin') {
                 return redirect('/mentors/liste');
             }
-            dd('user simple');
-        } else {
-            dd(Auth::user());
         }
     }
 }

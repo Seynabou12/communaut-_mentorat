@@ -19,55 +19,899 @@
 
     <!-- FAVICONS ICON -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <link href="vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
-<body>
-    @include('site.nav')
-    <div class="">
-        <div class="container-fluid">
-            <h3>Des mentors recommandés pour vous</h3>
-            <div class="row">
-                @foreach ($mentors as $mentor)
-                    <div class="col-md-3" style="margin-top: 100px; flex-direction: row;display: flex;">
-                        <div class="card overflow-hidden" style="">
-                            <div class="text-center p-3 overlay-box "
-                                style="">
-                                <div class="profile-photo">
-                                    <img src="{{ $mentor->user->photo }}" width="100"
-                                        class="img-fluid rounded-circle" alt="">
-                                </div>
-                                <h3 class="mt-3 mb-1 text-white">{{ $mentor->user->nom }} {{ $mentor->user->prenom }}
-                                </h3>
-                                <p class="text-white mb-0">{{ $mentor->user->email }}</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <p>{{ $mentor->parcours }}</p>
-                            </ul>
-                            <div class="card-footer border-0 mt-0">
-                                <button class="btn btn-primary" style="color: white;">
-                                    <a href="/mentores/{{ Auth::user()->mentore->id }}/connecte/{{ $mentor->id }}"
-                                        class="card-link float-end">Se Connecter</a>
+<style>
+    .banner-section {
+        position: relative;
+        background: url(/images/enfant.webp);
+        opacity: 5;
+        background-position: 50% 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+    section {
+        display: block;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .banner-content {
+        padding: 100px 0;
+    }
+
+
+    .banner-content {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    div {
+        display: block;
+    }
+
+    .banner-heading h2 {
+        font-size: 52px;
+        font-family: impact;
+        color: #fff;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    h2 {
+        color: #26292c;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+
+    h2 {
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    .banner-heading p {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .banner-forms {
+        padding: 30px 0 0;
+    }
+
+    .banner-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-form {
+        background: #fff;
+        box-shadow: 0px 4px 4px rgb(249 250 255 / 25%);
+        border-radius: 50px;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    form {
+        display: block;
+        margin-top: 0em;
+    }
+
+    .input-group-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-style {
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.26);
+        min-height: 52px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    @media (min-width: 768px) {
+        .col-md-6 {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+        }
+    }
+
+    .button-form {
+        background: #C15DFB;
+        height: 52px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: #fff;
+    }
+
+    .input-group-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-style {
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.26);
+        min-height: 52px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    .form-style input {
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=password] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    input,
+    button,
+    a {
+        transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+    }
+
+    button,
+    input {
+        overflow: visible;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+
+    input[type="text" i] {
+        padding: 1px 2px;
+    }
+
+    input {
+        writing-mode: horizontal-tb !important;
+        font-style: ;
+        font-variant-ligatures: ;
+        font-variant-caps: ;
+        font-variant-numeric: ;
+        font-variant-east-asian: ;
+        font-weight: ;
+        font-stretch: ;
+        font-size: ;
+        font-family: ;
+        text-rendering: auto;
+        color: -internal-light-dark(black, white);
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        appearance: auto;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-image: initial;
+    }
+
+    .form-style input {
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+
+    @media (max-width: 767.98px) {
+        .page-content {
+            padding: 30px 0;
+        }
+    }
+
+    @media (min-width: 576px) {
+
+        .container,
+        .container-sm {
+            max-width: 540px;
+        }
+    }
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    /* .col-md-6,
+    .col-lg-4 {
+        position: relative;
+        /* width: 100%; *
+        padding-right: 15px;
+        padding-left: 15px;
+    } */
+
+    .search-filter {
+        border: 1px solid #e3e8eb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+    }
+
+    .card {
+        border: 1px solid #e3e8eb;
+        margin-bottom: 1.875rem;
+        border-radius: 0.4rem;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: 0.25rem;
+    }
+
+    .card .card-header {
+        background-color: #fff;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .card-header:first-child {
+        border-radius: calc(0.4rem - 1px) calc(0.4rem - 1px) 0 0;
+    }
+
+    .card-header {
+        padding: 1rem 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .mb-0,
+    .my-0 {
+        margin-bottom: 0 !important;
+    }
+
+    h4 {
+        font-size: 1rem;
+        font-family: var(--thm-font);
+        margin-top: 0;
+        overflow-wrap: break-word;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #2F2D51;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        .card-body {
+            padding: 1.25rem;
+        }
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1.25rem;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    .card {
+        word-wrap: break-word;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    .card {
+        word-wrap: break-word;
+    }
+
+    fieldset {
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 767.98px) {
+        .form-control {
+            font-size: 14px !important;
+        }
+    }
+
+    .form-control {
+
+        height: 50px;
+        border-radius: 0.4rem;
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        line-height: 1.5;
+        color: #26292c;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #dce0eb;
+        border-radius: .4rem;
+        -webkit-transition: all 500ms ease;
+    }
+
+    @media (max-width: 767.98px) {
+        .form-control {
+            font-size: 14px !important;
+        }
+    }
+
+    .col-12 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .dc-searchresult-holder {
+        float: left;
+        width: 100%;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--thm-b-font);
+        font-weight: normal;
+        font-style: normal;
+        color: #77838F;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 767.98px) {
+        .mentor-widget {
+            -ms-flex-direction: column;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .mentor-widget {
+        display: flex;
+        padding: 1.5rem;
+        margin-bottom: 1.875rem;
+        border: 1px solid #e3e8eb;
+        border-radius: 0.4rem;
+    }
+
+    @media (max-width: 767.98px) {
+        .user-info-left {
+            -ms-flex-direction: column;
+            flex-direction: column;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .mentor-widget {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .mentor-img {
+            margin: 0 auto 20px auto;
+        }
+    }
+
+    .mentor-img {
+        -ms-flex: 0 0 150px;
+        flex: 0 0 150px;
+        height: 150px;
+        width: 150px;
+        margin-right: 20px;
+    }
+
+
+    @media (max-width: 767.98px) {
+        .mentor-widget {
+            text-align: center;
+        }
+    }
+
+    a {
+        color: #090761;
+        text-decoration: none;
+        outline: none;
+        transition: .3s;
+
+        background-color: transparent;
+    }
+
+    .mentor-img img {
+        border-radius: .4rem;
+    }
+
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    @media (max-width: 767.98px) {
+        .user-info-cont {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .mentor-widget .user-info-cont h3 {
+            margin: 0 auto 5px;
+            float: none;
+            text-align: center;
+        }
+    }
+
+    .mentor-widget .user-info-cont h3 {
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        display: inline-flex;
+    }
+
+    h3 {
+        overflow-wrap: break-word;
+    }
+
+    @media (max-width: 767.98px) {
+        .mentor-widget .user-info-cont h3 a {
+            float: none;
+        }
+    }
+
+    .mentor-widget .user-info-cont h3 a {
+        float: left;
+        max-width: 90%;
+        white-space: nowrap;
+        line-height: inherit;
+        text-overflow: ellipsis;
+        text-transform: capitalize;
+        color: var(--terthemecolor);
+    }
+
+    @media (max-width: 767.98px) {
+        .mentor-widget .user-info-cont h3 {
+            text-align: center;
+        }
+    }
+
+    .mentor-widget .user-info-cont h3 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    .mentor-widget .user-info-cont h3 i {
+        background-color: #24E14D;
+        color: #fff;
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        font-size: 10px;
+    }
+
+    .fa,
+    .fas {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    .user-tag {
+        font-size: 14px;
+        color: #77838F;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .mentor-widget {
+        display: flex;
+        padding: 1.5rem;
+        margin-bottom: 1.875rem;
+        border: 1px solid #e3e8eb;
+        border-radius: 0.4rem;
+    }
+
+    .user-info-left {
+        display: flex;
+    }
+
+    .page-content {
+        padding: 60px 0;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    .user-tag a {
+        color: #77838F;
+    }
+
+    .user-info-right {
+        margin-left: auto;
+        -ms-flex: 0 0 150px;
+        flex: 0 0 150px;
+        max-width: 150px;
+        padding: 0;
+        min-width: 150px;
+    }
+
+    .user-infos {
+        margin-bottom: 15px;
+    }
+
+    .user-booking a {
+        background-color: #1e88e5;
+        border: 1px solid #1e88e5;
+        border-radius: 0.4rem;
+        color: #fff;
+        font-weight: 500;
+        padding: 10px 30px;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100%;
+        display: block;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    @include('site.nav') <section class="banner-section">
+        <div class="container">
+            <div class="banner-content text-center">
+                <div class="banner-heading">
+                    <h2>Rechercher par mentors ou par domaine</h2>
+                    <p>Voici quelques mentors qui partagent l'expérience et les compétences que vous recherchez.
+                        Faire appel à plusieurs mentors peut augmenter vos chances de réussite.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="sigma_subheader after-title text-left style-1 dark-overlay ">
+        <div class="container">
+            <div class="sigma_subheader-inner">
+                <h1 class="page-title"> Courses: <span>Digital Marketer</span> </h1>
+                <div class="breadcrumb-nav">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                class="breadcrumb-item"><a itemprop="item"
+                                    href="https://mentoring-wp.dreamguystech.com/"><span itemprop="name">Home</span></a>
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                class="breadcrumb-item active" aria-current="page"><span itemprop="name">Courses:
+                                    Digital Marketer</span></li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
+    <div class="page-content " style="background-color: white;">
+        <div class="" style="display: flex; margin-left: 50px">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="card search-filter search_block">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Search Filter</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="https://mentoring-wp.dreamguystech.com/search-mentors" method="get"
+                                id="search_form">
+                                <div class="dc-innerbanner">
+                                    <div class="dc-formtheme dc-form-advancedsearch">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <input type="hidden" name="searchby" class="form-control"
+                                                    value="both">
+                                                <input type="text" name="keyword" class="form-control"
+                                                    placeholder="Search" value="">
+                                            </div>
+                                            <div class="form-group">
+                                                <h4>Location</h4>
+                                                <div class="dc-select">
+                                                    <select name="location"
+                                                        class="chosen-select select2-hidden-accessible"
+                                                        data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="3">Select a location
+                                                        </option>
+                                                        <option data-flag="" class=" level-0" value="australia">
+                                                            Australia</option>
+                                                        <option data-flag="" class=" level-0" value="england">
+                                                            England</option>
+                                                        <option data-flag="" class=" level-0" value="india">India
+                                                        </option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="2"
+                                                        style="width: 300px;"><span class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0"
+                                                                aria-disabled="false"
+                                                                aria-labelledby="select2-location-ik-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-location-ik-container" role="textbox"
+                                                                    aria-readonly="true"
+                                                                    title="Select a location">Select a
+                                                                    location</span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <h4>Courses</h4>
+                                                <div class="dc-select">
+                                                    <select name="courses"
+                                                        class="chosen-select select2-hidden-accessible"
+                                                        data-select2-id="4" tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="6">Select courses
+                                                        </option>
+                                                        <option data-flag="" class=" level-0" value="asp-net">
+                                                            ASP.NET</option>
+                                                        <option data-flag="" class=" level-0"
+                                                            value="digital-marketer">Digital Marketer</option>
+                                                        <option data-flag="" class=" level-0"
+                                                            value="web-developer">Web Developer</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="5"
+                                                        style="width: 300px;"><span class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0"
+                                                                aria-disabled="false"
+                                                                aria-labelledby="select2-courses-xb-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-courses-xb-container" role="textbox"
+                                                                    aria-readonly="true" title="Select courses">Select
+                                                                    courses</span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                            </div>
+                                            <div class="dc-btnarea">
+                                                <input type="submit" class="dc-btn" value="Search">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <a href="javascript:;" class="dc-docsearch"><span class="dc-advanceicon"><i></i>
+                                            <i></i> <i></i></span><span>Advanced <br> Search</span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="dc-haslayout dc-parent-section">
+                        <div id="dc-twocolumns" class="dc-twocolumns dc-haslayout d-flex row dc-disabled">
+                            <div class="col-12 order-last">
+                                <div class="dc-searchresult-holder">
+                                    @foreach ($mentors as $mentor)
+                                        <div class="dc-searchresult-grid dc-searchresult-list dc-searchvlistvtwo test">
+                                            <div class="dc-docpostholder dc-search-mentors">
+                                                <div class="mentor-widget">
+                                                    <div class="user-info-left">
+                                                        <div class="mentor-img">
+                                                            <a
+                                                                href="https://mentoring-wp.dreamguystech.com/mentors/katharine-berthold/">
+                                                                <img class="img-fluid user-image-res"
+                                                                    src="{{ $mentor->user->photo }}"
+                                                                    alt="Katharine  Berthold">
+
+                                                            </a>
+                                                        </div>
+                                                        <div class="user-info-cont">
+                                                            <h3>
+                                                                <a
+                                                                    href="https://mentoring-wp.dreamguystech.com/mentors/katharine-berthold/">{{ $mentor->user->prenom }}
+                                                                    {{ $mentor->user->nom }}</a>
+
+                                                            </h3>
+                                                            <div class="user-tag">
+                                                                <a
+                                                                    href="https://mentoring-wp.dreamguystech.com/courses/digital-marketer/">{{ $mentor->user->email }}
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="user-tag">
+                                                                <a
+                                                                    href="https://mentoring-wp.dreamguystech.com/courses/digital-marketer/">{{ $mentor->user->adresse }}
+                                                                </a>
+                                                            </div>
+                                                            <div class="user-tag">
+                                                                <a
+                                                                    href="https://mentoring-wp.dreamguystech.com/courses/digital-marketer/">{{ $mentor->user->telephone }}</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-info-right">
+
+                                                        <div class="user-booking" style="margin-top:150px;">
+                                                            <a href="/mentors/details">Voir Profil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>
-
-
-
-
-
 
 
 {{-- <!DOCTYPE html>

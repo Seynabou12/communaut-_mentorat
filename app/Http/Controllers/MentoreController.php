@@ -15,7 +15,6 @@ class MentoreController extends Controller
 {
 
     public function index()
-
     {
         $mentores = Mentore::all();
         return view('mentores.index', compact('mentores'));
@@ -120,7 +119,7 @@ class MentoreController extends Controller
         $connexion->mentor_id = $mentor->id;
         $connexion->mentore_id = $mentore->id;
         $connexion->date = Carbon::now();
-        $connexion->status = 'en attente';
+        $connexion->status = 'en attente';  
         $connexion->save();
         return redirect()->route('mentores.mentors', ['id' => $id]);
     }

@@ -33,13 +33,7 @@
                                     @foreach ($sessions as $session)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        {{-- <td>
-                                            <div class="form-check custom-checkbox ms-2">
-                                                <input type="checkbox" class="form-check-input" id="customCheckBox2"
-                                                    required="">
-                                                <label class="form-check-label" for="customCheckBox2"></label>
-                                            </div>
-                                        </td> --}}
+                                        
                                         <td>{{ $session->date }}</td>
                                         <td>{{ $session->titre }}</td>
                                         <td>{{ $session->description }}</td>
