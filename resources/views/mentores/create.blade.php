@@ -15,6 +15,88 @@
 
 <body>
     @include('site.nav')
+    <div class="banner"
+        style="margin-top: 80px;background: url(../images/ment.jpg) no-repeat center top;
+    background-size: cover;
+    min-height: 600px;
+    position: relative;">
+        <div class="bg-color" style="background-color: RGBA(12, 11, 11, 0.82);
+        min-height: 600px;">
+            <div class="container"
+                style="    padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;">
+                <div class="row" style="margin-right: -15px;
+                margin-left: -15px;">
+                    <div class="banner-text text-center" style="
+                    text-align: center;">
+                        <div class="text-border"
+                            style="border: 5px solid #C15DFB;
+                        display: inline-block;
+                        margin-top: 150px;">
+                            <h2 class="text-dec"
+                                style="    font-size: 24px;
+                            padding: 10px 20px;
+                            margin: 15px 0;
+                            text-transform: uppercase;
+                            color: #fff;
+                            font-family: Open Sans, sans-serif;
+                            font-weight: 700;">
+                                <span style="vertical-align: inherit;">
+                                    <span style="vertical-align: inherit;">Confiance &amp; Qualité</span>
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="intro-para text-center quote"
+                            style="font-family: 'Alegreya Sans', sans-serif;
+                        font-size: 45px;
+                        color: #fff;
+                        margin-top: 30px;">
+                            <p class="big-text"
+                                style="    margin: 0 0 10px;display: block;
+                            margin-block-start: 1em;
+                            margin-block-end: 1em;
+                            margin-inline-start: 0px;
+                            margin-inline-end: 0px;">
+                                <span style="vertical-align: inherit;">
+                                    <span style="vertical-align: inherit;">Apprendre aujourd'hui. </span>
+                                    <span style="vertical-align: inherit;">. </span>
+                                    <span style="vertical-align: inherit;">. </span>
+                                    <span style="vertical-align: inherit;">Diriger demain.</span>
+                                </span>
+                            </p>
+                            <p class="small-text" style="font-size: 16px; margin: 0 0 10px;">
+                                <span style="vertical-align: inherit;">
+                                    <span style="vertical-align: inherit;">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. </span>
+                                    <span style="vertical-align: inherit;">Laudantium enim repellat sapiente quos
+                                        architecto </span>
+                                </span><br>
+                                <span style="vertical-align: inherit;">
+                                    <span style="vertical-align: inherit;">Laudantium enim repellat sapiente quos
+                                        architecto</span>
+                                </span>
+                            </p>
+                            <a href="#footer" class="btn get-quote"
+                                style="    background-color: #C15DFB;
+                            color: #fff;
+                            
+                            transition: all 0.3s ease-in-out;
+                            margin-top: 10px;">
+                                <span style="vertical-align: inherit;">
+                                    <span style="vertical-align: inherit;">OBTENIR UN DEVIS</span>
+                                </span>
+                            </a>
+                        </div>
+                        <a href="#feature" class="mouse-hover">
+                            <div class="mouse"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="content-body">
         <div class="container-fluid">
             <!-- row -->
@@ -77,8 +159,9 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
-                                                    <input type="text" class="form-control" id="validationCustom08"
-                                                        placeholder="78-178-45-21" required="" name="telephone">
+                                                    <input type="text" class="form-control"
+                                                        id="validationCustom08" placeholder="78-178-45-21"
+                                                        required="" name="telephone">
                                                     <div class="invalid-feedback">
                                                         Enter votre numero de téléphone.
                                                     </div>
@@ -102,8 +185,9 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
-                                                    <input type="text" class="form-control" id="validationCustom02"
-                                                        placeholder="Enter votre Email.." required="" name="email">
+                                                    <input type="text" class="form-control"
+                                                        id="validationCustom02" placeholder="Enter votre Email.."
+                                                        required="" name="email">
                                                     <div class="invalid-feedback">
                                                         Enter votre Email.
                                                     </div>
@@ -115,7 +199,8 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
-                                                    <input type="password" class="form-control" id="validationCustom03"
+                                                    <input type="password" class="form-control"
+                                                        id="validationCustom03"
                                                         placeholder="Entrer votre mot de passe.." required=""
                                                         name="password">
                                                     <div class="invalid-feedback">
@@ -151,7 +236,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="form-group mb-3">
                                                 <div class="mb-3 row">
                                                     <label class="col-lg-4 col-form-label"
@@ -189,6 +274,7 @@
             </div>
         </div>
     </div>
+    @include('../site/footer')
 </body>
 
 </html>

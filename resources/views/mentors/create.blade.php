@@ -175,6 +175,18 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class=" mb-3 row">
+                                                <label class="col-lg-4 col-form-label" for="validationCustom03">Domaine
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-6 form-file">
+                                                    <input type="date" class="form-file-input form-control" id="validationCustom03"
+                                                        placeholder="domaine.." required="" name="domaine" >
+                                                    <div class="invalid-feedback">
+                                                        Entrer votre domaine.
+                                                    </div>
+                                                </div>
+                                            </div>
                                            
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">

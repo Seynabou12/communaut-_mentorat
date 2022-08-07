@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Connexion;
+use App\Models\Domaine;
 use App\Models\Mentor;
 use App\Models\Mentore;
 use App\Models\User;
@@ -45,6 +46,7 @@ class MentorController extends Controller
             'experience' => $input['experience'],
             'user_id' => $user->id
         ]);
+        
         
         return redirect('/login')->with('flash-message', 'Votre inscription à été bien enregistré');
     }

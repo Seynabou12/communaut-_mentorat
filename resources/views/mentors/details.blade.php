@@ -264,7 +264,7 @@
     margin-left: auto;
   ">
             <div class="user-view-content"
-                style="background: #1e88e5 url(../images/profile-bg2.png) no-repeat;
+                style="background: #C15DFB url(../images/profile-bg2.png) no-repeat;
                     background-position: center;
                     background-size: cover;
                     padding: 30px;
@@ -341,11 +341,12 @@
 
                     <div class="row"
                         style=" display: flex;
+                        box-sizing: border-box;
                                 display: flex;
                                 flex-wrap: wrap;
                                 margin-right: -15px;
                                 margin-left: -15px;">
-                        <div class="col-lg-8"
+                        <div class="col-md-8 "
                             style="position: relative;
                         width: 100%;
                         padding-right: 15px;
@@ -353,21 +354,22 @@
                             <div class="tab-content dc-contentdoctab dc-haslayout" style="padding: 0;">
                                 <div class="widget-overview"
                                     style="float: left;
-                                width: 100%;
-                                border: none;
-                                border-radius: 0 0 4px 4px;">
+                                        width: 100%;
+                                        border: none;
+                                        border-radius: 0 0 4px 4px;">
                                     <div class="widget-overview"
                                         style="border-radius: 0.4rem;
-                                padding: 1.5rem;
-                                border: 1px solid #e3e8eb;
-                                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.03);
-                                margin-bottom: 30px;">
+                                                padding: 1.5rem;
+                                                border: 1px solid #e3e8eb;
+                                                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.03);
+                                                margin-bottom: 30px;">
                                         <h4
                                             style="background-color: #F4F3F3;
-                                        border-radius: 5px;
-                                        padding: 15px;
-                                        margin-bottom: 1.5rem;font-size: 1.25rem;margin-top: 0;">
-                                            About Me</h4>
+                                            border-radius: 5px;
+                                            padding: 15px;
+                                            margin-bottom: 1.5rem;font-size: 1.25rem;margin-top: 0;">
+                                            About Me
+                                        </h4>
                                         <div class="overview-description">
                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                                                 industry.
@@ -755,52 +757,15 @@
                 });
             });
         </script>
-                                <div class="widget-overview">
-                                    <h4>Feedback</h4>
-                                    <div class="">
-                                        <div class="">
-                                            <div class="">
-                                                <div class="user-review-item">
-                                                    <div class="user-reviews-img">
-                                                        <img src="https://mentoring-wp.dreamguystech.com/wp-content/uploads/2022/07/user11-1-65x65.jpg"
-                                                            alt="Mentee Demo">
-                                                    </div>
-                                                    <div class="user-review-list">
-                                                        <h5>
-                                                            <span>
-                                                                Mentee Demo <i class="fas fa-check"
-                                                                    data-toggle="tooltip" title="Verified user"></i>
-                                                            </span>
-                                                        </h5>
-                                                        <div class="review-date">09 Jul 2022</div>
-                                                        <div class="feedback-description">
-                                                            <p>Good</p>
-                                                            <i class="fas fa-thumbs-up"></i>I Recommend This mentor
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dc-shareprofile">
-                                    <ul class="d-flex dc-tags-social">
-                                        <li class="dc-sharejob">Share Profile:</li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </div>
-                        <div class="col-lg-4"
-                            style="position: relative;
-                        width: 100%;
-                        padding-right: 15px;
-                        padding-left: 15px;">
+                        <div class="col-md-4" style="position: relative; padding-right: 15px; padding-left: 15px; ">
                             <div class="user-booking booking-widget"
-                                style="margin-bottom: 30px; padding: 14px 30px;
-                            font-size: 16px;">
+                                style="margin-bottom: 30px; padding: 14px 30px;font-size: 16px;">
                                 <a href="javascript:;" data-id="4126" class="user-add-feedback"
-                                    style="background-color: #1e88e5;
-                                border: 1px solid #1e88e5;
+                                    style="background-color: #C15DFB;
+                                border: 1px solid #C15DFB;
                                 border-radius: 0.4rem;
                                 color: #fff;
                                 font-weight: 500;
@@ -808,18 +773,33 @@
                                 text-align: center;
                                 text-transform: capitalize;
                                 width: 100%;
-                                display: block;">Add
-                                    Feedback</a>
+                                display: block;">Se
+                                    Connecter</a>
                                 <a href="javascript:;" data-mentor_id="4126" class="user-booking-model">Book
                                     Appointment</a>
                             </div>
-                            <div class="widget-overview languages-widget">
-                                <h4>Languages</h4>
-                                <div class="user-languages"><a
-                                        href="https://mentoring-wp.dreamguystech.com/languages/english/"
+                            <div class="widget-overview languages-widget"
+                                style="border-radius: 0.4rem;
+                            padding: 1.5rem;
+                            border: 1px solid #e3e8eb;
+                            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.03);
+                            margin-bottom: 30px;">
+                                <h4
+                                    style="background-color: #F4F3F3;
+                                border-radius: 5px;
+                                padding: 15px;
+                                margin-bottom: 1.5rem;
+                                font-size: 1.25rem;">
+                                    Languages</h4>
+                                <div class="user-languages"
+                                    style="display: flex;
+                               
+                                flex-wrap: wrap;">
+                                    <a href="https://mentoring-wp.dreamguystech.com/languages/english/"
                                         rel="tag">English</a><a
                                         href="https://mentoring-wp.dreamguystech.com/languages/french/"
-                                        rel="tag">French</a></div>
+                                        rel="tag">French</a>
+                                </div>
                             </div>
                             <div class="widget-overview service-widget">
                                 <h4>Offered Services</h4>
@@ -1032,6 +1012,7 @@
         </div>
     </div>
 
+    @include('site.footer')
     <script src="/vendor/global/global.min.js"></script>
     <script src="/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
     <script src="/js/custom.min.js"></script>

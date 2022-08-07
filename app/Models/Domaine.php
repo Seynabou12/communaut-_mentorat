@@ -12,7 +12,5 @@ class Domaine extends Model
     protected $table = 'domaines';
     protected $primarykey = 'id'; 
     protected $guarded = ['id'];
-
-
   
 }
