@@ -68,14 +68,14 @@
                             </p>
                             <p class="small-text" style="font-size: 16px; margin: 0 0 10px;">
                                 <span style="vertical-align: inherit;">
-                                    <span style="vertical-align: inherit;">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. </span>
-                                    <span style="vertical-align: inherit;">Laudantium enim repellat sapiente quos
-                                        architecto </span>
+                                    <span style="vertical-align: inherit;">Être mentoré permet d’accélérer son
+                                        développement en tant que scientifique tout en permettant de prendre du recul,
+                                    </span>
+                                    <span style="vertical-align: inherit;">  </span>
                                 </span><br>
                                 <span style="vertical-align: inherit;">
-                                    <span style="vertical-align: inherit;">Laudantium enim repellat sapiente quos
-                                        architecto</span>
+                                    <span style="vertical-align: inherit;">de
+                                        mieux évaluer ses options et prendre des décisions éclairées.</span>
                                 </span>
                             </p>
                             <a href="#footer" class="btn get-quote"
@@ -85,7 +85,7 @@
                             transition: all 0.3s ease-in-out;
                             margin-top: 10px;">
                                 <span style="vertical-align: inherit;">
-                                    <span style="vertical-align: inherit;">OBTENIR UN DEVIS</span>
+                                    <span style="vertical-align: inherit;">DEVENIR MENTORE</span>
                                 </span>
                             </a>
                         </div>
@@ -101,7 +101,7 @@
         <div class="container-fluid">
             <!-- row -->
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Formulaire de Validation</h4>

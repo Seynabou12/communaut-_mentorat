@@ -36,7 +36,32 @@
                                         </td>
                                         <td><span class="text-black">{{ $connexion->mentore->user->email }}</span></td>
                                         <td><span class="text-black">{{ $connexion->mentore->user->telephone }} </span></td>
-                                        <td><span class="badge light badge-danger">{{ $connexion->status }}</span></td>
+                                        <td>
+
+                                            @if ($connexion->status == 'en attente')
+                                                <div class="dropdown">
+                                                    <a href="javascript:void(0);" class="btn-link" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        <span
+                                                            class="badge light badge-warning">{{ $connexion->status }}</span>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item"
+                                                            href="/connexion/{{ $connexion->id }}/status?status=1">Accepter</a>
+                                                        <a class="dropdown-item"
+                                                            href="/connexion/{{ $connexion->id }}/status?status=2">Refuser</a>
+                                                    </div>
+                                                </div>
+                                            @else
+                                                @if ($connexion->status == 'accepté')
+                                                    <span class="badge light badge-success">{{ $connexion->status }}</span>
+                                                @else
+                                                    <span class="badge light badge-danger">{{ $connexion->status }}</span>
+                                                @endif
+                                            @endif
+
+
+                                        </td>
                                         {{-- <td><span class="text-black">{{ $connexion->status }} </span></td> --}}
                                         <td>
                                             <div class="dropdown">

@@ -79,17 +79,15 @@
         </div>
     </div>
 
-    <div class="container-fluid d-md-flex py-4" style="background-color: #C15DFB; height: 150px;" >
+    <div class="container-fluid d-md-flex py-4" style="background-color: #C15DFB; height: 150px; height: 100px;" >
 
-        <div class="me-md-auto text-center text-md-start">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+        <div class="me-md-auto text-center " style="margin-top: -20px;">
+            <div class="copyright" style="color: black">
+                &copy; Copyright <strong><span>Mentor</span></strong>All Rights Reserved
             </div>
-            <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">Nabouze@</a>
-            </div>
+            
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <div class="social-links text-center text-md-right pt-3 pt-md-0" style="margin-top: 20px; margin-right: 50px;">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>

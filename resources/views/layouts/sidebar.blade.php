@@ -49,10 +49,17 @@
                         </a>
                     </li>
                 @endif
-                @if (Auth::user()->profil == 'admin' || Auth::user()->profil == 'mentor')
+                @if (Auth::user()->profil == 'admin' )
                     <li><a href="/mentores/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentorés</span>
+                        </a>
+                    </li>
+                @endif
+                @if ( Auth::user()->profil == 'mentor')
+                    <li><a href="/mentors/{{Auth::user()->mentor->id}}/mentores" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-043-menu"></i>
+                            <span class="nav-text">Mentorés</span>
                         </a>
                     </li>
                 @endif

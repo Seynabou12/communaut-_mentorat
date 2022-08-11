@@ -36,7 +36,17 @@
                                         </td>
                                         <td><span class="text-black">{{ $connexion->mentor->user->email }}</span></td>
                                         <td><span class="text-black">{{ $connexion->mentor->user->telephone }} </span></td>
-                                        <td><span class="badge light badge-danger">{{ $connexion->status }}</span></td>
+                                        <td>
+                                            @if ($connexion->status == 'en attente')
+                                                <span class="badge light badge-warning">{{ $connexion->status }}</span>
+                                            @else
+                                                @if ($connexion->status == 'accepté')
+                                                    <span class="badge light badge-success">{{ $connexion->status }}</span>
+                                                @else
+                                                    <span class="badge light badge-danger">{{ $connexion->status }}</span>
+                                                @endif
+                                            @endif
+                                        </td>
                                         {{-- <td><span class="text-black">{{ $connexion->status }} </span></td> --}}
                                         <td>
                                             <div class="dropdown">

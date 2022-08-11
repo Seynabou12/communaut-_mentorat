@@ -857,13 +857,10 @@
                                                 <div class="mentor-widget">
                                                     <div class="user-info-left">
                                                         <div class="mentor-img">
-                                                            <a
-                                                                href="https://mentoring-wp.dreamguystech.com/mentors/katharine-berthold/">
-                                                                <img class="img-fluid user-image-res"
-                                                                    src="{{ $mentor->user->photo }}"
-                                                                    alt="Katharine  Berthold">
+                                                            <img class="img-fluid user-image-res"
+                                                                src="{{ $mentor->user->photo }}"
+                                                                alt="Katharine  Berthold">
 
-                                                            </a>
                                                         </div>
                                                         <div class="user-info-cont">
                                                             <h3>
@@ -892,7 +889,7 @@
                                                     <div class="user-info-right">
 
                                                         <div class="user-booking" style="margin-top:150px;">
-                                                            <a href="/mentors/details">Voir Profil</a>
+                                                            <a href="/mentors/{{$mentor->id}}/details">Voir Profil</a>
                                                         </div>
                                                     </div>
                                                 </div>

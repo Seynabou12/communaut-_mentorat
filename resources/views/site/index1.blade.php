@@ -37,6 +37,74 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+    @media (min-width: 768px) {
+        #fderesm .bloc-flou .canvas {
+            display: block;
+            position: absolute;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0;
+            opacity: 0.5;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #fderesm .span12 .bloc-flou .content {
+            width: 50%;
+            padding-left: 30px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #fderesm .bloc-flou h2 {
+            font-family: "FFClanWebPro-Book";
+            font-size: 40px;
+        }
+    }
+
+
+    #fderesm .bloc-flou h2 {
+        font-family: "FFClanWebPro-Medium";
+        font-size: 18px;
+    }
+
+    @media (min-width: 681px) {
+
+        #fderesm .content h2,
+        #fderesm .content .header--large {
+            margin-bottom: 20px;
+
+        }
+    }
+
+    @media (min-width: 768px) {
+        #fderesm .span12 .bloc-flou .content {
+            width: 50%;
+            padding-left: 30px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #fderesm .bloc-flou h2 {
+            font-family: "FFClanWebPro-Book";
+            font-size: 40px;
+        }
+    }
+
+    #fderesm .bloc-flou h2 {
+        font-family: "FFClanWebPro-Medium";
+        font-size: 18px;
+    }
+
+    @media (min-width: 681px) {
+
+        #fderesm .content h2,
+        #fderesm .content .header--large {
+            margin-bottom: 20px;
+        }
+    }
+</style>
 
 <body>
 
@@ -187,106 +255,97 @@
 
                 <div class="row counters">
 
-                    <div class="col-lg-3 col-6 text-center">
+                    <div class="col-lg-4 col-6 text-center">
                         <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1"
                             class="purecounter"></span>
-                        <p>Students</p>
+                        <p>Mentorés</p>
                     </div>
 
-                    <div class="col-lg-3 col-6 text-center">
+                    <div class="col-lg-4 col-6 text-center">
                         <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1"
                             class="purecounter"></span>
-                        <p>Courses</p>
+                        <p>Mentors</p>
                     </div>
 
-                    <div class="col-lg-3 col-6 text-center">
+                    <div class="col-lg-4 col-6 text-center">
                         <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1"
                             class="purecounter"></span>
-                        <p>Events</p>
+                        <p>Sessions</p>
                     </div>
 
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Trainers</p>
-                    </div>
+
 
                 </div>
 
             </div>
         </section><!-- End Counts Section -->
 
-        <!-- ======= Popular Courses Section ======= -->
-        {{-- <section id="popular-courses" class="courses">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Domaines </h2>
-                    <p>cours populaires</p>
-                </div>
-
-                <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="course-item">
-                            <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-                            <div class="course-content">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h4>Web Development</h4>
-
+        <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+            id="p_p_id_56_INSTANCE_Iw2yB75wBmVJ_"
+            style="font-family: FFClanWebPro-Book;
+            color: #2D373C;
+            font-size: 13px;
+            line-height: 1.53846;">
+            <span id="p_56_INSTANCE_Iw2yB75wBmVJ"></span>
+            <div class="portlet-borderless-container" style="min-height: 2.5em;
+            position: relative;">
+                <div class="portlet-body">
+                    <div class="journal-content-article" style="clear: right;">
+                        <div class="bloc-flou"
+                            style="background-color: white;
+                        position: relative;">
+                            <div class="wrapper"
+                                style="position: relative;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img id="image_photo_yaho_" src="./images/mentor.webp" alt=""
+                                            style="min-height: 1px;
+                                        border: 0;
+                                        width: 100%;">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="content" style="    padding-top: 15px;">
+                                            <h2
+                                                style="margin: 0;
+                                                padding: 0;
+                                                color: inherit;
+                                                font-weight: normal;
+                                                font-family: FFClanWebPro-Book">
+                                                Le mentorat, qu'est-ce que c'est?</h2>
+                                            <p></p>
+                                            <p
+                                                style="font-size: 16px;
+                                                margin-bottom: 14px;margin: 0;
+                                                padding: 0;
+                                                font-weight: bold;">
+                                                <strong>Le mentorat pour entrepreneurs est une relation d’accompagnement
+                                                    basée
+                                                    sur l’écoute, la confiance et le respect mutuel.</strong>
+                                            </p>
+                                            <p
+                                                style="font-size: 16px;
+                                                margin-bottom: 14px;
+                                                margin: 0;
+                                                padding: 0;">
+                                                <strong style="font-weight: bold;">Par le dialogue et le partage
+                                                    d'expérience, les mentors vous aident à
+                                                    trouver réponse à vos questions, une rencontre à la fois.</strong>
+                                            </p>
+                                            <p></p>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <h3><a href="course-details.html">Website Design</a></h3>
-                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae
-                                    dolores dolorem tempore.</p>
-
                             </div>
                         </div>
-                    </div> <!-- End Course Item-->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                        <div class="course-item">
-                            <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-                            <div class="course-content">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h4>Marketing</h4>
-
-                                </div>
-
-                                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae
-                                    dolores dolorem tempore.</p>
-
-                            </div>
-                        </div>
-                    </div> <!-- End Course Item-->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                        <div class="course-item">
-                            <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-                            <div class="course-content">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h4>Content</h4>
-
-                                </div>
-
-                                <h3><a href="course-details.html">Copywriting</a></h3>
-                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae
-                                    dolores dolorem tempore.</p>
-
-                            </div>
-                        </div>
-                    </div> <!-- End Course Item-->
-
+                    </div>
                 </div>
-
-                <div class="col-6" style="margin-top: 20px; align-items: center;">
-                    <a href="#" class="btn" style="border: 2px solid #C15DFB; border-radius: 20%;">Voir
-                        plus</a>
-                </div>
-
+                <div class="entry-links"> </div>
             </div>
-        </section><!-- End Popular Courses Section --> --}}
+        </div>
+        </div>
 
 
 
@@ -304,7 +363,7 @@
                         <img src="/images/wim-sbg.png" alt="" srcset=""
                             style="width: 100px; height: auto;">
                         <p style="margin-top: 20px;">
-                            Lot N°46 Sud Foire  <br>
+                            Lot N°46 Sud Foire <br>
                             en Supermarché Exclusive,<br>
                             Dakar (Sénégal) <br><br>
                             <strong>Phone:</strong> +221 33 829 05 28<br>

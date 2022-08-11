@@ -101,8 +101,17 @@ class MentoreController extends Controller
 
     public function accueil()
     {
+        return redirect()->route('mentores.mentors', ['id' => AUth::user()->mentore->id]);
+        $connexions = Connexion::where('mentore_id',Auth::user()->mentore->id)->get();
         $mentors = Mentor::all();
-        return view('mentores.accueil', compact('mentors'));
+        $m = [];
+        foreach ($connexions as $c ) {
+            if(!$mentors->contains($c->mentor)){
+                $m[] = $c->mentor;
+            }
+        }
+        $mentors = $m;
+        return view('mentores.accueil', compact('mentors','connexions'));
     }
 
     public function mentors($id)

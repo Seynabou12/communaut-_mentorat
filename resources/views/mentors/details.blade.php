@@ -296,7 +296,7 @@
                             font-weight: 500;
                             line-height: 1.2;margin-top: 0;">
                                 <a href="https://mentoring-wp.dreamguystech.com/mentors/james-amen/"
-                                    style="color: #FFF;"> Prenom Nom</a>
+                                    style="color: #FFF;"> {{$mentor->user->prenom}} {{$mentor->user->nom}}</a>
                             </h2>
                             <div class="pro-fav-loc">
                                 <div class="user-location"
@@ -763,7 +763,7 @@
                         <div class="col-md-4" style="position: relative; padding-right: 15px; padding-left: 15px; ">
                             <div class="user-booking booking-widget"
                                 style="margin-bottom: 30px; padding: 14px 30px;font-size: 16px;">
-                                <a href="javascript:;" data-id="4126" class="user-add-feedback"
+                                <a href="/mentores/{{Auth::user()->mentore->id}}/connecte/{{$mentor->id}}" data-id="4126" class="user-add-feedback"
                                     style="background-color: #C15DFB;
                                 border: 1px solid #C15DFB;
                                 border-radius: 0.4rem;

@@ -102,10 +102,10 @@ class MentorController extends Controller
         return view('mentors.accueil');
     }
 
-    public function details()
+    public function details($id)
     {
-        $mentors = Mentor::all();
-        return view('mentors.details', compact('mentors'));
+        $mentor = Mentor::findOrFail($id);
+        return view('mentors.details', compact('mentor'));
     }
 
     public function mentores($id)
@@ -123,6 +123,14 @@ class MentorController extends Controller
         $connexion->mentor_id = $mentor->id;
         $connexion->date = Carbon::now();
         $connexion->status = 'en attente';
+        $connexion->save();
+        return redirect()->route('mentors.mentores', ['id' => $id]);
+    }
+
+    public function status(Request $request, $id)
+    {
+        $connexion = Connexion::findOrFail($id);
+        $connexion->status = $request->status == 1 ? 'accepté' : 'refusé';
         $connexion->save();
         return redirect()->route('mentors.mentores', ['id' => $id]);
     }
