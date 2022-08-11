@@ -729,6 +729,26 @@
             font-weight: 700;
         }
     }
+
+    @media print,
+    screen and (min-width: 64em) {
+        .profile-list>.container>.profile-card:nth-child(3n-2) {
+            margin-left: 0;
+        }
+    }
+
+
+    @media print,
+    screen and (min-width: 64em) {
+        .profile-list>.container>.profile-card {
+            flex: 0 0 auto;
+            width: calc(33.3333333333% - 2rem);
+            margin-right: 1rem;
+            margin-left: 1rem;
+            flex-grow: 0;
+            width: calc(33.3333333333% - 1.3333333333rem);
+        }
+    }
 </style>
 
 <body>
@@ -738,7 +758,7 @@
         style="background-color: #C15DFB;
             color: #fefefe;
             padding-bottom: 1.5rem;
-            padding-top: 1.5rem;">
+            padding-top: 100px;">
         <div class="container"
             style="max-width: 71.4285714286rem;
                 margin-left: auto;
@@ -756,7 +776,7 @@
         </div>
     </header>
 
-    <div class="page-content " style="background-color: white;">
+    {{-- <div class="page-content " style="background-color: white;">
         <div class="" style="display: flex; margin-left: 50px">
             <div class="row">
                 <div class="dc-haslayout dc-parent-section">
@@ -811,16 +831,50 @@
             </div>
 
         </div>
+    </div> --}}
+    <div style="margin-left: 300px; margin-right: 300px; margin-top: 50px;">
+        <h4 style="text-align: center; margin-bottom: 30px; font-weight: bold;">Rechercher par Mentor ou par Domaine</h4>
+        <div class="input-group">
+            <input type="search" class="form-control rounded" placeholder="Rechercher un mentor ou un domaine"
+                aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline" style="background: #C15DFB;color: white">Recherche</button>
+        </div>
     </div>
 
-    <section class="profile-list">
-        <div class="container">
 
-            <article class="profile-card">
+    <section class="profile-list" style="padding-bottom: 1.5rem;
+    padding-top: 1.5rem;">
+        <div class="container"
+            style="
+        max-width: 71.4285714286rem;
+        margin-left: auto;
+        margin-right: auto;display: flex;
+    flex-flow: row wrap;">
 
-                <header class="profile-card__overview">
+            <article class="profile-card"
+                style="position: relative;
+            word-break: break-word;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            border: 1px solid #e3e6e8;
+            border-radius: 2px;
+            background: #fefefe;
+            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
+            color: #0a0a0a;
+            overflow: visible;">
 
-                    <div class="profile-card__organization">
+                <header class="profile-card__overview"
+                    style="flex: 0 0 auto;
+                word-break: break-word;
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: row;">
+
+                    <div class="profile-card__organization"
+                        style="position: absolute;
+                    top: -1rem;
+                    right: 1rem;">
                         <div class="community-org-label label success">
                             <i class="fad fa-users" aria-hidden="true"></i>
                             <font style="vertical-align: inherit;">
@@ -939,13 +993,11 @@
                         </div>
                     </div>
                 </header>
-
-
-
-
-
-
-                <section class="profile-card__expertise">
+                <section class="profile-card__expertise"
+                    style="background-color: #e3e6e8;
+                flex: 1 0 auto;
+                word-break: break-word;
+                padding: 1.5rem;">
                     <h4>
                         <font style="vertical-align: inherit;">
                             <font style="vertical-align: inherit;">Comment je peux aider</font>
@@ -1017,19 +1069,31 @@
                     </div>
 
                 </section>
+                <footer class="profile-card__actions background-whisper"
+                    style="    justify-content: flex-end;
+                align-items: flex-end;
+                display: flex;
+                flex-flow: row nowrap;
+                flex: 1 0 auto;
+                word-break: break-word;
+                padding: 0 1rem 1.5rem 1rem;">
 
-
-
-
-
-
-
-
-
-
-                <footer class="profile-card__actions background-whisper">
-
-                    <a href="/mentor/1430297" class="button hollow small tertiary">
+                    <a href="/mentor/1430297" class="button hollow small tertiary"
+                        style="border: 2px solid #C15DFB;
+                    color: #C15DFB; display: inline-block;
+    vertical-align: middle;
+    margin: 0.5rem 0;
+    padding: 0.85em 1.25em;
+    border-radius: 3px;
+    transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
+    font-family: futura-pt, Source Sans Pro, Helvetica, Roboto, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    -webkit-appearance: none;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;">
                         <strong>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Voir le profil</font>

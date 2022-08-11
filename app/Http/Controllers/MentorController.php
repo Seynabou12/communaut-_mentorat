@@ -27,7 +27,7 @@ class MentorController extends Controller
     {
         $input = $request->all();
         $fileName = time() . $request->file('photo')->getClientOriginalName();
-        $path = $request->file('photo')->storeAs('images', $fileName, 'public');
+        $path = $request->file('photo')->storeAs('imagess', $fileName, 'public');
         $input['photo'] = '/storage/' . $path;
 
         $user = User::create([

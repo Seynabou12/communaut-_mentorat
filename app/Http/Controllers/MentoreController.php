@@ -133,4 +133,8 @@ class MentoreController extends Controller
         return redirect()->route('mentores.mentors', ['id' => $id]);
     }
 
+    public function  blog()
+    {
+        return view('site.blog');
+    }
 }

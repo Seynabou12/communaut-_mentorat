@@ -151,7 +151,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+    
                                             <div class="mb-3 row">
                                                 <label class="col-lg-4 col-form-label"
                                                     for="validationCustom08">Telephone
@@ -167,7 +167,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+    
                                             <div class="mb-3 row ">
                                                 <label for="attente" class="col-lg-4 col-form-label">Attentes</label>
                                                 <div class="col-lg-6">
@@ -177,7 +177,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+    
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">
@@ -208,7 +208,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+    
                                             <div class=" mb-3 row">
                                                 <label class="col-lg-4 col-form-label" for="validationCustom03">Photo
                                                     de profil
@@ -236,7 +236,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+    
                                             <div class="form-group mb-3">
                                                 <div class="mb-3 row">
                                                     <label class="col-lg-4 col-form-label"

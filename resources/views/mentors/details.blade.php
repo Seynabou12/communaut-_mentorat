@@ -131,101 +131,6 @@
 <body style="background-color: #FFF;">
     @include('site.nav')
 
-    {{-- <div id="main-wrapper">
-        <div class="content-body">
-            <div class="container-fluid">
-                <!-- row -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                @foreach ($mentors as $mentor)
-                                    <div class="email-right-box ms-0 ms-sm-4 ms-sm-0" style="padding-left: 0;">
-                                        <div class="">
-                                            <div class="col-12">
-                                                <div class="right-box-padding">
-
-                                                    <div class="read-content">
-                                                        <div
-                                                            class="media pt-3 d-sm-flex d-block justify-content-between">
-                                                            <div class="clearfix mb-3 d-flex">
-                                                                <img class="me-3 rounded" width="70" height="70"
-                                                                    alt="image" src="{{ $mentor->user->photo }}">
-                                                                <div class="media-body me-2">
-                                                                    <h5 class="text-primary mb-0 mt-1">
-                                                                        {{ $mentor->user->prenom }}
-                                                                        {{ $mentor->user->nom }}
-                                                                    </h5>
-                                                                    <p class="mb-0">{{ $mentor->user->dateNaissance }}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div class="media mb-2 mt-3">
-                                                            <div class="media-body"><span class="pull-end">07:23
-                                                                    AM</span>
-                                                                <h5 class="my-1 text-primary">A collection of textile
-                                                                    samples lay spread</h5>
-                                                                <p class="read-content-email">
-                                                                    {{ $mentor->user->email }}</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="read-content-body">
-                                                            <h5 class="mb-4">Hi,Ingredia,</h5>
-
-                                                            <p class="mb-2">{{ $mentor->parcours }}
-                                                            </p>
-
-                                                        </div>
-                                                        <hr>
-                                                    </div>
-                                                    <div class="text-end">
-                                                        <a
-                                                            href="/mentores/{{ Auth::user()->mentore->id }}/connecte/{{ $mentor->id }}">
-                                                            <button class="btn btn-primary " type="button">Se
-                                                                Connecter</button></a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div> --}}
-
-
-
-
-    {{-- <div class="container">
-        <div class="sigma_subheader-inner">
-            <h1 class="page-title"> Mentor Detail </h1>
-            <div class="breadcrumb-nav">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
-                            class="breadcrumb-item"><a itemprop="item"
-                                href="https://mentoring-wp.dreamguystech.com/"><span itemprop="name">Home</span></a>
-                        </li>
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
-                            class="breadcrumb-item"><span itemprop="name"><a href="" itemprop="item"><span
-                                        itemprop="name">Mentor</span></a></span></li>
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
-                            class="breadcrumb-item active" aria-current="page"><span itemprop="name">James Amen</span>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div> --}}
-
 
 
     <div class="container-fluid" style="display: flex; background-color: #f6f6f6;">
@@ -258,11 +163,11 @@
     <div class="page-content" style="padding: 60px 0 30px;">
         <div class="container"
             style="max-width: 1200px;  width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  ">
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            ">
             <div class="user-view-content"
                 style="background: #C15DFB url(../images/profile-bg2.png) no-repeat;
                     background-position: center;
@@ -296,7 +201,7 @@
                             font-weight: 500;
                             line-height: 1.2;margin-top: 0;">
                                 <a href="https://mentoring-wp.dreamguystech.com/mentors/james-amen/"
-                                    style="color: #FFF;"> {{$mentor->user->prenom}} {{$mentor->user->nom}}</a>
+                                    style="color: #FFF;"> {{ $mentor->user->prenom }} {{ $mentor->user->nom }}</a>
                             </h2>
                             <div class="pro-fav-loc">
                                 <div class="user-location"
@@ -763,7 +668,8 @@
                         <div class="col-md-4" style="position: relative; padding-right: 15px; padding-left: 15px; ">
                             <div class="user-booking booking-widget"
                                 style="margin-bottom: 30px; padding: 14px 30px;font-size: 16px;">
-                                <a href="/mentores/{{Auth::user()->mentore->id}}/connecte/{{$mentor->id}}" data-id="4126" class="user-add-feedback"
+                                <a href="/mentores/{{ Auth::user()->mentore->id }}/connecte/{{ $mentor->id }}"
+                                    data-id="4126" class="user-add-feedback"
                                     style="background-color: #C15DFB;
                                 border: 1px solid #C15DFB;
                                 border-radius: 0.4rem;

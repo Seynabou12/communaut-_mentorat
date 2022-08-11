@@ -31,6 +31,8 @@ Route::post("/mentors/create", [MentorController::class, 'store']);
 Route::get('/mentores/create', [MentoreController::class, 'create']);
 Route::post('/mentores/create', [MentoreController::class, 'store']);
 
+Route::get('/blog', [MentoreController::class, 'blog']);
+
 Route::middleware('authentification')->group(
     function () {
         Route::get('/mentors/liste', [MentorController::class, 'index']);
@@ -41,7 +43,6 @@ Route::middleware('authentification')->group(
         Route::get('/mentors/{id}/connecte/{idMentore}', [MentorController::class, 'connecte'])->where('id', '[0-9]+')->where('idMentore', '[0-9]+');
         Route::get("/mentors/edit/{id}", [MentorController::class, 'edit'])->where('id', '[0-9]+');
         Route::post("/mentors/edit/{id}", [MentorController::class, 'update'])->where('id', '[0-9]+');
-
 
 
         Route::get("/connexion/{id}/status", [MentorController::class, 'status'])->where('id', '[0-9]+');
