@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\MentoreController;
@@ -56,12 +57,16 @@ Route::middleware('authentification')->group(
         Route::post("/mentores/edit/{id}", [MentoreController::class, 'update'])->where('id', '[0-9]+');
         Route::get('/mentores/{id}/connecte/{idMentor}', [MentoreController::class, 'connecte'])->where('id', '[0-9]+')->where('idMentor', '[0-9]+');
 
-        Route::get('/sessions', [SessionsController::class, 'index']);
+        Route::get('/mes-sessions', [SessionsController::class, 'mentore']);
+        Route::get('/sessions', [SessionsController::class, 'index'])->name('session.accueil');
         Route::get('/sessions/create', [SessionsController::class, 'create']);
         Route::post('/sessions/create', [SessionsController::class, 'store']);
+        Route::get('/session/{id}/status', [SessionsController::class, 'status'])->where('id', '[0-9]+');
 
         Route::get('/niveaux/create', [NiveauController::class, 'create']);
         Route::post('/niveaux/create', [NiveauController::class, 'store']);
+
+        Route::get('/admin/dashbord', [AdminController::class, 'dashbord']);
     }
 );
 

@@ -211,7 +211,7 @@
                                 <div class="user-role">
                                     <a href="javascript:;" class="user-like user-add-wishlist" data-id="4126"
                                         style="margin-bottom: 10px; color: #FFF;font-size:20px;">
-                                        <span class="addto_fav">Email</span>
+                                        <span class="addto_fav">{{ $mentor->user->email }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -230,7 +230,7 @@
                                 <li class="votes"
                                     style="margin-bottom: 15px;
                                 line-height: inherit; font-size: 20px;">
-                                    Telephone</li>
+                                    {{ $mentor->user->telephone }}</li>
                                 <li class="days"
                                     style="margin-bottom: 15px;
                                 line-height: inherit; font-size: 20px;">
@@ -273,7 +273,7 @@
                                             border-radius: 5px;
                                             padding: 15px;
                                             margin-bottom: 1.5rem;font-size: 1.25rem;margin-top: 0;">
-                                            About Me
+                                            Parcours
                                         </h4>
                                         <div class="overview-description">
                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -326,7 +326,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-overview available-widget">
+                                {{-- <div class="widget-overview available-widget">
                                     <h4>Available Timings</h4>
                                     <div class="accordion" id="accordionExample">
                                         <div class="card">
@@ -642,26 +642,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <script type="application/javascript">
-            jQuery(document).ready(function () {
-                jQuery("a[data-rel]").each(function () {
-                    jQuery(this).attr("rel", jQuery(this).data("rel"));
-                });
-                jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
-                    animation_speed: 'normal',
-                    theme: 'dark_square',
-                    slideshow: 3000,
-                    default_width: 800,
-                    default_height: 500,
-                    allowfullscreen: true,
-                    autoplay_slideshow: false,	
-                    social_tools: false,
-                    iframe_markup: "<iframe src='{path}' width='{width}' height='{height}' frameborder='no' allowfullscreen='true'></iframe>", 
-                    deeplinking: false
-                });
-            });
-        </script>
+                                    jQuery(document).ready(function () {
+                                        jQuery("a[data-rel]").each(function () {
+                                            jQuery(this).attr("rel", jQuery(this).data("rel"));
+                                        });
+                                        jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
+                                            animation_speed: 'normal',
+                                            theme: 'dark_square',
+                                            slideshow: 3000,
+                                            default_width: 800,
+                                            default_height: 500,
+                                            allowfullscreen: true,
+                                            autoplay_slideshow: false,	
+                                            social_tools: false,
+                                            iframe_markup: "<iframe src='{path}' width='{width}' height='{height}' frameborder='no' allowfullscreen='true'></iframe>", 
+                                            deeplinking: false
+                                        });
+                                    });
+                                </script>
 
                             </div>
                         </div>
@@ -671,18 +671,16 @@
                                 <a href="/mentores/{{ Auth::user()->mentore->id }}/connecte/{{ $mentor->id }}"
                                     data-id="4126" class="user-add-feedback"
                                     style="background-color: #C15DFB;
-                                border: 1px solid #C15DFB;
-                                border-radius: 0.4rem;
-                                color: #fff;
-                                font-weight: 500;
-                                padding: 10px 30px;
-                                text-align: center;
-                                text-transform: capitalize;
-                                width: 100%;
-                                display: block;">Se
-                                    Connecter</a>
-                                <a href="javascript:;" data-mentor_id="4126" class="user-booking-model">Book
-                                    Appointment</a>
+                                            border: 1px solid #C15DFB;
+                                            border-radius: 0.4rem;
+                                            color: #fff;
+                                            font-weight: 500;
+                                            padding: 10px 30px;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            width: 100%;
+                                            display: block;">Se Connecter</a>
+                                <a href="javascript:;" data-mentor_id="4126" class="user-booking-model">Modifier</a>
                             </div>
                             <div class="widget-overview languages-widget"
                                 style="border-radius: 0.4rem;

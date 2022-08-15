@@ -29,7 +29,7 @@ class UtilisateurController extends Controller
             } else if ($user->profil == 'mentore') {
                 return redirect('/mentores');
             } else if ($user->profil == 'admin') {
-                return redirect('/mentors/liste');
+                return redirect('/admin/dashbord');
             }
         }
     }

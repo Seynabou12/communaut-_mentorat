@@ -3,10 +3,10 @@
         <ul class="metismenu" id="menu">
             <li class="dropdown header-profile">
                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                    <img src="/images/profile/pic1.jpg" width="20" alt="">
+                    <img src="{{ asset(Auth::user()->photo) }}" width="20" alt="">
                     <div class="header-info ms-3">
-                        <span class="font-w600 ">Hi,<b>William</b></span>
-                        <small class="text-end font-w400">william@gmail.com</small>
+                        <span class="font-w600 ">{{Auth::user()->nom}},<b>{{Auth::user()->prenom}}</b></span>
+                        <small class="text-end font-w400">{{Auth::user()->email}}</small>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -42,22 +42,36 @@
                 </div>
             </li>
             @auth
-                @if (Auth::user()->profil == 'admin' || Auth::user()->profil == 'mentore' || Auth::user()->profil == 'mentor')
+                @if (Auth::user()->profil == 'admin')
+                    <li><a href="/admin/dashbord" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-025-dashboard"></i>
+                            <span class="nav-text">Dashbord</span>
+                        </a>
+                    </li>
+                @endif
+                @if (Auth::user()->profil == 'mentor')
                     <li><a href="#" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-025-dashboard"></i>
                             <span class="nav-text">Dashbord</span>
                         </a>
                     </li>
                 @endif
-                @if (Auth::user()->profil == 'admin' )
+                @if (Auth::user()->profil == 'mentore')
+                    <li><a href="#" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-025-dashboard"></i>
+                            <span class="nav-text">Dashbord</span>
+                        </a>
+                    </li>
+                @endif
+                @if (Auth::user()->profil == 'admin')
                     <li><a href="/mentores/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Liste Mentorés</span>
                         </a>
                     </li>
                 @endif
-                @if ( Auth::user()->profil == 'mentor')
-                    <li><a href="/mentors/{{Auth::user()->mentor->id}}/mentores" class="ai-icon" aria-expanded="false">
+                @if (Auth::user()->profil == 'mentor')
+                    <li><a href="/mentors/{{ Auth::user()->mentor->id }}/mentores" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Mentorés</span>
                         </a>
@@ -74,6 +88,8 @@
                             <span class="nav-text">Niveaux Etudes</span>
                         </a>
                     </li>
+
+                    </li>
                 @endif
 
                 @if (Auth::user()->profil == 'mentor')
@@ -84,6 +100,17 @@
                         <ul aria-expanded="false">
                             <li><a href="/sessions/create">Ajout</a></li>
                             <li><a href="/sessions">Liste</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if (Auth::user()->profil == 'mentore')
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-041-graph"></i>
+                            <span class="nav-text">Sessions</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/mes-sessions">Mes Sessions</a></li>
                         </ul>
                     </li>
                 @endif

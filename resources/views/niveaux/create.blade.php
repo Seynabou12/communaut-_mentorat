@@ -17,7 +17,7 @@
                             <form  novalidate="" method="POST" action="/niveaux/create" enctype="multipart/form-data" >
                                 @csrf
                                 <div class="mb-3">
-                                    <label for="libelle">Niveau d'étude</label>
+                                    <label for="libelle">Ajout Niveau</label>
                                     <input class="form-control form-control-lg" type="text"
                                         placeholder="Niveau d'étude" name="libelle">
                                 </div>

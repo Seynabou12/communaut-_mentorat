@@ -17,6 +17,14 @@
                         <div class="basic-form">
                             <form  novalidate="" method="POST" action="/sessions/create" enctype="multipart/form-data" >
                                 @csrf
+                                <div class="form-group mb-3">
+                                    <label for="connexion_id" class="control-label">Mentoré</label>
+                                    <select name="connexion_id" id="connexion__id" class="form-control">
+                                        @foreach ($connexions as $connexion)
+                                            <option value="{{$connexion->id}}">{{$connexion->mentore->user->prenom}} {{$connexion->mentore->user->nom}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="mb-3">
                                     <input class="form-control form-control-lg" type="text"
                                         placeholder="Titre de la session" name="titre">

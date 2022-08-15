@@ -41,17 +41,8 @@
 
                                             @if ($session->status == 'en cours')
                                                 <div class="dropdown">
-                                                    <a href="javascript:void(0);" class="btn-link" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
                                                         <span
                                                             class="badge light badge-warning">{{ $session->status }}</span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item"
-                                                            href="/session/{{ $session->id }}/status?status=1">Annuler</a>
-                                                        <a class="dropdown-item"
-                                                            href="/session/{{ $session->id }}/status?status=2">Realiser</a>
-                                                    </div>
                                                 </div>
                                             @else
                                                 @if ($session->status == 'realisé')

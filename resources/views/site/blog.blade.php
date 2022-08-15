@@ -749,6 +749,20 @@
             width: calc(33.3333333333% - 1.3333333333rem);
         }
     }
+
+    @media print,
+    screen and (min-width: 40em) {
+        .avatar--small {
+            font-size: 157.5%;
+            border-color: #fefefe;
+            border-radius: 300px;
+            border-style: solid;
+            border-width: 6px;
+            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
+            height: auto;
+            max-width: 5rem;
+        }
+    }
 </style>
 
 <body>
@@ -833,7 +847,8 @@
         </div>
     </div> --}}
     <div style="margin-left: 300px; margin-right: 300px; margin-top: 50px;">
-        <h4 style="text-align: center; margin-bottom: 30px; font-weight: bold;">Rechercher par Mentor ou par Domaine</h4>
+        <h4 style="text-align: center; margin-bottom: 30px; font-weight: bold;">Rechercher par Mentor ou par Domaine
+        </h4>
         <div class="input-group">
             <input type="search" class="form-control rounded" placeholder="Rechercher un mentor ou un domaine"
                 aria-label="Search" aria-describedby="search-addon" />
@@ -853,29 +868,29 @@
 
             <article class="profile-card"
                 style="position: relative;
-            word-break: break-word;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 2rem;
-            border: 1px solid #e3e6e8;
-            border-radius: 2px;
-            background: #fefefe;
-            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
-            color: #0a0a0a;
-            overflow: visible;">
+                word-break: break-word;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2rem;
+                border: 1px solid #e3e6e8;
+                border-radius: 2px;
+                background: #fefefe;
+                box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
+                color: #0a0a0a;
+                overflow: visible;">
 
                 <header class="profile-card__overview"
                     style="flex: 0 0 auto;
-                word-break: break-word;
-                padding: 1.5rem;
-                display: flex;
-                flex-direction: row;">
+                    word-break: break-word;
+                    padding: 1.5rem;
+                    display: flex;
+                    flex-direction: row;">
 
                     <div class="profile-card__organization"
                         style="position: absolute;
-                    top: -1rem;
-                    right: 1rem;">
-                        <div class="community-org-label label success">
+                            top: -1rem;
+                            right: 1rem;">
+                        {{-- <div class="community-org-label label success">
                             <i class="fad fa-users" aria-hidden="true"></i>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">&nbsp;
@@ -883,18 +898,26 @@
 
                                 </font>
                             </font>
-                        </div>
+                        </div> --}}
 
                     </div>
 
-                    <div class="profile-card__image">
+                    <div class="profile-card__image"
+                        style="margin-right: 1rem;     margin: 0;
+                        padding: 0;">
 
-                        <a href="#">
+                        <a href="#"
+                            style="    line-height: inherit;
+                        color: #0266b7;
+                        text-decoration: none;
+                        cursor: pointer;background-color: transparent;">
 
 
 
                             <img src="https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1430297/fda675e905fe947b.e91d525c0a28.jpg"
-                                class="avatar--small" alt="[NN]">
+                                class="avatar--small" alt="[NN]"
+                                style="display: block;
+                                margin: auto;">
 
 
                         </a>
@@ -1070,30 +1093,31 @@
 
                 </section>
                 <footer class="profile-card__actions background-whisper"
-                    style="    justify-content: flex-end;
-                align-items: flex-end;
-                display: flex;
-                flex-flow: row nowrap;
-                flex: 1 0 auto;
-                word-break: break-word;
-                padding: 0 1rem 1.5rem 1rem;">
+                    style="justify-content: flex-end;
+                        align-items: flex-end;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        flex: 1 0 auto;
+                        word-break: break-word;
+                        background-color: #e3e6e8 !important;
+                        padding: 0 1rem 1.5rem 1rem;">
 
-                    <a href="/mentor/1430297" class="button hollow small tertiary"
+                    <a href="#" class="button hollow small tertiary"
                         style="border: 2px solid #C15DFB;
-                    color: #C15DFB; display: inline-block;
-    vertical-align: middle;
-    margin: 0.5rem 0;
-    padding: 0.85em 1.25em;
-    border-radius: 3px;
-    transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
-    font-family: futura-pt, Source Sans Pro, Helvetica, Roboto, Arial, sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-    -webkit-appearance: none;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;">
+                            color: #C15DFB; display: inline-block;
+                            vertical-align: middle;
+                            margin: 0.5rem 0;
+                            padding: 0.85em 1.25em;
+                            border-radius: 3px;
+                            transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
+                            font-family: futura-pt, Source Sans Pro, Helvetica, Roboto, Arial, sans-serif;
+                            font-weight: bold;
+                            letter-spacing: 0.2em;
+                            -webkit-appearance: none;
+                            line-height: 1;
+                            text-align: center;
+                            text-transform: uppercase;
+                            cursor: pointer;">
                         <strong>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Voir le profil</font>
@@ -1102,6 +1126,8 @@
                     </a>
                 </footer>
             </article>
+
+            
 
         </div>
     </section>

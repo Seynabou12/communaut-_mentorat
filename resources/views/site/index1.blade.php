@@ -122,26 +122,7 @@
                     <li><a class="active" href="/">Acceuil</a></li>
                     <li><a href="/mentors/create">Devenir Mentor</a></li>
                     <li><a href="/mentores/create">Devenir Mentoré</a></li>
-                    <li><a href="#">Admin</a></li>
-
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="/mentors/liste">Admin</a></li>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -153,16 +134,19 @@
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Search Teacher in <br><span>Mentoring Appointment</span></h1>
-            <h2>Discover the best Mentors &amp; institutions the city nearest to you.</h2>
-            <a href="/login" class="btn-get-started">Connexion</a>
-        </div>
-    </section><!-- End Hero -->
+    <!-- End Hero -->
 
     <main id="main">
-
+        <section id="hero" class="d-flex justify-content-center align-items-center">
+            <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+                <h1>Trouvez le mentor <br><span>qui vous fera grandir</span></h1>
+                <h2>Nos services de mentorat sont disponibles pour <br> les filliéres scientifiques quels que soient
+                    votre
+                    âge.</h2>
+                <a href="/login" class="btn-get-started" style="border:1px solid #C15DFB">Connexion</a>
+            </div>
+        </section>
+        
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us" style="background-color: rgb(245, 243, 243); margin-top: 50px;">
             <div class="container" data-aos="fade-up">
@@ -176,7 +160,6 @@
                     dans ta réussite.</p>
                 <br>
                 <div class="row">
-
                     <div class="col-lg-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-boxes d-flex flex-column justify-content-center">
                             <div class="row">
@@ -224,14 +207,11 @@
                 <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
                         <img src="/images/fille.jpg" class="img-fluid" alt=""
-                            style="border-radius: 100%; border: 10px solid #C15DFB; width: 100%; height: 100%;">
+                            style="border-radius: 50%; border: 10px solid #C15DFB; ">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3>Trouvez des mentors qui vous accompagnerons dans la science.</h3>
-
                         <br>
-
-
                         <ul>
                             <li><i class="bi bi-check-circle"></i> d’être écouté / pour se motiver.</li>
                             <li><i class="bi bi-check-circle"></i> d’être accompagné / pour réussir mes etudes.</li>
@@ -247,106 +227,10 @@
                 </div>
 
             </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts section-bg">
-            <div class="container">
-
-                <div class="row counters">
-
-                    <div class="col-lg-4 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Mentorés</p>
-                    </div>
-
-                    <div class="col-lg-4 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Mentors</p>
-                    </div>
-
-                    <div class="col-lg-4 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Sessions</p>
-                    </div>
-
-
-
-                </div>
-
-            </div>
-        </section><!-- End Counts Section -->
-
-        <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
-            id="p_p_id_56_INSTANCE_Iw2yB75wBmVJ_"
-            style="font-family: FFClanWebPro-Book;
-            color: #2D373C;
-            font-size: 13px;
-            line-height: 1.53846;">
-            <span id="p_56_INSTANCE_Iw2yB75wBmVJ"></span>
-            <div class="portlet-borderless-container" style="min-height: 2.5em;
-            position: relative;">
-                <div class="portlet-body">
-                    <div class="journal-content-article" style="clear: right;">
-                        <div class="bloc-flou"
-                            style="background-color: white;
-                        position: relative;">
-                            <div class="wrapper"
-                                style="position: relative;
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: flex-start;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img id="image_photo_yaho_" src="./images/mentor.webp" alt=""
-                                            style="min-height: 1px;
-                                        border: 0;
-                                        width: 100%;">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content" style="    padding-top: 15px;">
-                                            <h2
-                                                style="margin: 0;
-                                                padding: 0;
-                                                color: inherit;
-                                                font-weight: normal;
-                                                font-family: FFClanWebPro-Book">
-                                                Le mentorat, qu'est-ce que c'est?</h2>
-                                            <p></p>
-                                            <p
-                                                style="font-size: 16px;
-                                                margin-bottom: 14px;margin: 0;
-                                                padding: 0;
-                                                font-weight: bold;">
-                                                <strong>Le mentorat pour entrepreneurs est une relation d’accompagnement
-                                                    basée
-                                                    sur l’écoute, la confiance et le respect mutuel.</strong>
-                                            </p>
-                                            <p
-                                                style="font-size: 16px;
-                                                margin-bottom: 14px;
-                                                margin: 0;
-                                                padding: 0;">
-                                                <strong style="font-weight: bold;">Par le dialogue et le partage
-                                                    d'expérience, les mentors vous aident à
-                                                    trouver réponse à vos questions, une rencontre à la fois.</strong>
-                                            </p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="entry-links"> </div>
-            </div>
-        </div>
+        </section>
         </div>
 
+     
 
 
     </main><!-- End #main -->

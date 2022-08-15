@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('date');
             $table->string('titre');
             $table->string('description');
+            $table->string('status');
             $table->foreignId('connexion_id')->constrained('connexions');
             $table->timestamps();
         });

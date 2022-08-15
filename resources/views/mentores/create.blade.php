@@ -12,6 +12,32 @@
     <!-- Style css -->
     <link href="/css/style.css" rel="stylesheet">
 </head>
+<style>
+    @media (min-width: 768px) {
+        #fderesm .bloc-contenu-blanc .heading {
+            margin-bottom: 15px;
+            font-size: 12px;
+        }
+    }
+
+
+    #fderesm .bloc-contenu-blanc .heading {
+        font-size: 9px;
+        font-family: "FFClanWebPro-WideBook";
+        color: #647878;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: 768px) {
+        #fderesm .bloc-contenu-blanc p {
+            margin: 0 6% 45px 6%;
+        }
+    }
+
+  
+</style>
 
 <body>
     @include('site.nav')
@@ -71,7 +97,7 @@
                                     <span style="vertical-align: inherit;">Être mentoré permet d’accélérer son
                                         développement en tant que scientifique tout en permettant de prendre du recul,
                                     </span>
-                                    <span style="vertical-align: inherit;">  </span>
+                                    <span style="vertical-align: inherit;"> </span>
                                 </span><br>
                                 <span style="vertical-align: inherit;">
                                     <span style="vertical-align: inherit;">de
@@ -93,6 +119,70 @@
                             <div class="mouse"></div>
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pp-scrollable" style="text-align: center; ">
+        <div class="wrap content" style="padding-top: 0px;">
+            <div class="wrap content" id="wrapper">
+                <div id="content">
+                    <nav id="breadcrumbs" style="display: none;">
+                        <ul aria-label="Fil d'Ariane" class="breadcrumb breadcrumb-horizontal">
+                            <li class="active only"><a href="https://www.reseaumentorat.com/mentore">Devenir
+                                    mentoré</a><span class="divider">/</span></li>
+                        </ul>
+                    </nav>
+                    <div class="columns-1" id="main-content" role="main">
+                        <div class="portlet-layout row-fluid">
+                            <div class="portlet-column portlet-column-only span12" id="column-1">
+                                <div class="portlet-dropzone portlet-column-content portlet-column-content-only"
+                                    id="layout-column_column-1"
+                                    style="    font-family: FFClanWebPro-Book;
+                                    color: #2D373C;
+                                    font-size: 13px;
+                                    line-height: 1.53846;">
+                                    <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                        id="p_p_id_56_INSTANCE_HVkCb6rLZJY2_"> <span
+                                            id="p_56_INSTANCE_HVkCb6rLZJY2"></span>
+                                        <div class="portlet-borderless-container"
+                                            style="min-height: 2.5em;
+                                                    position: relative;">
+                                            <div class="portlet-body">
+                                                <div class="journal-content-article">
+                                                    <div class="bloc-contenu-blanc container">
+                                                        <p class="heading"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                id="pyramids" viewBox="0 0 150 70.48"
+                                                               style="width: 24px;
+                                                               height: 11px; fill: #C15DFB;
+                                                               display: block;
+                                                               margin: 40px auto 0 auto;"
+                                                                class="injected-svg inject-svg icon-pyramids">
+                                                                
+                                                                <path
+                                                                    d="M109.31,0L75,59.43,40.69,0,0,70.48H150ZM12.13,63.47L40.69,14,69.25,63.47H12.13Zm68.62,0L109.31,14l28.56,49.47H80.75Z">
+                                                                </path>
+                                                            </svg>Devenir mentoré</p>
+                                                        <h2>Être mentoré</h2>
+                                                        <p><span style="font-size:18px;">Être mentoré permet
+                                                                d’accélérer son développement en tant qu’entrepreneur
+                                                                tout en permettant de prendre du recul, de mieux évaluer
+                                                                ses options et prendre des décisions
+                                                                éclairées.&nbsp;</span></p> <a
+                                                            href="https://www.reseaumentorat.com/qui-peut-etre-mentore"
+                                                            class="btn btn--secondary"><span>En savoir plus</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="entry-links"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#" id="hrefFm" method="post" name="hrefFm"> <span></span> </form>
                 </div>
             </div>
         </div>
@@ -151,7 +241,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="mb-3 row">
                                                 <label class="col-lg-4 col-form-label"
                                                     for="validationCustom08">Telephone
@@ -167,7 +257,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="mb-3 row ">
                                                 <label for="attente" class="col-lg-4 col-form-label">Attentes</label>
                                                 <div class="col-lg-6">
@@ -177,7 +267,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">
@@ -208,7 +298,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class=" mb-3 row">
                                                 <label class="col-lg-4 col-form-label" for="validationCustom03">Photo
                                                     de profil
@@ -236,7 +326,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="form-group mb-3">
                                                 <div class="mb-3 row">
                                                     <label class="col-lg-4 col-form-label"
@@ -274,6 +364,9 @@
             </div>
         </div>
     </div>
+
+
+
     @include('../site/footer')
 </body>
 
