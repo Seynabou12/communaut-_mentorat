@@ -44,7 +44,6 @@
                     <li><a class="active" href="/">Acceuil</a></li>
                     <li><a href="/mentors/create">Devenir Mentor</a></li>
                     <li><a href="/mentores/create">Devenir Mentoré</a></li>
-                    <li><a href="/mentors/liste">Admin</a></li>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>

@@ -25,7 +25,6 @@
 </head>
 
 <style>
-
     *,
     ::after,
     ::before {
@@ -271,87 +270,33 @@
 </style>
 
 <body>
+
     @include('site.nav')
 
     <header class="washed-row--tertiary"
         style="background-color: #C15DFB;
-        color: #fefefe;
-        padding-bottom: 1.5rem;
-        padding-top: 100px;">
+            color: #fefefe;
+            padding-bottom: 1.5rem;
+            padding-top: 100px;">
         <div class="container"
             style="max-width: 71.4285714286rem;
-            margin-left: auto;
-            margin-right: auto;">
+                margin-left: auto;
+                margin-right: auto;">
             <h1 style="color: white; margin-bottom: 0.5rem; margin-top: 0;">Trouver des Mentors et Connectés Vous</h1>
             <p class="lead"
                 style="font-size: 131.25%;
-                line-height: 1.6; display: block;
-                margin-block-start: 1em;
-                margin-block-end: 1em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;">
+                    line-height: 1.6; display: block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;">
                 Nous avons trié ces résultats de recherche en fonction de leur pertinence par rapport à votre profil.
                 Lorsque vous voyez quelqu'un qui semble convenir, Connectez avec lui et envoyez un message !</p>
         </div>
     </header>
 
-    {{-- <div class="page-content " style="background-color: white;">
-    <div class="" style="display: flex; margin-left: 50px">
-        <div class="row">
-            <div class="dc-haslayout dc-parent-section">
-                <div id="dc-twocolumns" class="dc-twocolumns dc-haslayout d-flex row dc-disabled">
-                    <div class="col-12 order-last">
-                        <div class="dc-searchresult-holder">
-                            @foreach ($mentors as $mentor)
-                                <div class="dc-searchresult-grid dc-searchresult-list dc-searchvlistvtwo test">
-                                    <div class="dc-docpostholder dc-search-mentors">
-                                        <div class="mentor-widget">
-                                            <div class="user-info-left">
-                                                <div class="mentor-img">
-                                                    <img class="img-fluid user-image-res"
-                                                        src="{{ $mentor->user->photo }}" alt="Katharine  Berthold">
 
-                                                </div>
-                                                <div class="user-info-cont">
-                                                    <h3>
-                                                        <a href="#">{{ $mentor->user->prenom }}
-                                                            {{ $mentor->user->nom }}</a>
-
-                                                    </h3>
-                                                    <div class="user-tag">
-                                                        <a href="#">{{ $mentor->user->email }}
-                                                        </a>
-                                                    </div>
-
-                                                    <div class="user-tag">
-                                                        <a href="#">{{ $mentor->user->adresse }}
-                                                        </a>
-                                                    </div>
-                                                    <div class="user-tag">
-                                                        <a href="#">{{ $mentor->user->telephone }}</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="user-info-right">
-
-                                                <div class="user-booking" style="margin-top:150px;">
-                                                    <a href="/mentors/{{ $mentor->id }}/details">Voir Profil</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> --}}
-    <div style="margin: 50px;">
+    <div style="margin-left: 300px; margin-right: 300px; margin-top: 50px;">
         <h4 style="text-align: center; margin-bottom: 30px; font-weight: bold;">Rechercher par Mentor ou par Domaine
         </h4>
         <div class="input-group">
@@ -362,121 +307,104 @@
     </div>
 
 
-    {{-- <section class="profile-list" style="padding-bottom: 1.5rem;
-            padding-top: 1.5rem;">
+    <section class="profile-list" style="padding-bottom: 1.5rem;
+    padding-top: 1.5rem;">
         <div class="container"
-            style="max-width: 71.4285714286rem;
-                    margin-left: auto;
-                    margin-right: auto;display: flex;
-                    flex-flow: row wrap;">
+            style="
+        max-width: 71.4285714286rem;
+        margin-left: auto;
+        margin-right: auto;display: flex;
+    flex-flow: row wrap;">
             @foreach ($mentors as $mentor)
                 <article class="profile-card"
                     style="position: relative;
-                        word-break: break-word;
-                        display: flex;
-                        flex-direction: column;
-                        margin-bottom: 2rem;
-                        border: 1px solid #e3e6e8;
-                        border-radius: 2px;
-                        background: #fefefe;
-                        box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
-                        color: #0a0a0a;
-                        overflow: visible;">
+                            word-break: break-word;
+                            display: flex;
+                            margin-left: 20px;
+                            flex-direction: column;
+                            margin-bottom: 2rem;
+                            border: 1px solid #e3e6e8;
+                            border-radius: 2px;
+                            background: #fefefe;
+                            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
+                            color: #0a0a0a;
+                            overflow: visible;">
 
                     <header class="profile-card__overview"
                         style="flex: 0 0 auto;
-                            word-break: break-word;
-                            padding: 1.5rem;
-                            display: flex;
-                            flex-direction: row;">
+    word-break: break-word;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;">
 
                         <div class="profile-card__organization"
                             style="position: absolute;
-                                top: -1rem;
-                                right: 1rem;">
+            top: -1rem;
+            right: 1rem;">
+
+
                         </div>
 
-                        <div class="profile-card__image"
-                            style="margin-right: 1rem;     margin: 0;
-                                padding: 0;">
+                        <div class="profile-card__image" style="margin-right: 1rem;     margin: 0;
+        padding: 0;">
 
                             <a href="#"
-                                style="line-height: inherit;
-                                    color: #0266b7;
-                                    text-decoration: none;
-                                    cursor: pointer;background-color: transparent;">
-                                <img src="{{ $mentor->user->photo }}"
-                                    class="avatar--small" alt="[NN]"
+                                style="    line-height: inherit;
+        color: #0266b7;
+        text-decoration: none;
+        cursor: pointer;background-color: transparent;">
+                                <img src="{{ $mentor->user->photo }}" class="avatar--small" alt="[NN]"
                                     style="display: block;
-                                    margin: auto;">
+                margin: auto; width: 60px; height: 60px;">
                             </a>
+
                         </div>
+
                         <div class="profile-card__about">
                             <h3>
+
                                 <a href="#" class="text-tertiary">
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;">
 
-                                            {{ $mentor->user->prenom }}
-                                            {{ $mentor->user->nom }}
+                                            {{ $mentor->user->prenom }} {{ $mentor->user->nom }}
 
                                         </font>
                                     </font>
                                 </a>
                             </h3>
+
                             <h5 class="">
                                 <ul class="list--comma-separated">
-                                    <li>
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $mentor->user->email }} </font>
-                                            <font style="vertical-align: inherit;">{{ $mentor->user->adresse }}</font>
-                                        </font>
-                                    </li>
                                     <li>
                                         <font style="vertical-align: inherit;">
                                             <font style="vertical-align: inherit;">{{ $mentor->user->telephone }}</font>
                                         </font>
                                     </li>
-                                   
+                                    <li>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">{{ $mentor->user->email }}</font>
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">{{ $mentor->user->adresse }}</font>
+                                        </font>
+                                    </li>
                                 </ul>
                             </h5>
-
                             <h5 class="no-bold text-sottovoce">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">{{ $mentor->experience }} ans</font>
+                                    <font style="vertical-align: inherit;">Domaine</font>
                                 </font>
                             </h5>
-                            <div class="profile-card__extras">
-                                <div class="profile-details__detail">
-                                    <div class="detail__label"><strong>
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">Domaines</font>
-                                            </font>
-                                        </strong></div>
-                                    <div class="detail__value">
-                                        <div class="activity-widget">
-
-                                            <span data-tooltip="2ych00-tooltip" title="" role="img"
-                                                aria-label="Actif la semaine dernière" aria-describedby="w2jyzo-tooltip"
-                                                data-yeti-box="w2jyzo-tooltip" data-toggle="w2jyzo-tooltip"
-                                                data-resize="w2jyzo-tooltip" class="has-tip" data-events="resize">
-                                                <i class="fas fa-comment text-tertiary" aria-hidden="true"></i>
-                                                <i class="fas fa-comment text-tertiary " aria-hidden="true"></i>
-                                                <i class="fas fa-comment text-tertiary " aria-hidden="true"></i>
-                                            </span>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </header>
                     <section class="profile-card__expertise"
                         style="background-color: #e3e6e8;
-                                flex: 1 0 auto;
-                                word-break: break-word;
-                                padding: 1.5rem;">
+            flex: 1 0 auto;
+            word-break: break-word;
+            padding: 1.5rem;">
                         <h4>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Comment je peux aider</font>
@@ -550,33 +478,22 @@
                     </section>
                     <footer class="profile-card__actions background-whisper"
                         style="justify-content: flex-end;
-                    align-items: flex-end;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    flex: 1 0 auto;
-                    word-break: break-word;
-                    background-color: #e3e6e8 !important;
-                    padding: 0 1rem 1.5rem 1rem;">
+        align-items: flex-end;
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 1 0 auto;
+        word-break: break-word;
+        background-color: #e3e6e8 !important;
+        padding: 0 1rem 1.5rem 1rem;">
 
-                        <a href="#" class="button hollow small tertiary"
-                            style="border: 2px solid #C15DFB;
-                        color: #C15DFB; display: inline-block;
-                        vertical-align: middle;
-                        margin: 0.5rem 0;
-                        padding: 0.85em 1.25em;
-                        border-radius: 3px;
-                        transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
-                        font-family: futura-pt, Source Sans Pro, Helvetica, Roboto, Arial, sans-serif;
-                        font-weight: bold;
-                        letter-spacing: 0.2em;
-                        -webkit-appearance: none;
-                        line-height: 1;
-                        text-align: center;
-                        text-transform: uppercase;
-                        cursor: pointer;">
+                        <a href="#" class="button hollow small tertiary" style="border: #C15DFB">
                             <strong>
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;"> <a href="/mentors/{{ $mentor->id }}/details"> Voir le profil</a></font>
+                                    <button>
+                                        <a style="vertical-align: inherit;"
+                                            href="/mentors/{{ $mentor->id }}/details">Voir le profil</a>
+                                    </button>
+
                                 </font>
                             </strong>
                         </a>
@@ -584,67 +501,10 @@
                 </article>
             @endforeach
 
-        </div>
-    </section> --}}
 
-    <div class="page-content " style="background-color: white;">
-        <div class="" style="display: flex; margin-left: 50px">
-            <div class="row">
-                <div class="dc-haslayout dc-parent-section">
-                    <div id="dc-twocolumns" class="dc-twocolumns dc-haslayout d-flex row dc-disabled">
-                        <div class="col-12 order-last">
-                            <div class="dc-searchresult-holder">
-                                @foreach ($mentors as $mentor)
-                                    <div class="dc-searchresult-grid dc-searchresult-list dc-searchvlistvtwo test">
-                                        <div class="dc-docpostholder dc-search-mentors">
-                                            <div class="mentor-widget">
-                                                <div class="user-info-left">
-                                                    <div class="mentor-img">
-                                                        <img class="img-fluid user-image-res"
-                                                            src="{{ $mentor->user->photo }}"
-                                                            alt="Katharine  Berthold">
-
-                                                    </div>
-                                                    <div class="user-info-cont">
-                                                        <h3>
-                                                            <a href="#">{{ $mentor->user->prenom }}
-                                                                {{ $mentor->user->nom }}</a>
-
-                                                        </h3>
-                                                        <div class="user-tag">
-                                                            <a href="#">{{ $mentor->user->email }}
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="user-tag">
-                                                            <a href="#">{{ $mentor->user->adresse }}
-                                                            </a>
-                                                        </div>
-                                                        <div class="user-tag">
-                                                            <a href="#">{{ $mentor->user->telephone }}</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="user-info-right">
-
-                                                    <div class="user-booking" style="margin-top:150px;">
-                                                        <a href="/mentors/{{ $mentor->id }}/details">Voir Profil</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
-    </div>
-
+    </section>
 </body>
 
 </html>

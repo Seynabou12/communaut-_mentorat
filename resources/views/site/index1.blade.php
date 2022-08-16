@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Mentor Bootstrap Template - Index</title>
+    <title>Communauté de Mentorat</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -122,7 +122,6 @@
                     <li><a class="active" href="/">Acceuil</a></li>
                     <li><a href="/mentors/create">Devenir Mentor</a></li>
                     <li><a href="/mentores/create">Devenir Mentoré</a></li>
-                    <li><a href="/mentors/liste">Admin</a></li>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
