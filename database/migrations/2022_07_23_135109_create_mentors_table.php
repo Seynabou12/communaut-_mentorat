@@ -10,7 +10,8 @@ return new class extends Migration
      * Run the migrations.
      *
      * @return void
-     */
+    */
+    
     public function up()
     {
         Schema::create('mentors', function (Blueprint $table) {
@@ -18,6 +19,7 @@ return new class extends Migration
             $table->string('parcours');
             $table->integer('experience');
             $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('domaine_id')->constrained('domaines');
             $table->timestamps();
         });
     }

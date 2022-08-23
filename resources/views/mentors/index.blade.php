@@ -23,7 +23,6 @@
                                             <th>Id</th>
                                             <th>Profil</th>
                                             <th>Adresse</th>
-                                            <th>Region</th>
                                             <th>Telephone</th>
                                             <th>Email</th>
                                             <th>Parcours</th>
@@ -49,7 +48,6 @@
                                                     </div>
                                                 </td>
                                                 <td>{{ $mentor->user->adresse }}</td>
-                                                <td>{{ $mentor->user->region }}</td>
                                                 <td>{{ $mentor->user->telephone }}</td>
                                                 <td>{{ $mentor->user->email }}</td>
                                                 <td>{{ $mentor->parcours }}</td>

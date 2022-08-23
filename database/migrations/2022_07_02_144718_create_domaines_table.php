@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('domaines', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('nomDomaine');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

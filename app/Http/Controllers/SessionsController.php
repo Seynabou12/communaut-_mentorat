@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Connexion;
+use App\Models\Mentor;
+use App\Models\Mentore;
 use App\Models\Sessions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,15 +15,18 @@ class SessionsController extends Controller
     public function index()
     {
         $sessions = Sessions::all();
-        return view('sessions.index', compact('sessions'));
+        $mentores = Mentore::all();
+        return view('sessions.index', compact('sessions', 'mentores'));
     }
 
     public function mentore()
     {
         $sessions = Sessions::join('connexions', function ($join)
         {
-            $join->on('connexions.id','=','sessions.connexion_id')->where('connexions.mentor_id',Auth::user()->mentore->id);
+            $join->on('connexions.id','=','sessions.connexion_id')->where('connexions.mentore_id',Auth::user()->mentore->id);
         })->get(['sessions.*']);
+
+
         return view('sessions.mentore', compact('sessions'));
     }
 
@@ -75,5 +80,11 @@ class SessionsController extends Controller
         $session->status = 'en attente';  
         $session->save();
         return redirect()->route('sessions.index');
+    }
+
+    public function voirplus($id)
+    {
+        $session = Sessions::findOrFail($id);
+        return view('sessions.voirplus', compact('session'));
     }
 }

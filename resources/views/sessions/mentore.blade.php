@@ -11,18 +11,17 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Patient</h4>
+                        <h4 class="card-title">Mes Sessions</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="example5" class="display" style="min-width: 845px">
                                 <thead>
                                     <tr>
-                                        
                                         <th>Id</th>
                                         <th>Date</th>
                                         <th>Titre</th>
-                                        <th>Description</th>
+                                        <th>Mentors</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -35,14 +34,11 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $session->date }}</td>
                                         <td>{{ $session->titre }}</td>
-                                        <td>{{ $session->description }}</td>
+                                        <td>{{ $session->connexion->mentor->user->nom }} {{ $session->connexion->mentor->user->prenom }}</td>
                                         <td>
-
-
                                             @if ($session->status == 'en cours')
                                                 <div class="dropdown">
-                                                        <span
-                                                            class="badge light badge-warning">{{ $session->status }}</span>
+                                                    <span class="badge light badge-warning">{{ $session->status }}</span>
                                                 </div>
                                             @else
                                                 @if ($session->status == 'realisé')
@@ -53,7 +49,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-warning">Voir plus</button>
+                                            <button type="button" class="btn btn-outline-warning"><a href="/sessions/{{ $session->id }}/voirplus">Voir plus</a></button>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -77,11 +77,10 @@ position: relative;">
                                 </span>
                             </p>
                             <a href="#footer" class="btn get-quote"
-                                style="    background-color: #C15DFB;
-                        color: #fff;
-                        
-                        transition: all 0.3s ease-in-out;
-                        margin-top: 10px;">
+                                style=" background-color: #C15DFB;
+                                        color: #fff;
+                                        transition: all 0.3s ease-in-out;
+                                        margin-top: 10px;">
                                 <span style="vertical-align: inherit;">
                                     <span style="vertical-align: inherit;">DEVENIR MENTORE</span>
                                 </span>
@@ -95,6 +94,8 @@ position: relative;">
             </div>
         </div>
     </div>
+
+
 
     <div class="section pp-scrollable" style="text-align: center; ">
         <div class="wrap content" style="padding-top: 0px;">
@@ -127,11 +128,10 @@ position: relative;">
                                                         <p class="heading"><svg xmlns="http://www.w3.org/2000/svg"
                                                                 id="pyramids" viewBox="0 0 150 70.48"
                                                                 style="width: 24px;
-                                                               height: 11px; fill: #C15DFB;
-                                                               display: block;
-                                                               margin: 40px auto 0 auto;"
+                                                                    height: 11px; fill: #C15DFB;
+                                                                    display: block;
+                                                                    margin: 40px auto 0 auto;"
                                                                 class="injected-svg inject-svg icon-pyramids">
-
                                                                 <path
                                                                     d="M109.31,0L75,59.43,40.69,0,0,70.48H150ZM12.13,63.47L40.69,14,69.25,63.47H12.13Zm68.62,0L109.31,14l28.56,49.47H80.75Z">
                                                                 </path>
@@ -162,9 +162,7 @@ position: relative;">
             </div>
         </div>
     </div>
-
     <main id="main">
-        <!-- ======= Events Section ======= -->
         <section id="events" class="events" style="">
             <div class="container" data-aos="fade-up">
 
@@ -179,7 +177,8 @@ position: relative;">
                                 <p class="card-text">Vous avez envie d'aider d'autres entrepreneurs?
                                     De contribuer au développement de la communauté entrepreneuriale?
                                     Vous êtes ou vous avez été un entrepreneur pendant plus de 5 ans avec gestion
-                                    d'équipe?</p>
+                                    d'équipe?
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -215,11 +214,9 @@ position: relative;">
 
     <div class="content" style="">
         <div class="container-fluid" style="margin-top: 10px;">
-
-            <!-- row -->
             <div class="row">
                 <div class="col-md-4">
-                    <h1>hello</h1>
+                    <img src="/images/form.png" alt="" srcset="" style="width: 100%; height: 100%;">
                 </div>
                 <div class="col-md-8">
                     <div class="card" style="justify-content: center;">
@@ -270,19 +267,6 @@ position: relative;">
                                                         required="" name="adresse">
                                                     <div class="invalid-feedback">
                                                         Entrer votre adresse.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label" for="validationCustom01">Région
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="col-lg-6">
-                                                    <input type="text" class="form-control"
-                                                        id="validationCustom01" placeholder="Entrer votre region.."
-                                                        required="" name="region">
-                                                    <div class="invalid-feedback">
-                                                        Entrer votre region.
                                                     </div>
                                                 </div>
                                             </div>
@@ -384,6 +368,27 @@ position: relative;">
                                                         required="" name="dateNaissance">
                                                     <div class="invalid-feedback">
                                                         Entrer votre date de naissance.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label"
+                                                        for="validationCustom05">Domaine
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <select class="default-select wide form-control"
+                                                            id="validationCustom05" name="domaine_id[]" multiple="multiple">
+                                                            <option data-display="Select">Please select</option>
+                                                            @foreach ($domaines as $domaine)
+                                                                <option value="{{ $domaine->id }}">
+                                                                    {{ $domaine->nomDomaine }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Please select a one.
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

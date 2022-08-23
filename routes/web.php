@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DomaineController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\MentoreController;
 use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UtilisateurController;
 
 /*
@@ -19,23 +21,24 @@ use App\Http\Controllers\UtilisateurController;
 |
 */
 
-Route::get('/', function () {
-    return view('site.index1');
-});
+// Route::get('/', function () {
+//     return view('site.index1');
+// });
+
 Route::get('/dashbord/welcome', function () {
     return view('dashbord.welcome', ['profil' => 'mentor']);
 });
-Route::get('/mentors/create', function () {
-    return view('mentors.create');
-});
+Route::get('/mentors/create', [MentorController::class, 'create']);
 Route::post("/mentors/create", [MentorController::class, 'store']);
 Route::get('/mentores/create', [MentoreController::class, 'create']);
 Route::post('/mentores/create', [MentoreController::class, 'store']);
 
 Route::get('/blog', [MentoreController::class, 'blog']);
+Route::get('/', [SiteController::class, 'index1']);
 
 Route::middleware('authentification')->group(
     function () {
+
         Route::get('/mentors/liste', [MentorController::class, 'index']);
         Route::get('/mentors/{id}/details', [MentorController::class, 'details'])->where('id', '[0-9]+');
         Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
@@ -45,10 +48,7 @@ Route::middleware('authentification')->group(
         Route::get("/mentors/edit/{id}", [MentorController::class, 'edit'])->where('id', '[0-9]+');
         Route::post("/mentors/edit/{id}", [MentorController::class, 'update'])->where('id', '[0-9]+');
 
-
         Route::get("/connexion/{id}/status", [MentorController::class, 'status'])->where('id', '[0-9]+');
-
-
 
         Route::get('/mentores', [MentoreController::class, 'accueil']);
         Route::get('/mentores/{id}/mentors', [MentoreController::class, 'mentors'])->name('mentores.mentors')->where('id', '[0-9]+');
@@ -61,15 +61,18 @@ Route::middleware('authentification')->group(
         Route::get('/sessions', [SessionsController::class, 'index'])->name('session.accueil');
         Route::get('/sessions/create', [SessionsController::class, 'create']);
         Route::post('/sessions/create', [SessionsController::class, 'store']);
+        Route::get('/sessions/{id}/voirplus', [SessionsController::class, 'voirplus'])->where('id', '[0-9]+');;
         Route::get('/session/{id}/status', [SessionsController::class, 'status'])->where('id', '[0-9]+');
 
         Route::get('/niveaux/create', [NiveauController::class, 'create']);
         Route::post('/niveaux/create', [NiveauController::class, 'store']);
 
+        Route::get('/domaines/create', [DomaineController::class, 'create']);
+        Route::post('/domaines/create', [DomaineController::class, 'store']);
+
         Route::get('/admin/dashbord', [AdminController::class, 'dashbord']);
     }
 );
-
 
 Route::get("/login", [UtilisateurController::class, 'formLogin'])->name('auth.formLogin');
 Route::post("/login", [UtilisateurController::class, 'login'])->name('auth.login');

@@ -20,7 +20,8 @@ class MentorController extends Controller
 
     public function create()
     {
-        return view('mentors.create');
+        $domaines=Domaine::all();
+        return view('mentors.create', compact('domaines'));
     }
 
     public function store(Request $request)
@@ -29,6 +30,8 @@ class MentorController extends Controller
         $fileName = time() . $request->file('photo')->getClientOriginalName();
         $path = $request->file('photo')->storeAs('imagess', $fileName, 'public');
         $input['photo'] = '/storage/' . $path;
+        $domaine = $input['domaine_id'];
+        $input['domaine_id'] = implode(',',$domaine);
 
         $user = User::create([
             'prenom' => $input['prenom'],
@@ -41,13 +44,14 @@ class MentorController extends Controller
             'email' => $input['email'],
             'password' => $input['password'],
         ]);
+        
         Mentor::create([
             'parcours' => $input['parcours'],
             'experience' => $input['experience'],
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'domaine_id' => $input['domaine_id'],
         ]);
-        
-        
+
         return redirect('/login')->with('flash-message', 'Votre inscription à été bien enregistré');
     }
 
@@ -68,8 +72,8 @@ class MentorController extends Controller
         $mentor = Mentor::findorFail($id);
         $user = $mentor->user;
         $input = $request->all();
-        if ($request->file('photo') != null){
-
+        if ($request->file('photo') != null)
+        {
             $fileName = time() . $request->file('photo')->getClientOriginalName();
             $path = $request->file('photo')->storeAs('images', $fileName, 'public');
             $input['photo'] = '/storage/' . $path;
@@ -132,7 +136,7 @@ class MentorController extends Controller
         $connexion = Connexion::findOrFail($id);
         $connexion->status = $request->status == 1 ? 'accepté' : 'refusé';
         $connexion->save();
-        return redirect()->route('mentors.mentores', ['id' => $id]);
+        return redirect()->route('mentors.mentores', ['id' => $connexion->mentor_id]);
     }
 
 }

@@ -9,10 +9,6 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="/assets/img/favicon.png" rel="icon">
-    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -104,6 +100,28 @@
             margin-bottom: 20px;
         }
     }
+
+    @media only screen and (max-width: 991px) {
+        .vc_row-fluid.nk-awb {
+            padding: 0 !important;
+        }
+    }
+
+    @media only screen and (max-width: 1160px) {
+        .wpb_column.vc_column_container.vc_col-sm-12 {
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+    }
+
+    .uvc-heading.ultimate-heading-4517630002f11d481 .uvc-sub-heading {
+        font-size: 16px;
+    }
+
+    .uvc-sub-heading {
+        line-height: normal;
+        margin: 0 auto;
+    }
 </style>
 
 <body>
@@ -117,7 +135,7 @@
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 200px;">
+            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
                 <ul>
                     <li><a class="active" href="/">Acceuil</a></li>
                     <li><a href="/mentors/create">Devenir Mentor</a></li>
@@ -145,9 +163,9 @@
                 <a href="/login" class="btn-get-started" style="border:1px solid #C15DFB">Connexion</a>
             </div>
         </section>
-        
+
         <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us" style="background-color: rgb(245, 243, 243); margin-top: 50px;">
+        <section id="why-us" class="why-us" style="background-color: rgb(245, 243, 243);">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <p style="text-align: center;">Quel est le role du Mentor ???</p>
@@ -227,10 +245,36 @@
 
             </div>
         </section>
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts section-bg">
+            <div class="container">
+
+                <div class="row counters">
+                    <div class="col-lg-4 col-6 text-center">
+                        <span data-purecounter-start="0"
+                            data-purecounter-end="{{ $mentors->count() + $mentores->count() }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Nombres Total Inscrit</p>
+                    </div>
+                    <div class="col-lg-4 col-6 text-center">
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $mentors->count() }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Mentors</p>
+                    </div>
+                    <div class="col-lg-4 col-6 text-center">
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $mentores->count() }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Mentorés</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Counts Section -->
         </div>
 
-     
-
+        
 
     </main><!-- End #main -->
 

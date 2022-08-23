@@ -30,12 +30,11 @@
                                         placeholder="Titre de la session" name="titre">
                                 </div>
                                 <div class="mb-3">
-                                    <input class="form-control" type="text" placeholder="Description de la session" name="description">
+                                    <textarea class="form-control" type="text" placeholder="Description de la session" name="description"></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label for="">Date de la session"</label>
-                                    <input class="form-control form-control-sm" type="date"
-                                        placeholder="Date de la session" name="date">
+                                    <input class="form-control form-control-sm" type="date" placeholder="Date de la session" name="date">
                                 </div>
                                 <div class="mb-3 row">
                                     <div class="col-lg-8 ms-auto">

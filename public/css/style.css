@@ -2394,19 +2394,19 @@ textarea.form-control {
   border-color: #C15DFB; }
   .btn-primary:hover {
     color: #000;
-    background-color: #74d6ce;
-    border-color: #6bd4cb; }
+    background-color: #fafcfc;
+    border-color: #fafcfc; }
   .btn-check:focus + .btn-primary, .btn-primary:focus {
     color: #000;
-    background-color: #74d6ce;
+    background-color: #fafcfc;
     border-color: #6bd4cb;
     box-shadow: 0 0 0 0.25rem rgba(77, 176, 167, 0.5); }
   .btn-check:checked + .btn-primary,
   .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
   .show > .btn-primary.dropdown-toggle {
     color: #000;
-    background-color: #7cd9d1;
-    border-color: #6bd4cb; }
+    background-color: #fafcfc;
+    border-color: #fafcfc; }
     .btn-check:checked + .btn-primary:focus,
     .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus,
     .show > .btn-primary.dropdown-toggle:focus {

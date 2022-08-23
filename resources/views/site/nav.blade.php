@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- Favicons -->
-    <link href="/assets/img/favicon.png" rel="icon">
-    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
 
     <!-- Google Fonts -->
     <link
@@ -39,7 +37,7 @@
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 200px;">
+            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
                 <ul>
                     <li><a class="active" href="/">Acceuil</a></li>
                     <li><a href="/mentors/create">Devenir Mentor</a></li>

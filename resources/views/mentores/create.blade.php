@@ -36,11 +36,29 @@
         }
     }
 
-  
 </style>
 
 <body>
-    @include('site.nav')
+      <!-- ======= Header ======= -->
+      <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <img src="/images/wim-sbg.png" alt="" srcset="" style="width: 100px; height: auto;">
+
+            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
+                <ul>
+                    <li><a class="active" href="/">Acceuil</a></li>
+                    <li><a href="/mentors/create">Devenir Mentor</a></li>
+                    <li><a href="/mentores/create">Devenir Mentoré</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href="/login" class="get-started-btn">Connexion</a>
+
+        </div>
+    </header><!-- End Header -->
     <div class="banner"
         style="margin-top: 80px;background: url(../images/ment.jpg) no-repeat center top;
     background-size: cover;
@@ -123,7 +141,6 @@
             </div>
         </div>
     </div>
-
     <div class="section pp-scrollable" style="text-align: center; ">
         <div class="wrap content" style="padding-top: 0px;">
             <div class="wrap content" id="wrapper">
@@ -154,12 +171,11 @@
                                                     <div class="bloc-contenu-blanc container">
                                                         <p class="heading"><svg xmlns="http://www.w3.org/2000/svg"
                                                                 id="pyramids" viewBox="0 0 150 70.48"
-                                                               style="width: 24px;
+                                                                style="width: 24px;
                                                                height: 11px; fill: #C15DFB;
                                                                display: block;
                                                                margin: 40px auto 0 auto;"
                                                                 class="injected-svg inject-svg icon-pyramids">
-                                                                
                                                                 <path
                                                                     d="M109.31,0L75,59.43,40.69,0,0,70.48H150ZM12.13,63.47L40.69,14,69.25,63.47H12.13Zm68.62,0L109.31,14l28.56,49.47H80.75Z">
                                                                 </path>
@@ -187,19 +203,22 @@
             </div>
         </div>
     </div>
-    <div class="content-body">
+    <div class="">
         <div class="container-fluid">
             <!-- row -->
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4 col-lg-4 col-sm-6">
+                    <img src="/images/demo_image.png" alt="" srcset="" wire:style="width: 100%; height: 100%;">
+                </div>
+                <div class="col-md-8  col-lg-8 col-sm-6 " style="margin-top: 200px; margin-left: -5px;">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Formulaire de Validation</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="post" action="/mentores/create"
-                                    enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" method="post"
+                                    action="/mentores/create" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="col-xl-6">
@@ -208,9 +227,9 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
-                                                    <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Entrer votre prenom.." required=""
-                                                        name="prenom">
+                                                    <input type="text" class="form-control"
+                                                        id="validationCustom01" placeholder="Entrer votre prenom.."
+                                                        required="" name="prenom">
                                                     <div class="invalid-feedback">
                                                         Entrer votre prenom.
                                                     </div>
@@ -221,21 +240,23 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
-                                                    <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Entrer votre nom.." required="" name="nom">
+                                                    <input type="text" class="form-control"
+                                                        id="validationCustom01" placeholder="Entrer votre nom.."
+                                                        required="" name="nom">
                                                     <div class="invalid-feedback">
                                                         Entrer votre nom.
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label" for="validationCustom01">Adresse
+                                                <label class="col-lg-4 col-form-label"
+                                                    for="validationCustom01">Adresse
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
-                                                    <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Entrer votre adresse.." required=""
-                                                        name="adresse">
+                                                    <input type="text" class="form-control"
+                                                        id="validationCustom01" placeholder="Entrer votre adresse.."
+                                                        required="" name="adresse">
                                                     <div class="invalid-feedback">
                                                         Entrer votre adresse.
                                                     </div>

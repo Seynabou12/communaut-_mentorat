@@ -21,14 +21,12 @@ class MentoreController extends Controller
     }
 
     public function create()
-
     {
         $niveaux=Niveau::all();
         return view('mentores.create',compact('niveaux'));
     }
 
     public function store(Request $request)
-
     {
         $input = $request->all();
         $fileName = time() . $request->file('photo')->getClientOriginalName();
@@ -48,7 +46,7 @@ class MentoreController extends Controller
         Mentore::create([
             'attente' => $input['attente'],
             'user_id' => $user->id,
-            'niveau_id' => $input['niveau_id']
+            'niveau_id' => $input['niveau_id'],
         ]);
         return redirect('/login')->with('flash-message', 'Votre inscription à été bien enregistré');
     }
@@ -101,7 +99,6 @@ class MentoreController extends Controller
 
     public function accueil()
     {
-        //return redirect()->route('mentores.mentors', ['id' => AUth::user()->mentore->id]);
         $connexions = Connexion::where('mentore_id',Auth::user()->mentore->id)->get();
         $mentors = Mentor::all();
         $m = [];
@@ -115,6 +112,7 @@ class MentoreController extends Controller
         }
         return view('mentores.accueil', compact('mentors','connexions'));
     }
+  
 
     public function mentors($id)
     {
@@ -132,7 +130,7 @@ class MentoreController extends Controller
         $connexion->date = Carbon::now();
         $connexion->status = 'en attente';  
         $connexion->save();
-        return redirect()->route('mentores.mentors', ['id' => $id]);
+        return redirect()->route('mentores.mentors', ['id' => $idMentor]);
     }
 
     public function  blog()

@@ -12,5 +12,10 @@ class Domaine extends Model
     protected $table = 'domaines';
     protected $primarykey = 'id'; 
     protected $guarded = ['id'];
+
+    public function mentor(){
+        
+        return $this->hasOne(Mentor::class);
+    }
   
 }

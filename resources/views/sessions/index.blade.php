@@ -18,11 +18,10 @@
                             <table id="example5" class="display" style="min-width: 845px">
                                 <thead>
                                     <tr>
-                                        
                                         <th>Id</th>
                                         <th>Date</th>
                                         <th>Titre</th>
-                                        <th>Description</th>
+                                        <th>Mentoré</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -31,40 +30,42 @@
 
                                     <?php $no = 1; ?>
                                     @foreach ($sessions as $session)
-                                    <tr>
-                                        <td>{{ $no++ }}</td>
-                                        <td>{{ $session->date }}</td>
-                                        <td>{{ $session->titre }}</td>
-                                        <td>{{ $session->description }}</td>
-                                        <td>
-
-
-                                            @if ($session->status == 'en cours')
-                                                <div class="dropdown">
-                                                    <a href="javascript:void(0);" class="btn-link" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
-                                                        <span
-                                                            class="badge light badge-warning">{{ $session->status }}</span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item"
-                                                            href="/session/{{ $session->id }}/status?status=1">Annuler</a>
-                                                        <a class="dropdown-item"
-                                                            href="/session/{{ $session->id }}/status?status=2">Realiser</a>
+                                        <tr>
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $session->date }}</td>
+                                            <td>{{ $session->titre }}</td>
+                                            <td>{{ $session->connexion->mentore->user->nom }}
+                                                {{ $session->connexion->mentore->user->prenom }}</td>
+                                            <td>
+                                                @if ($session->status == 'en cours')
+                                                    <div class="dropdown">
+                                                        <a href="javascript:void(0);" class="btn-link"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span
+                                                                class="badge light badge-warning">{{ $session->status }}</span>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item"
+                                                                href="/session/{{ $session->id }}/status?status=1">Annuler</a>
+                                                            <a class="dropdown-item"
+                                                                href="/session/{{ $session->id }}/status?status=2">Realiser</a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            @else
-                                                @if ($session->status == 'realisé')
-                                                    <span class="badge light badge-success">{{ $session->status }}</span>
                                                 @else
-                                                    <span class="badge light badge-danger">{{ $session->status }}</span>
+                                                    @if ($session->status == 'realisé')
+                                                        <span
+                                                            class="badge light badge-success">{{ $session->status }}</span>
+                                                    @else
+                                                        <span class="badge light badge-danger">{{ $session->status }}</span>
+                                                    @endif
                                                 @endif
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-warning">Voir plus</button>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-outline-warning"><a href="/sessions/voirplus">Voir plus</a></button>
+                        
+                                            </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>

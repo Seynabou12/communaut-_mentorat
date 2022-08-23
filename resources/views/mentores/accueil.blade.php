@@ -263,7 +263,6 @@
             font-size: 2.619047619rem;
             line-height: 1.4;
             color: inherit;
-            font-family: futura-pt, "Source Sans Pro", Helvetica, Roboto, Arial, sans-serif;
             font-weight: 700;
         }
     }
@@ -274,29 +273,18 @@
     @include('site.nav')
 
     <header class="washed-row--tertiary"
-        style="background-color: #C15DFB;
-            color: #fefefe;
-            padding-bottom: 1.5rem;
-            padding-top: 100px;">
-        <div class="container"
-            style="max-width: 71.4285714286rem;
-                margin-left: auto;
-                margin-right: auto;">
+        style="background-color: #C15DFB;color: #fefefe;padding-bottom: 1.5rem;padding-top: 100px;">
+        <div class="container"style="max-width: 71.4285714286rem;margin-left: auto; margin-right: auto;">
             <h1 style="color: white; margin-bottom: 0.5rem; margin-top: 0;">Trouver des Mentors et Connectés Vous</h1>
             <p class="lead"
-                style="font-size: 131.25%;
-                    line-height: 1.6; display: block;
-                    margin-block-start: 1em;
-                    margin-block-end: 1em;
-                    margin-inline-start: 0px;
-                    margin-inline-end: 0px;">
+                style="font-size: 131.25%;line-height: 1.6; display: block;margin-block-start: 1em; margin-block-end: 1em;margin-inline-start: 0px; margin-inline-end: 0px;">
                 Nous avons trié ces résultats de recherche en fonction de leur pertinence par rapport à votre profil.
-                Lorsque vous voyez quelqu'un qui semble convenir, Connectez avec lui et envoyez un message !</p>
+                Lorsque vous voyez quelqu'un qui semble convenir, Connectez avec lui et envoyez un message !
+            </p>
         </div>
     </header>
 
-
-    <div style="margin-left: 300px; margin-right: 300px; margin-top: 50px;">
+    <div style=" margin-top: 50px;">
         <h4 style="text-align: center; margin-bottom: 30px; font-weight: bold;">Rechercher par Mentor ou par Domaine
         </h4>
         <div class="input-group">
@@ -306,115 +294,70 @@
         </div>
     </div>
 
-
-    <section class="profile-list" style="padding-bottom: 1.5rem;
-    padding-top: 1.5rem;">
-        <div class="container"
-            style="
-        max-width: 71.4285714286rem;
-        margin-left: auto;
-        margin-right: auto;display: flex;
-    flex-flow: row wrap;">
+    <section class="profile-list" style="padding-bottom: 1.5rem;padding-top: 1.5rem;">
+        <div class="container-fluid row"
+            style="max-width: 100rem;margin-left: auto; margin-right: auto;display: flex; flex-flow: row wrap; justify-content: center;">
             @foreach ($mentors as $mentor)
-                <article class="profile-card"
-                    style="position: relative;
-                            word-break: break-word;
-                            display: flex;
-                            margin-left: 20px;
-                            flex-direction: column;
-                            margin-bottom: 2rem;
-                            border: 1px solid #e3e6e8;
-                            border-radius: 2px;
-                            background: #fefefe;
-                            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);
-                            color: #0a0a0a;
-                            overflow: visible;">
-
+                <article class="profile-card col-md-4 col-sm-6 col-lg-3"
+                    style="position: relative;word-break: break-word;display: flex; margin-left: 20px;
+                            flex-direction: column; margin-bottom: 2rem;border: 1px solid #e3e6e8;
+                            border-radius: 2px; background: #fefefe;
+                            box-shadow: #e3e6e8;
+                            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);color: #0a0a0a;overflow: visible;">
                     <header class="profile-card__overview"
-                        style="flex: 0 0 auto;
-    word-break: break-word;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: row;">
-
-                        <div class="profile-card__organization"
-                            style="position: absolute;
-            top: -1rem;
-            right: 1rem;">
-
-
+                        style="flex: 0 0 auto; word-break: break-word; padding: 1.5rem; display: flex; flex-direction: row;">
+                        <div class="profile-card__organization" style="position: absolute; top: -1rem;right: 1rem;">
                         </div>
-
-                        <div class="profile-card__image" style="margin-right: 1rem;     margin: 0;
-        padding: 0;">
-
+                        <div class="profile-card__image" style="margin-right: 1rem; margin: 0;padding: 0;";>
                             <a href="#"
-                                style="    line-height: inherit;
-        color: #0266b7;
-        text-decoration: none;
-        cursor: pointer;background-color: transparent;">
+                                style="line-height: inherit; color: #0266b7;text-decoration: none; cursor: pointer;background-color: transparent;">
                                 <img src="{{ $mentor->user->photo }}" class="avatar--small" alt="[NN]"
-                                    style="display: block;
-                margin: auto; width: 60px; height: 60px;">
+                                    style="display: block;margin: auto; width: 70px; height: 70px; border-radius: 50%; border: 2px solid #C15DFB;">
                             </a>
-
                         </div>
-
-                        <div class="profile-card__about">
-                            <h3>
-
+                        <div class="profile-card__about" style=" margin-right: 50px;">
+                            <font >
                                 <a href="#" class="text-tertiary">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">
-
+                                    <h3 style="vertical-align: inherit;">
+                                        <h4 style="vertical-align: inherit;" >
                                             {{ $mentor->user->prenom }} {{ $mentor->user->nom }}
-
-                                        </font>
-                                    </font>
+                                        </h4>
+                                    </h3>
                                 </a>
-                            </h3>
-
-                            <h5 class="">
-                                <ul class="list--comma-separated">
+                            </font>
+                            <font class="">
+                                <ul class="list--comma-separated" >
                                     <li>
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $mentor->user->telephone }}</font>
-                                        </font>
+                                        <h5 style="vertical-align: inherit;">
+                                            <h5 style="vertical-align: inherit;">{{ $mentor->user->telephone }}</h5>
+                                        </h5>
                                     </li>
                                     <li>
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $mentor->user->email }}</font>
-                                        </font>
+                                        <h5 style="vertical-align: inherit;">
+                                            <h5 style="vertical-align: inherit;">{{ $mentor->user->email }}</h5>
+                                        </h5>
                                     </li>
                                     <li>
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $mentor->user->adresse }}</font>
-                                        </font>
+                                        <h5 style="vertical-align: inherit;">
+                                            <h5 style="vertical-align: inherit;">{{ $mentor->user->adresse }}</h5>
+                                        </h5>
                                     </li>
                                 </ul>
-                            </h5>
-                            <h5 class="no-bold text-sottovoce">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Domaine</font>
-                                </font>
-                            </h5>
+                            </font>
+
                         </div>
                     </header>
                     <section class="profile-card__expertise"
-                        style="background-color: #e3e6e8;
-            flex: 1 0 auto;
-            word-break: break-word;
-            padding: 1.5rem;">
+                        style="background-color: #f1f3f5; flex: 1 0 auto; word-break: break-word; padding: 1.5rem;">
                         <h4>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Comment je peux aider</font>
                             </font>
                         </h4>
-
                         <div class="profile-card__category-rating">
                             <div>
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">La gestion</font>
+                                    <font style="vertical-align: inherit;">{{ $mentor->domaine->nomDomaine }}</font>
                                 </font>
                             </div>
                             <div class="profile-card__progress-container">
@@ -474,37 +417,113 @@
                                 </div>
                             </div>
                         </div>
-
                     </section>
                     <footer class="profile-card__actions background-whisper"
                         style="justify-content: flex-end;
-        align-items: flex-end;
-        display: flex;
-        flex-flow: row nowrap;
-        flex: 1 0 auto;
-        word-break: break-word;
-        background-color: #e3e6e8 !important;
-        padding: 0 1rem 1.5rem 1rem;">
-
-                        <a href="#" class="button hollow small tertiary" style="border: #C15DFB">
-                            <strong>
-                                <font style="vertical-align: inherit;">
-                                    <button>
-                                        <a style="vertical-align: inherit;"
-                                            href="/mentors/{{ $mentor->id }}/details">Voir le profil</a>
-                                    </button>
-
-                                </font>
-                            </strong>
-                        </a>
+                                align-items: flex-end;
+                                display: flex;
+                                flex-flow: row nowrap;
+                                flex: 1 0 auto;
+                                word-break: break-word;
+                                background-color: #f1f3f5 !important;
+                                padding: 0 1rem 1.5rem 1rem;">
+                        <div class="d-flex">
+                            <a href="/mentors/{{ $mentor->id }}/details">
+                                <button type="button" class="btn btn-outline "
+                                    style="background: transparent; border: 1px solid #C15DFB; color: black;">Voir
+                                    Profil</button>
+                            </a>
+                        </div>
                     </footer>
                 </article>
             @endforeach
-
-
-
         </div>
     </section>
+
+    @include('site.footer')
+
+    {{-- <div class="d-md-grid grid-cols-3 mx-n3" style="margin-left: -1rem !important;margin-right: -1rem !important;">
+
+
+        <div class="slide p-3 " data-test="collaborate-profile-card-component"
+            style="cursor: pointer;padding: 1rem !important;">
+            <div class="card carousel-card rounded border border-secondary"
+                id="collaborate-profile-card-e02f148a-f0f3-4c27-a8e5-849c01217fc5" data-controller="card-navigation"
+                data-card-navigation-navigation-url-value="/scraly" data-action="click->card-navigation#cardClick"
+                style="border-radius: 0.5rem !important;position: relative;
+                display: flex;
+                flex-direction: column;
+                min-width: 0px;
+                overflow-wrap: break-word;
+                background-color: rgb(255, 255, 255);
+                background-clip: border-box;
+                border-width: 1px !important;
+                height: 140px;
+                width: 100%;
+                border-style: solid !important;">
+                <header class="carousel-card-header rounded-top bg-secondary"
+                    style="border-top-left-radius: 0.5rem !important;
+                border-top-right-radius: 0.5rem !important;">
+                </header>
+                <div class="carousel-card-avatar -rounded-circle -centered">
+                    <a data-turbo-frame="_top" href="/scraly">
+                        <div class="avatar-background avatar-background-size-xl-3 rounded-circle">
+                            <div class="avatar rounded-circle avatar-size-xl-3">
+                                <span class="avatar-image">
+                                    <img data-test="available-profile-avatar" data-controller="lazy-image-loader"
+                                        data-lazy-image-loader-src-value="https://polywork-images-proxy.imgix.net/https%3A%2F%2Fwww.polywork.com%2Fscraly%2Favatar%3Fversion%3Df4d528cf8c5426e57898399d6b50f566?ixlib=rails-4.2.0&amp;w=128&amp;h=128&amp;fit=crop&amp;auto=format&amp;s=6588572dfbceca12ddbdcaa69a8c4344"
+                                        src="https://polywork-images-proxy.imgix.net/https%3A%2F%2Fwww.polywork.com%2Fscraly%2Favatar%3Fversion%3Df4d528cf8c5426e57898399d6b50f566?ixlib=rails-4.2.0&amp;w=128&amp;h=128&amp;fit=crop&amp;auto=format&amp;s=6588572dfbceca12ddbdcaa69a8c4344">
+                                </span>
+                            </div>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="py-6 px-4 text-center">
+                    <a data-turbo-frame="_top" class="d-inline-flex mw-100" href="/scraly">
+                        <h4 class="pt-3 ellipsable text-default">
+                            Aurélie Vache
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px"
+                                viewBox="0 0 22 22" fill="none">
+                                <path
+                                    d="M22 11L19.56 8.21L19.9 4.52L16.29 3.7L14.4 0.5L11 1.96L7.6 0.5L5.71 3.69L2.1 4.5L2.44 8.2L0 11L2.44 13.79L2.1 17.49L5.71 18.31L7.6 21.5L11 20.03L14.4 21.49L16.29 18.3L19.9 17.48L19.56 13.79L22 11ZM8.38 15.01L6 12.61C5.61 12.22 5.61 11.59 6 11.2L6.07 11.13C6.46 10.74 7.1 10.74 7.49 11.13L9.1 12.75L14.25 7.59C14.64 7.2 15.28 7.2 15.67 7.59L15.74 7.66C16.13 8.05 16.13 8.68 15.74 9.07L9.82 15.01C9.41 15.4 8.78 15.4 8.38 15.01Z"
+                                    fill="#582be8"></path>
+                            </svg>
+
+                        </h4>
+                    </a>
+                    <div class="caption-2 text-muted ellipsable line-height-body">
+                        DevRel, OVHcloud
+                    </div>
+
+                    <div class="caption-1 text-muted my-3 d-flex align-items-center justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor"
+                            class="fixed-icon-size--12px text-yellow mr-1 pw-icon pw-icon-coffee">
+                            <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                            <path
+                                d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z">
+                            </path>
+                        </svg>
+
+                        <span>
+                            Open to mentoring
+                        </span>
+                    </div>
+
+                    <a class="btn btn-outline-secondary align-items-center rounded" data-turbo-frame="modal_container"
+                        data-test="collaborate-profile-card-component-cta"
+                        href="/registration/flows/collaboration/7459?entrypoint=%2Fcollaborators%2Fmentoring">
+                        <span class="d-block px-1">
+                            Connect
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div> --}}
 </body>
 
 </html>

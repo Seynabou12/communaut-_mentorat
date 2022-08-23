@@ -17,5 +17,9 @@ class Mentor extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function domaine()
+    {
+        return $this->belongsTo(Domaine::class);
+    }
 
 }
