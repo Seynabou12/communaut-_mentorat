@@ -15,11 +15,10 @@
 
 <body>
     <div class="authincation h-100" >
-
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-md-6">
-                    <div class="authincation-content" style="margin-top: 100px;">
+                    <div class="authincation-content" style="margin-top: 10px;">
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form" >
@@ -56,10 +55,8 @@
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Vous n'avez pas de compte? <a class="text-primary"
-                                            href="/mentors/create">S'inscrire</a></p>
+                                        <p>Vous n'avez pas de compte? <a class="text-primary" href="/mentors/create">inscrivez-vous</a></p>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

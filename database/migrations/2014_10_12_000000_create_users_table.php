@@ -11,7 +11,7 @@ return new class extends Migration
      *
      * @return void
     */
-
+    
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('nom');
             $table->string('adresse')->nullable();
-            $table->string('telephone')->nullable();
-            $table->string('email');
+            $table->string('telephone')->nullable()->unique();
+            $table->string('email')->unique();
             $table->string('password');
             $table->string('profil');
             $table->date('dateNaissance')->nullable();

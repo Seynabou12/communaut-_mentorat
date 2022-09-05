@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
     <link href="/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
-    <!-- Style css -->
     <link href="/css/style.css" rel="stylesheet">
 </head>
 
@@ -17,46 +15,44 @@
     @include('site.nav')
     <div class="banner"
         style="margin-top: 80px;background: url(../images/g1.jpg) no-repeat center top;
-background-size: cover;
-min-height: 600px;
-position: relative;">
+                background-size: cover;
+                min-height: 600px;
+                position: relative;">
         <div class="bg-color" style="background-color: RGBA(10, 9, 9, 0.80);
-        min-height: 700px; ">
+                min-height: 700px; ">
             <div class="container"
-                style="    padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;">
+                style=" padding-right: 15px;
+                        padding-left: 15px;
+                        margin-right: auto;
+                        margin-left: auto;">
                 <div class="row" style="margin-right: -15px;
-            margin-left: -15px;">
+                        margin-left: -15px;">
                     <div class="banner-text text-center" style="
-                text-align: center;">
+                            text-align: center;">
                         <div class="text-border"
-                            style="
-                    display: inline-block;
-                    margin-top: 150px;">
+                            style="display: inline-block; margin-top: 150px;">
                             <h2 class="text-dec"
-                                style="    font-size: 24px;
-                        padding: 10px 20px;
-                        margin: 15px 0;
-                        text-transform: uppercase;
-                        color: #fff;
-                        font-family: Open Sans, sans-serif;
-                        font-weight: 700;">
+                                style="font-size: 24px;
+                                    padding: 10px 20px;
+                                    margin: 15px 0;
+                                    text-transform: uppercase;
+                                    color: #fff;
+                                    font-family: Open Sans, sans-serif;
+                                    font-weight: 700;">
                                 Fier d'être mentor du Réseau Mentorat!
                             </h2>
                         </div>
                         <div class="intro-para text-center quote"
                             style="font-family: 'Alegreya Sans', sans-serif;
-                    font-size: 45px;
-                    color: #fff;
-                    margin-top: 30px;">
+                                font-size: 45px;
+                                color: #fff;
+                                margin-top: 30px;">
                             <p class="big-text"
-                                style="    margin: 0 0 10px;display: block;
-                        margin-block-start: 1em;
-                        margin-block-end: 1em;
-                        margin-inline-start: 0px;
-                        margin-inline-end: 0px;">
+                                style="margin: 0 0 10px;display: block;
+                                    margin-block-start: 1em;
+                                    margin-block-end: 1em;
+                                    margin-inline-start: 0px;
+                                    margin-inline-end: 0px;">
                                 <span style="vertical-align: inherit;">
                                     <span style="vertical-align: inherit;">Apprendre aujourd'hui. </span>
                                     <span style="vertical-align: inherit;">. </span>
@@ -77,7 +73,7 @@ position: relative;">
                                 </span>
                             </p>
                             <a href="#footer" class="btn get-quote"
-                                style=" background-color: #C15DFB;
+                                style="background-color: #C15DFB;
                                         color: #fff;
                                         transition: all 0.3s ease-in-out;
                                         margin-top: 10px;">
@@ -94,9 +90,6 @@ position: relative;">
             </div>
         </div>
     </div>
-
-
-
     <div class="section pp-scrollable" style="text-align: center; ">
         <div class="wrap content" style="padding-top: 0px;">
             <div class="wrap content" id="wrapper">
@@ -379,7 +372,7 @@ position: relative;">
                                                     </label>
                                                     <div class="col-lg-6">
                                                         <select class="default-select wide form-control"
-                                                            id="validationCustom05" name="domaine_id[]" multiple="multiple">
+                                                            id="validationCustom05" name="domaine_id">
                                                             <option data-display="Select">Please select</option>
                                                             @foreach ($domaines as $domaine)
                                                                 <option value="{{ $domaine->id }}">

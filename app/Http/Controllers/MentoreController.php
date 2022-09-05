@@ -6,6 +6,7 @@ use App\Models\Connexion;
 use App\Models\Mentor;
 use App\Models\Mentore;
 use App\Models\Niveau;
+use App\Models\Notification;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -76,7 +77,6 @@ class MentoreController extends Controller
         } else {
             $input['photo'] = $user->photo;
         }
-
         $user->prenom = $input['prenom'];
         $user->nom = $input['nom'];
         $user->adresse = $input['adresse'];
@@ -113,7 +113,6 @@ class MentoreController extends Controller
         return view('mentores.accueil', compact('mentors','connexions'));
     }
   
-
     public function mentors($id)
     {
         $connexions = Connexion::where('mentore_id',$id)->get();
@@ -130,6 +129,12 @@ class MentoreController extends Controller
         $connexion->date = Carbon::now();
         $connexion->status = 'en attente';  
         $connexion->save();
+        $notification = new Notification();
+        $notification->titre = "Le mentoré " . $connexion->mentore->user->prenom ." " . $connexion->mentore->user->nom . " vous a envoyé une demande de connexion ";
+        $notification->date = Carbon::now();
+        $notification->user_id = $mentor->user->id;
+        $notification->lien = "/mentors/".$connexion->mentor_id."/mentores";
+        $notification->save();
         return redirect()->route('mentores.mentors', ['id' => $idMentor]);
     }
 

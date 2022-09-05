@@ -6,6 +6,7 @@ use App\Models\Connexion;
 use App\Models\Domaine;
 use App\Models\Mentor;
 use App\Models\Mentore;
+use App\Models\Notification;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -30,8 +31,8 @@ class MentorController extends Controller
         $fileName = time() . $request->file('photo')->getClientOriginalName();
         $path = $request->file('photo')->storeAs('imagess', $fileName, 'public');
         $input['photo'] = '/storage/' . $path;
-        $domaine = $input['domaine_id'];
-        $input['domaine_id'] = implode(',',$domaine);
+        // $domaine = $input['domaine_id'];
+        // $input['domaine_id'] = implode(',',$domaine);
 
         $user = User::create([
             'prenom' => $input['prenom'],
@@ -111,7 +112,7 @@ class MentorController extends Controller
         $mentor = Mentor::findOrFail($id);
         return view('mentors.details', compact('mentor'));
     }
-
+ 
     public function mentores($id)
     {
         $connexions = Connexion::where('mentor_id',$id)->get();
@@ -128,6 +129,12 @@ class MentorController extends Controller
         $connexion->date = Carbon::now();
         $connexion->status = 'en attente';
         $connexion->save();
+        $notification = new Notification();
+        $notification->titre = "Le mentoré " . $connexion->mentore->user->prenom ." " . $connexion->mentore->user->nom . " vous a envoyé une demande de connexion ";
+        $notification->date = Carbon::now();
+        $notification->user_id = $mentor->user_id;
+        $notification->lien = "/mentors/".$connexion->mentor_id."/mentores";
+        $notification->save();
         return redirect()->route('mentors.mentores', ['id' => $id]);
     }
 
@@ -136,7 +143,12 @@ class MentorController extends Controller
         $connexion = Connexion::findOrFail($id);
         $connexion->status = $request->status == 1 ? 'accepté' : 'refusé';
         $connexion->save();
+        $notification = new Notification();
+        $notification->titre = "Le mentor " . $connexion->mentor->user->prenom ." " . $connexion->mentor->user->nom . " a ". $connexion->status . " votre connexion";
+        $notification->date = Carbon::now();
+        $notification->user_id = $connexion->mentore->user_id;
+        $notification->lien = "/mentores/".$connexion->mentore_id."/mentors";
+        $notification->save();
         return redirect()->route('mentors.mentores', ['id' => $connexion->mentor_id]);
     }
-
 }

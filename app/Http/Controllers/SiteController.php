@@ -14,4 +14,9 @@ class SiteController extends Controller
         $mentores = Mentore::all();
         return view('site.index1', compact('mentors', 'mentores'));
     }
+
+    public function mentoré()
+    {
+        return view('site.mentoré');
+    }
 }

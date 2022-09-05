@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\MentoreController;
 use App\Http\Controllers\NiveauController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UtilisateurController;
@@ -36,7 +37,7 @@ Route::post('/mentores/create', [MentoreController::class, 'store']);
 Route::get('/blog', [MentoreController::class, 'blog']);
 Route::get('/', [SiteController::class, 'index1']);
 
-Route::middleware('authentification')->group(
+Route::middleware(['authentification', 'notification'])->group(
     function () {
 
         Route::get('/mentors/liste', [MentorController::class, 'index']);
@@ -71,6 +72,8 @@ Route::middleware('authentification')->group(
         Route::post('/domaines/create', [DomaineController::class, 'store']);
 
         Route::get('/admin/dashbord', [AdminController::class, 'dashbord']);
+
+        Route::get('/notification/{id}/etat', [NotificationController::class, 'etat'])->where('id', '[0-9]+');
     }
 );
 
