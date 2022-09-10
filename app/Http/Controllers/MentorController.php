@@ -21,7 +21,7 @@ class MentorController extends Controller
 
     public function create()
     {
-        $domaines=Domaine::all();
+        $domaines = Domaine::all();
         return view('mentors.create', compact('domaines'));
     }
 
@@ -45,7 +45,7 @@ class MentorController extends Controller
             'email' => $input['email'],
             'password' => $input['password'],
         ]);
-        
+
         Mentor::create([
             'parcours' => $input['parcours'],
             'experience' => $input['experience'],
@@ -73,8 +73,7 @@ class MentorController extends Controller
         $mentor = Mentor::findorFail($id);
         $user = $mentor->user;
         $input = $request->all();
-        if ($request->file('photo') != null)
-        {
+        if ($request->file('photo') != null) {
             $fileName = time() . $request->file('photo')->getClientOriginalName();
             $path = $request->file('photo')->storeAs('images', $fileName, 'public');
             $input['photo'] = '/storage/' . $path;
@@ -110,12 +109,13 @@ class MentorController extends Controller
     public function details($id)
     {
         $mentor = Mentor::findOrFail($id);
-        return view('mentors.details', compact('mentor'));
+        $connexions = Connexion::where('mentore_id', $id)->get();
+        return view('mentors.details', compact('mentor', 'connexions'));
     }
- 
+
     public function mentores($id)
     {
-        $connexions = Connexion::where('mentor_id',$id)->get();
+        $connexions = Connexion::where('mentor_id', $id)->get();
         return view('mentors.mentores', compact('connexions'));
     }
 
@@ -130,10 +130,10 @@ class MentorController extends Controller
         $connexion->status = 'en attente';
         $connexion->save();
         $notification = new Notification();
-        $notification->titre = "Le mentoré " . $connexion->mentore->user->prenom ." " . $connexion->mentore->user->nom . " vous a envoyé une demande de connexion ";
+        $notification->titre = "Le mentoré " . $connexion->mentore->user->prenom . " " . $connexion->mentore->user->nom . " vous a envoyé une demande de connexion ";
         $notification->date = Carbon::now();
         $notification->user_id = $mentor->user_id;
-        $notification->lien = "/mentors/".$connexion->mentor_id."/mentores";
+        $notification->lien = "/mentors/" . $connexion->mentor_id . "/mentores";
         $notification->save();
         return redirect()->route('mentors.mentores', ['id' => $id]);
     }
@@ -141,13 +141,14 @@ class MentorController extends Controller
     public function status(Request $request, $id)
     {
         $connexion = Connexion::findOrFail($id);
+    
         $connexion->status = $request->status == 1 ? 'accepté' : 'refusé';
         $connexion->save();
         $notification = new Notification();
-        $notification->titre = "Le mentor " . $connexion->mentor->user->prenom ." " . $connexion->mentor->user->nom . " a ". $connexion->status . " votre connexion";
+        $notification->titre = "Le mentor " . $connexion->mentor->user->prenom . " " . $connexion->mentor->user->nom . " a " . $connexion->status . " votre connexion";
         $notification->date = Carbon::now();
         $notification->user_id = $connexion->mentore->user_id;
-        $notification->lien = "/mentores/".$connexion->mentore_id."/mentors";
+        $notification->lien = "/mentores/" . $connexion->mentore_id . "/mentors";
         $notification->save();
         return redirect()->route('mentors.mentores', ['id' => $connexion->mentor_id]);
     }

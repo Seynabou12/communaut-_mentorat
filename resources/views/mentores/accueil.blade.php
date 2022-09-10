@@ -14,11 +14,9 @@
     <meta property="og:image" content="https://dompet.dexignlab.com/xhtml/social-image.png">
     <meta name="format-detection" content="telephone=no">
 
-    <!-- PAGE TITLE HERE -->
-    <title>Dompet : Payment Admin Template</title>
+    <title>Blog des Mentors inscrits dans la plateforme</title>
 
-    <!-- FAVICONS ICON -->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="/shortcut icon" type="image/png" href="images/favicon.png">
     <link href="/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 
@@ -266,9 +264,54 @@
             font-weight: 700;
         }
     }
+
+    .grid:before {
+        order: 9999;
+        content: "";
+        width: 25%;
+        height: 0;
+        background-color: #fff;
+        flex-shrink: 1;
+    }
+
+    @media (max-width: 1024px) {
+
+        .grid .grid-slider li,
+        .grid li {
+            width: calc(50% - 20px);
+            padding: 30px 15px 60px;
+        }
+
+    }
+
+    .grid li {
+        margin: 0 10px 24px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
+        border-radius: 12px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 16px;
+        color: #8b8b8b;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .custom-btn.bg-red:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(231, 76, 60, .8);
+        border-radius: 24px;
+        z-index: -1;
+        transition: left .3s, right .3s, top .3s, bottom .3s;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
+    }
 </style>
 
-<body>
+<body style="background-color: #f9fbfd;">
 
     @include('site.nav')
 
@@ -293,237 +336,59 @@
             <button type="button" class="btn btn-outline" style="background: #C15DFB;color: white">Recherche</button>
         </div>
     </div>
+    
+    <section id="courses" class="courses">
+        <div class="container" data-aos="fade-up">
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                @foreach ($mentors as $mentor)
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="course-item" style="margin: 2px ;
+                                    box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
+                                    border-radius: 12px;
+                                    overflow: hidden;
+                                    margin-bottom: 30px;
+                                    text-align: center;
+                                    font-size: 16px;
+                                    color: #8b8b8b;
+                                    background-color: #fff;">
 
-    <section class="profile-list" style="padding-bottom: 1.5rem;padding-top: 1.5rem;">
-        <div class="container-fluid row"
-            style="max-width: 100rem;margin-left: auto; margin-right: auto;display: flex; flex-flow: row wrap; justify-content: center;">
-            @foreach ($mentors as $mentor)
-                <article class="profile-card col-md-4 col-sm-6 col-lg-3"
-                    style="position: relative;word-break: break-word;display: flex; margin-left: 20px;
-                            flex-direction: column; margin-bottom: 2rem;border: 1px solid #e3e6e8;
-                            border-radius: 2px; background: #fefefe;
-                            box-shadow: #e3e6e8;
-                            box-shadow: 0 0 9px 0 rgb(92 158 214 / 10%);color: #0a0a0a;overflow: visible;">
-                    <header class="profile-card__overview"
-                        style="flex: 0 0 auto; word-break: break-word; padding: 1.5rem; display: flex; flex-direction: row;">
-                        <div class="profile-card__organization" style="position: absolute; top: -1rem;right: 1rem;">
-                        </div>
-                        <div class="profile-card__image" style="margin-right: 1rem; margin: 0;padding: 0;";>
-                            <a href="#"
-                                style="line-height: inherit; color: #0266b7;text-decoration: none; cursor: pointer;background-color: transparent;">
-                                <img src="{{ $mentor->user->photo }}" class="avatar--small" alt="[NN]"
-                                    style="display: block;margin: auto; width: 70px; height: 70px; border-radius: 50%; border: 2px solid #C15DFB;">
-                            </a>
-                        </div>
-                        <div class="profile-card__about" style=" margin-right: 50px;">
-                            <font >
-                                <a href="#" class="text-tertiary">
-                                    <h3 style="vertical-align: inherit;">
-                                        <h4 style="vertical-align: inherit;" >
-                                            {{ $mentor->user->prenom }} {{ $mentor->user->nom }}
-                                        </h4>
-                                    </h3>
-                                </a>
-                            </font>
-                            <font class="">
-                                <ul class="list--comma-separated" >
-                                    <li>
-                                        <h5 style="vertical-align: inherit;">
-                                            <h5 style="vertical-align: inherit;">{{ $mentor->user->telephone }}</h5>
-                                        </h5>
-                                    </li>
-                                    <li>
-                                        <h5 style="vertical-align: inherit;">
-                                            <h5 style="vertical-align: inherit;">{{ $mentor->user->email }}</h5>
-                                        </h5>
-                                    </li>
-                                    <li>
-                                        <h5 style="vertical-align: inherit;">
-                                            <h5 style="vertical-align: inherit;">{{ $mentor->user->adresse }}</h5>
-                                        </h5>
-                                    </li>
-                                </ul>
-                            </font>
+                            <img src="{{ $mentor->user->photo }}" class="img-fluid" alt="..."  style="background-size: cover;
+                            width: 112px;
+                            height: 112px;
 
-                        </div>
-                    </header>
-                    <section class="profile-card__expertise"
-                        style="background-color: #f1f3f5; flex: 1 0 auto; word-break: break-word; padding: 1.5rem;">
-                        <h4>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Comment je peux aider</font>
-                            </font>
-                        </h4>
-                        <div class="profile-card__category-rating">
-                            <div>
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">{{ $mentor->domaine->nomDomaine }}</font>
-                                </font>
-                            </div>
-                            <div class="profile-card__progress-container">
-                                <div class="tertiary progress profile-card__progress--mentor" role="progressbar"
-                                    tabindex="0" aria-valuenow="70.0" aria-valuemin="0"
-                                    aria-valuetext="70,0 pour cent" aria-valuemax="100">
-                                    <div class="progress-meter" style="width: 70.0%">
-                                    </div>
+                            border-radius: 50%;
+                            overflow: hidden;
+                            border: 4px solid #C15DFB;
+                            margin: 40px auto 36px;">
+                            <div class="course-content">
+                                
+
+                                <h3><a href="#">{{ $mentor->user->prenom }} {{ $mentor->user->nom }}</a></h3>
+                                <h3> {{ $mentor->user->email }}</h3>
+                                <h3> {{ $mentor->user->telephone }}</h3>
+                                <h3> {{ $mentor->user->adresse }}</h3>
+                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
+                                    dolorem tempore.</p>
+                                
+                                    <div class="trainer d-flex justify-content-center align-items-center">
+                                        <a href="/mentors/{{ $mentor->id }}/details"><button type="button" class="btn " data-toggle="button" aria-pressed="false" style=" background-color: #C15DFB;color: #fff"
+                                            autocomplete="off">
+                                            Voir Profil
+                                        </button></a>
+                                  
                                 </div>
+                               
                             </div>
                         </div>
-
-                        <div class="profile-card__category-rating">
-                            <div>
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Commercialisation</font>
-                                </font>
-                            </div>
-                            <div class="profile-card__progress-container">
-                                <div class="tertiary progress profile-card__progress--mentor" role="progressbar"
-                                    tabindex="0" aria-valuenow="21.428571428571427" aria-valuemin="0"
-                                    aria-valuetext="21,428571428571427 pour cent" aria-valuemax="100">
-                                    <div class="progress-meter" style="width: 21.428571428571427%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="profile-card__category-rating">
-                            <div>
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Démarrage</font>
-                                </font>
-                            </div>
-                            <div class="profile-card__progress-container">
-                                <div class="tertiary progress profile-card__progress--mentor" role="progressbar"
-                                    tabindex="0" aria-valuenow="33.33333333333333" aria-valuemin="0"
-                                    aria-valuetext="33,33333333333333 pour cent" aria-valuemax="100">
-                                    <div class="progress-meter" style="width: 33.33333333333333%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="profile-card__category-rating">
-                            <div>
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Durabilité</font>
-                                </font>
-                            </div>
-                            <div class="profile-card__progress-container">
-                                <div class="tertiary progress profile-card__progress--mentor" role="progressbar"
-                                    tabindex="0" aria-valuenow="25.0" aria-valuemin="0"
-                                    aria-valuetext="25,0 pour cent" aria-valuemax="100">
-                                    <div class="progress-meter" style="width: 25.0%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <footer class="profile-card__actions background-whisper"
-                        style="justify-content: flex-end;
-                                align-items: flex-end;
-                                display: flex;
-                                flex-flow: row nowrap;
-                                flex: 1 0 auto;
-                                word-break: break-word;
-                                background-color: #f1f3f5 !important;
-                                padding: 0 1rem 1.5rem 1rem;">
-                        <div class="d-flex">
-                            <a href="/mentors/{{ $mentor->id }}/details">
-                                <button type="button" class="btn btn-outline "
-                                    style="background: transparent; border: 1px solid #C15DFB; color: black;">Voir
-                                    Profil</button>
-                            </a>
-                        </div>
-                    </footer>
-                </article>
+                    </div>
             @endforeach
+            </div>
+
         </div>
-    </section>
+    </section><!-- End Courses Section -->
 
     @include('site.footer')
 
-    {{-- <div class="d-md-grid grid-cols-3 mx-n3" style="margin-left: -1rem !important;margin-right: -1rem !important;">
-
-
-        <div class="slide p-3 " data-test="collaborate-profile-card-component"
-            style="cursor: pointer;padding: 1rem !important;">
-            <div class="card carousel-card rounded border border-secondary"
-                id="collaborate-profile-card-e02f148a-f0f3-4c27-a8e5-849c01217fc5" data-controller="card-navigation"
-                data-card-navigation-navigation-url-value="/scraly" data-action="click->card-navigation#cardClick"
-                style="border-radius: 0.5rem !important;position: relative;
-                display: flex;
-                flex-direction: column;
-                min-width: 0px;
-                overflow-wrap: break-word;
-                background-color: rgb(255, 255, 255);
-                background-clip: border-box;
-                border-width: 1px !important;
-                height: 140px;
-                width: 100%;
-                border-style: solid !important;">
-                <header class="carousel-card-header rounded-top bg-secondary"
-                    style="border-top-left-radius: 0.5rem !important;
-                border-top-right-radius: 0.5rem !important;">
-                </header>
-                <div class="carousel-card-avatar -rounded-circle -centered">
-                    <a data-turbo-frame="_top" href="/scraly">
-                        <div class="avatar-background avatar-background-size-xl-3 rounded-circle">
-                            <div class="avatar rounded-circle avatar-size-xl-3">
-                                <span class="avatar-image">
-                                    <img data-test="available-profile-avatar" data-controller="lazy-image-loader"
-                                        data-lazy-image-loader-src-value="https://polywork-images-proxy.imgix.net/https%3A%2F%2Fwww.polywork.com%2Fscraly%2Favatar%3Fversion%3Df4d528cf8c5426e57898399d6b50f566?ixlib=rails-4.2.0&amp;w=128&amp;h=128&amp;fit=crop&amp;auto=format&amp;s=6588572dfbceca12ddbdcaa69a8c4344"
-                                        src="https://polywork-images-proxy.imgix.net/https%3A%2F%2Fwww.polywork.com%2Fscraly%2Favatar%3Fversion%3Df4d528cf8c5426e57898399d6b50f566?ixlib=rails-4.2.0&amp;w=128&amp;h=128&amp;fit=crop&amp;auto=format&amp;s=6588572dfbceca12ddbdcaa69a8c4344">
-                                </span>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-
-                <div class="py-6 px-4 text-center">
-                    <a data-turbo-frame="_top" class="d-inline-flex mw-100" href="/scraly">
-                        <h4 class="pt-3 ellipsable text-default">
-                            Aurélie Vache
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px"
-                                viewBox="0 0 22 22" fill="none">
-                                <path
-                                    d="M22 11L19.56 8.21L19.9 4.52L16.29 3.7L14.4 0.5L11 1.96L7.6 0.5L5.71 3.69L2.1 4.5L2.44 8.2L0 11L2.44 13.79L2.1 17.49L5.71 18.31L7.6 21.5L11 20.03L14.4 21.49L16.29 18.3L19.9 17.48L19.56 13.79L22 11ZM8.38 15.01L6 12.61C5.61 12.22 5.61 11.59 6 11.2L6.07 11.13C6.46 10.74 7.1 10.74 7.49 11.13L9.1 12.75L14.25 7.59C14.64 7.2 15.28 7.2 15.67 7.59L15.74 7.66C16.13 8.05 16.13 8.68 15.74 9.07L9.82 15.01C9.41 15.4 8.78 15.4 8.38 15.01Z"
-                                    fill="#582be8"></path>
-                            </svg>
-
-                        </h4>
-                    </a>
-                    <div class="caption-2 text-muted ellipsable line-height-body">
-                        DevRel, OVHcloud
-                    </div>
-
-                    <div class="caption-1 text-muted my-3 d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor"
-                            class="fixed-icon-size--12px text-yellow mr-1 pw-icon pw-icon-coffee">
-                            <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                            <path
-                                d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z">
-                            </path>
-                        </svg>
-
-                        <span>
-                            Open to mentoring
-                        </span>
-                    </div>
-
-                    <a class="btn btn-outline-secondary align-items-center rounded" data-turbo-frame="modal_container"
-                        data-test="collaborate-profile-card-component-cta"
-                        href="/registration/flows/collaboration/7459?entrypoint=%2Fcollaborators%2Fmentoring">
-                        <span class="d-block px-1">
-                            Connect
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-    </div> --}}
 </body>
 
 </html>

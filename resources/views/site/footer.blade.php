@@ -27,7 +27,7 @@
 
 </head>
 <!-- ======= Footer ======= -->
-<footer id="footer">
+<footer id="footer" style=" box-shadow: 0 3px 6px rgb(0 0 0 / 10%);">
 
     <div class="footer-top">
         <div class="container">

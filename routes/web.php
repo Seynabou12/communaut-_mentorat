@@ -38,7 +38,8 @@ Route::get('/blog', [MentoreController::class, 'blog']);
 Route::get('/', [SiteController::class, 'index1']);
 
 Route::middleware(['authentification', 'notification'])->group(
-    function () {
+    function () 
+    {
 
         Route::get('/mentors/liste', [MentorController::class, 'index']);
         Route::get('/mentors/{id}/details', [MentorController::class, 'details'])->where('id', '[0-9]+');
@@ -75,6 +76,7 @@ Route::middleware(['authentification', 'notification'])->group(
 
         Route::get('/notification/{id}/etat', [NotificationController::class, 'etat'])->where('id', '[0-9]+');
     }
+
 );
 
 Route::get("/login", [UtilisateurController::class, 'formLogin'])->name('auth.formLogin');

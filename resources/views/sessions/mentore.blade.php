@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="content-body">
+    <div class="content-body" style="margin-top: -70px;">
         <div class="container-fluid">
 
             <div class="col-12">
@@ -16,14 +16,14 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="example5" class="display" style="min-width: 845px">
-                                <thead>
+                                <thead style="background-color: #C15DFB;">
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Date</th>
-                                        <th>Titre</th>
-                                        <th>Mentors</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th style="color: white;">Id</th>
+                                        <th style="color: white;">Date</th>
+                                        <th style="color: white;">Titre</th>
+                                        <th style="color: white;">Mentors</th>
+                                        <th style="color: white;">Status</th>
+                                        <th style="color: white;">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,7 +49,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-warning"><a href="/sessions/{{ $session->id }}/voirplus">Voir plus</a></button>
+                                            <button type="button" class="btn btn-outline-primary" style="color: white;"><a href="/sessions/{{ $session->id }}/voirplus">Voir plus</a></button>
                                         </td>
                                     </tr>
                                     @endforeach

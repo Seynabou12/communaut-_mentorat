@@ -51,12 +51,15 @@
                             line-height: 4rem;
                             font-weight: 800;
                             color: var(--text-color,#000000);
-                            text-decoration: none;">{{ $session->titre }}</h1>
+                            text-decoration: none;">
+                            {{ $session->titre }}</h1>
                         <div class="sc-1qt8j1-6 fgFgJJ"
                             style="display: flex;
                                 -moz-box-align: center;
                                 align-items: center;">
-                            <span class="ekeyz-0 dPTSJD sc-48swuy-0 jzZKXF bi2o3c-0 Ajoal"><img src="{{ $session->connexion->mentor->user->photo }}" style=" height: 58px;
+                            <span class="ekeyz-0 dPTSJD sc-48swuy-0 jzZKXF bi2o3c-0 Ajoal"><img
+                                    src="{{ $session->connexion->mentor->user->photo }}"
+                                    style=" height: 58px;
                                     width: 58px;border-radius: 50%;overflow: hidden;"></span>
                             <div style="margin-left: 16px; ">
                                 <p class="ekeyz-0 kFXjqR"
@@ -67,7 +70,8 @@
                                     font-weight: 600;
                                     color: var(--text-color,#000000);
                                     text-decoration: none;">
-                                    {{ $session->connexion->mentor->user->prenom }} {{ $session->connexion->mentor->user->nom }}</p>
+                                    {{ $session->connexion->mentor->user->prenom }}
+                                    {{ $session->connexion->mentor->user->nom }}</p>
                                 <p class="ekeyz-0 sc-1qt8j1-3 kFXjqR cshyT"
                                     style="margin: 0px;
                                     font-family: Nunito Sans, sans-serif;
@@ -101,12 +105,12 @@
                                         transition: all 0.2s ease 0s;
                                         cursor: auto;pointer-events: none; opacity: 1;
                                         margin: 8px 8px 0px 0px;"><span
-                                class="ekeyz-0 kFXjqR"
-                                style="pointer-events: none;cursor: auto;">Domaine</span></button>
+                                        class="ekeyz-0 kFXjqR"
+                                        style="pointer-events: none;cursor: auto;">Domaine</span></button>
                             </li>
                         </ul>
                     </div>
-                   
+
                     <div class="sc-7lcum6-0 edCusw"
                         style="padding: 24px;
                             margin-left: 20px;
@@ -124,13 +128,7 @@
                         <div>
                             <div>
                                 <p class="ekeyz-0 jasXoh">{{ $session->description }}</p>
-                                <p class="ekeyz-0 jasXoh">A l'aide de la P.O.O, vous devez créer une application de gestion
-                                    des
-                                    oragnisation avec PHP 8 et MySql.</p>
-                                <p class="ekeyz-0 jasXoh">L'appiclation devra compter une page d'accueil, un espace
-                                    d'authentification pour la connexion des utilisateurs et des cruds sécurisés pour la
-                                    gestion
-                                    des oragnisations.</p>
+                                
                                 <p class="ekeyz-0 jasXoh">​</p>
                                 <p class="ekeyz-0 jasXoh">​</p>
                             </div>
@@ -148,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     {{-- <div class="sc-7lcum6-0 buHFMv" style="border-radius: 8px;">
                         <h3 class="ekeyz-0 dPTSJD" style="margin-left: 20px;">Documenter vous sur les sites suivants</h3>
                         <div class="b99hij-0 flpvII"
@@ -322,8 +320,8 @@
                         transition: all 0.2s ease 0s;
                         will-change: box-shadow, transform;"><span>Soumettre
                             un
-                            rendu</span><span> </span><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                            rendu</span><span> </span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                             style="height: 1.6rem;
                             width: 1.6rem;
                             flex-shrink: 0;
@@ -336,7 +334,8 @@
                                 style="stroke: var(--icon-color,#000000);" stroke-width="2" stroke-linecap="round"
                                 class="colorStroke"></line>
                             <line x1="7" y1="12" x2="17" y2="12" stroke="black"
-                                stroke-width="2" stroke-linecap="round" class="colorStroke"  style="stroke: var(--icon-color,#000000);" ></line>
+                                stroke-width="2" stroke-linecap="round" class="colorStroke"
+                                style="stroke: var(--icon-color,#000000);"></line>
                         </svg></button>
                     <p class="ekeyz-0 kFXjqR"
                         style="margin-left: 16px;
@@ -415,9 +414,11 @@
                             width: 24px;
                             height: 24px;">
                             <path d="M21 2.91992L10 14.3599" stroke="black" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="colorStroke" style="stroke: var(--icon-color,#000000);"></path>
+                                stroke-linejoin="round" class="colorStroke" style="stroke: var(--icon-color,#000000);">
+                            </path>
                             <path d="M21 2.91992L14 23.7199L10 14.3599L1 10.1999L21 2.91992Z" stroke="black"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="colorStroke" style="  stroke: var(--icon-color,#000000);">
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="colorStroke"
+                                style="  stroke: var(--icon-color,#000000);">
                             </path>
                         </svg></button>
                 </div>

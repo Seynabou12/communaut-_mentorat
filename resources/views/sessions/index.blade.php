@@ -16,16 +16,16 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="example5" class="display" style="min-width: 845px">
-                                <thead>
+                                <thead style="background-color: #C15DFB;">
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Date</th>
-                                        <th>Titre</th>
-                                        <th>Mentoré</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th style="color: white;">Id</th>
+                                        <th style="color: white;">Date</th>
+                                        <th style="color: white;">Titre</th>
+                                        <th style="color: white;">Mentoré</th>
+                                        <th style="color: white;">Status</th>
+                                        <th style="color: white;">Actions</th>
                                     </tr>
-                                </thead>
+                                </thead >
                                 <tbody>
 
                                     <?php $no = 1; ?>
@@ -61,10 +61,12 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <button type="button"
-                                                    class="btn btn-outline-warning"><a href="/sessions/voirplus">Voir plus</a></button>
-                        
+                                                <div class="d-flex">
+                                                    <button type="button" class="btn btn-outline-primary">Détails</button>
+                                                    
+                                                </div>
                                             </td>
+                                           
                                         </tr>
                                     @endforeach
                                 </tbody>

@@ -19,32 +19,10 @@
 </head>
 
 <body>
-    <!--*******************
-        Preloader start
-    ********************-->
-    <div id="preloader">
-        <div class="waviy">
-            <span style="--i:1">L</span>
-            <span style="--i:2">o</span>
-            <span style="--i:3">a</span>
-            <span style="--i:4">d</span>
-            <span style="--i:5">i</span>
-            <span style="--i:6">n</span>
-            <span style="--i:7">g</span>
-            <span style="--i:8">.</span>
-            <span style="--i:9">.</span>
-            <span style="--i:10">.</span>
-        </div>
-    </div>
-
+    
     <div id="main-wrapper">
-
-        <!--**********************************
-            Nav header start
-        ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-
                 <img src="/images/wim-sbg.png" alt="" srcset="" width="70" height="60" class="">
             </a>
             <div class="nav-control">
@@ -53,13 +31,6 @@
                 </div>
             </div>
         </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
-
-        <!--**********************************
-            Chat box start
-        ***********************************-->
         <div class="chatbox">
             <div class="chatbox-close"></div>
             <div class="custom-tab-1">

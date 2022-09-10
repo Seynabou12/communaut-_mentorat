@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="example3" class="display">
-                                    <thead>
+                                    <thead style="background-color: #C15DFB;">
                                         <tr>
                                             <th>Id</th>
                                             <th>Profil</th>

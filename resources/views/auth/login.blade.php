@@ -18,7 +18,7 @@
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-md-6">
-                    <div class="authincation-content" style="margin-top: 10px;">
+                    <div class="authincation-content" style="margin-top: 70px;">
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form" >

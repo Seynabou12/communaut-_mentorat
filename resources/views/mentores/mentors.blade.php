@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="content-body">
+    <div class="content-body" style="margin-top: -70px;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -16,14 +16,14 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="example3" class="display">
-                                    <thead>
-                                        <tr>
-                                            <th>Profil</th>
-                                            <th>Prenom et Nom</th>
-                                            <th>Email</th>
-                                            <th>Telephone</th>
-                                            <th>Status</th>
-                                            <th>Actions</th>
+                                    <thead style="background-color: #C15DFB;">
+                                        <tr >
+                                            <th style="color: white">Profil</th>
+                                            <th style="color: white">Prenom et Nom</th>
+                                            <th style="color: white">Email</th>
+                                            <th style="color: white">Telephone</th>
+                                            <th style="color: white">Status</th>
+                                            <th style="color: white">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>

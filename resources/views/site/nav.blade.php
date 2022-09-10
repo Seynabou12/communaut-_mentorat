@@ -50,7 +50,7 @@
             <a href="/login" class="get-started-btn">Connexion</a>
 
         </div>
-    </header><!-- End Header -->
+    </header>
     <!-- Vendor JS Files -->
     <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="/assets/vendor/aos/aos.js"></script>
