@@ -148,3 +148,5 @@ class MentoreController extends Controller
         return view('site.blog');
     }
 }
+
+//mentores?domaine=3
