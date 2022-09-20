@@ -26,6 +26,7 @@
                                             <th>Telephone</th>
                                             <th>Adresse</th>
                                             <th>Niveau Etude</th>
+                                            <th>Etat</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -53,9 +54,12 @@
                                                 <td>{{ $mentore->user->adresse }}</td>
                                                
                                                 <td>{{ $mentore->niveau->libelle}}</td>
+                                               
+                                                <td>{{ $mentore->user->etat ? 'Actif' : 'Bloqué'}}</td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <button type="button" class="btn btn-outline-primary">Voir Profil</button>
+                                                        <a href="/user/{{$mentore->user->id}}/etat"><button type="button" class="btn btn-outline-primary">{{$mentore->user->etat ? 'Bloqué' : 'Débloqué'}}</button></a>
                                                         
                                                     </div>
                                                 </td>

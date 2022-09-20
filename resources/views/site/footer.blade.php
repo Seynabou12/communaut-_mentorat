@@ -32,27 +32,16 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-3 col-md-6 footer-contact">
-
-                    <img src="/images/wim-sbg.png" alt="" srcset="" style="width: 100px; height: auto;">
+                    <img src="/images/wim-sbg.png" alt="" srcset=""
+                        style="width: 100px; height: auto;">
                     <p style="margin-top: 20px;">
-                        A108 Adam Street <br>
-                        New York, NY 535022<br>
-                        United States <br><br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                        Lot N°46 Sud Foire <br>
+                        en Supermarché Exclusive,<br>
+                        Dakar (Sénégal) <br><br>
+                        <strong>Phone:</strong> +221 33 829 05 28<br>
+                        <strong>Email:</strong> contact@wimsenegal.org<br>
                     </p>
-                </div>
-
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Acceuil</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Devenir Mentoré</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Devenir Mentor</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                    </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
@@ -77,15 +66,14 @@
         </div>
     </div>
 
-    <div class="container-fluid d-md-flex py-4" style="background-color: #C15DFB; height: 150px; height: 100px;" >
-
-        <div class="me-md-auto text-center " style="margin-top: -20px;">
-            <div class="copyright" style="color: black">
-                &copy; Copyright <strong><span>Mentor</span></strong>All Rights Reserved
+    <div class="container-fluid d-md-flex py-4" style="background-color: #C15DFB">
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright" style="color: white;">
+                <strong> © WIM Sénégal 2022 Mentor</strong>
+               
             </div>
-            
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0" style="margin-top: 20px; margin-right: 50px;">
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>

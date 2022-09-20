@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('profil');
+            $table->boolean("etat")->default(true);
             $table->date('dateNaissance')->nullable();
             $table->string('photo', 300)->nullable();
             $table->timestamp('email_verified_at')->nullable();

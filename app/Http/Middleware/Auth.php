@@ -20,6 +20,9 @@ class Auth
         if (!FacadesAuth::check()) {
             return redirect()->route('auth.login');
         }
+        if(!FacadesAuth::user()->etat){
+            return redirect()->route("unauthorization");
+        }
         return $next($request);
     }
 }

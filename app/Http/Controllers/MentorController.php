@@ -31,8 +31,6 @@ class MentorController extends Controller
         $fileName = time() . $request->file('photo')->getClientOriginalName();
         $path = $request->file('photo')->storeAs('imagess', $fileName, 'public');
         $input['photo'] = '/storage/' . $path;
-        // $domaine = $input['domaine_id'];
-        // $input['domaine_id'] = implode(',',$domaine);
 
         $user = User::create([
             'prenom' => $input['prenom'],
@@ -52,8 +50,8 @@ class MentorController extends Controller
             'user_id' => $user->id,
             'domaine_id' => $input['domaine_id'],
         ]);
-
-        return redirect('/login')->with('flash-message', 'Votre inscription à été bien enregistré');
+    
+        return redirect('/')->with('flash-message', 'Votre inscription à été bien enregistré');
     }
 
     public function show($id)
@@ -109,7 +107,7 @@ class MentorController extends Controller
     public function details($id)
     {
         $mentor = Mentor::findOrFail($id);
-        $connexions = Connexion::where('mentore_id', $id)->get();
+        $connexions = Connexion::where('mentor_id', $id)->get();
         return view('mentors.details', compact('mentor', 'connexions'));
     }
 
@@ -135,6 +133,7 @@ class MentorController extends Controller
         $notification->user_id = $mentor->user_id;
         $notification->lien = "/mentors/" . $connexion->mentor_id . "/mentores";
         $notification->save();
+
         return redirect()->route('mentors.mentores', ['id' => $id]);
     }
 
@@ -152,4 +151,5 @@ class MentorController extends Controller
         $notification->save();
         return redirect()->route('mentors.mentores', ['id' => $connexion->mentor_id]);
     }
+
 }

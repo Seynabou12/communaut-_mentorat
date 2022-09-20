@@ -15,13 +15,14 @@ class NiveauController extends Controller
 
     public function create()
     {
-        return view('niveaux.create');
+        $niveaux = Niveau::all();
+        return view('niveaux.create', compact('niveaux'));
     }
 
     public function store(Request $request)
     {
         $input = $request->all();
         Niveau::create($input);
-        return redirect('/admin/dashbord')->with('flash-message', 'Votre niveaux à été bien enregistré');
+        return redirect('/niveaux/create')->with('flash-message', 'Votre niveaux à été bien enregistré');
     }
 }

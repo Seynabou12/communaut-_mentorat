@@ -12,7 +12,21 @@
 </head>
 
 <body>
-    @include('site.nav')
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <img src="/images/wim-sbg.png" alt="" srcset="" style="width: 100px; height: auto;">
+            <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
+                <ul>
+                    <li><a class="active" href="/">Acceuil</a></li>
+                    <li><a href="/mentors/create">Devenir Mentor</a></li>
+                    <li><a href="/mentores/create">Devenir Mentoré</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <a href="/login" class="get-started-btn">Connexion</a>
+        </div>
+    </header>
     <div class="banner"
         style="margin-top: 80px;background: url(../images/g1.jpg) no-repeat center top;
                 background-size: cover;
@@ -193,33 +207,26 @@
                 </div>
 
             </div>
-        </section><!-- End Events Section -->
+        </section>
 
     </main>
     <div class="breadcrumbs" data-aos="fade-in" style="margin-top: -50px;">
         <div class="container">
-            <h2>Formulaire d'adhésion du mentor</h2>
-            <p>Nous accordons de l’importance à l’expérience professionnelle du mentor d’entrepreneur. En effet, nos
+            <h2 style="color: #fff;font-weight: 700;">Formulaire d'adhésion du mentor</h2>
+            <p style="font-size: 20px;">Nous accordons de l’importance à l’expérience professionnelle du mentor d’entrepreneur. En effet, nos
                 mentors sont tous, sans exception, des généralistes du monde des affaires. Ils deviennent le garant de
                 la vision que lui a confiée l’entrepreneur/mentoré au début du mentorat.</p>
         </div>
     </div>
 
-    <div class="content" style="">
+    <div class="content" style="margin: 50px 150px 20px 150px;">
         <div class="container-fluid" style="margin-top: 10px;">
             <div class="row">
-                <div class="col-md-4">
-                    <img src="/images/form.png" alt="" srcset="" style="width: 100%; height: 100%;">
-                </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card" style="justify-content: center;">
-                        <div class="card-header">
-                            <h4 class="card-title">Formulaire d'inscription</h4>
-                        </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST"
-                                    action="/mentors/create" enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" method="POST" action="/mentors/create" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="col-xl-6">
@@ -271,7 +278,7 @@
                                                 </label>
                                                 <div class="col-lg-6">
                                                     <input type="text" class="form-control"
-                                                        id="validationCustom08" placeholder="78-178-45-21"
+                                                        id="validationCustom08" placeholder="ESaisir le numéro de telephone"
                                                         required="" name="telephone">
                                                     <div class="invalid-feedback">
                                                         Enter votre numero de téléphone.
@@ -289,6 +296,20 @@
                                                         name="experience">
                                                     <div class="invalid-feedback">
                                                         nombre d'année d'experience.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" mb-3 row">
+                                                <label class="col-lg-4 col-form-label" for="validationCustom03">Date
+                                                    de Naissance
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-6 form-file">
+                                                    <input type="date" class="form-file-input form-control"
+                                                        id="validationCustom03" placeholder="Date de naissance.."
+                                                        required="" name="dateNaissance">
+                                                    <div class="invalid-feedback">
+                                                        Entrer votre date de naissance.
                                                     </div>
                                                 </div>
                                             </div>
@@ -350,20 +371,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" mb-3 row">
-                                                <label class="col-lg-4 col-form-label" for="validationCustom03">Date
-                                                    de Naissance
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="col-lg-6 form-file">
-                                                    <input type="date" class="form-file-input form-control"
-                                                        id="validationCustom03" placeholder="Date de naissance.."
-                                                        required="" name="dateNaissance">
-                                                    <div class="invalid-feedback">
-                                                        Entrer votre date de naissance.
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                             <div class="mb-3">
                                                 <div class="mb-3 row">
                                                     <label class="col-lg-4 col-form-label"
@@ -371,26 +379,29 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <select class="default-select wide form-control"
-                                                            id="validationCustom05" name="domaine_id">
-                                                            <option data-display="Select">Please select</option>
+                                                        <select class="default-select wide form-control" multiple="multiple"
+                                                            id="validationCustom05" name="domaine_id[]">
+                                                            <option data-display="Select">SVP selectionner</option>
                                                             @foreach ($domaines as $domaine)
-                                                                <option value="{{ $domaine->id }}">
+                                                                <option value="{{ $domaine->id }}" >
                                                                     {{ $domaine->nomDomaine }}</option>
                                                             @endforeach
                                                         </select>
                                                         <div class="invalid-feedback">
-                                                            Please select a one.
+                                                            SVP selectionner une domaine.
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="mb-3 row">
-                                                <div class="col-lg-8 ms-auto">
-                                                    <button type="submit" class="btn "
-                                                        style="background-color: #C15DFB; color: white;">S'incrire</button>
+                                            <div class="row">
+                                                <div class="mb-3 ">
+                                                    <div class="col-lg-12 ">
+                                                        <button type="submit" class="btn"
+                                                            style="background-color: #C15DFB; color: white;">S'incrire</button>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        
                                         </div>
                                     </div>
                                 </form>

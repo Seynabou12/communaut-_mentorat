@@ -27238,7 +27238,7 @@ table.dataTable.display tbody td {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#00ffffff',GradientType=1 ); }
 
-.invoice-card-row > div:nth-child(3) .invoice-card:after {
+/* .invoice-card-row > div:nth-child(3) .invoice-card:after {
   height: 100px;
   width: 100px;
   transform: rotate(-45deg);
@@ -27248,9 +27248,9 @@ table.dataTable.display tbody td {
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#00ffffff',GradientType=1 ); }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#00ffffff',GradientType=1 ); } */
 
-.invoice-card-row > div:nth-child(4) .invoice-card:after {
+/* .invoice-card-row > div:nth-child(4) .invoice-card:after {
   height: 100px;
   width: 100px;
   transform: rotate(145deg);
@@ -27260,7 +27260,7 @@ table.dataTable.display tbody td {
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#00ffffff',GradientType=1 ); }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#00ffffff',GradientType=1 ); } */
 
 .card-list {
   height: auto; }

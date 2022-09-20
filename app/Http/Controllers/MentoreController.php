@@ -97,17 +97,22 @@ class MentoreController extends Controller
         return redirect('mentore')->with('flash-message', 'Mentoré supprimé avec succés');
     }
 
-    public function accueil()
+    public function accueil(Request $request)
     {
         $connexions = Connexion::where('mentore_id',Auth::user()->mentore->id)->get();
-        $mentors = Mentor::all();
+
+        if(isset($request->domaine)){
+            $mentors = Mentor::where("domaine_id", $request->domaine)->get();
+        } else {
+            $mentors = Mentor::all();
+        }
         $m = [];
         foreach ($connexions as $c ) {
             if($mentors->contains($c->mentor)){
                 $m[] = $c->mentor;
             }
         }
-        if ($connexions->count()>0) {
+        if ( $connexions->count()>0) {
             $mentors = $mentors->diff($m);
         }
         return view('mentores.accueil', compact('mentors','connexions'));
@@ -135,7 +140,7 @@ class MentoreController extends Controller
         $notification->user_id = $mentor->user->id;
         $notification->lien = "/mentors/".$connexion->mentor_id."/mentores";
         $notification->save();
-        return redirect()->route('mentores.mentors', ['id' => $idMentor]);
+        return redirect()->route('mentores.mentors', ['id' => $id]);
     }
 
     public function  blog()

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Connexion;
 use App\Models\Mentor;
 use App\Models\Mentore;
+use App\Models\Notification;
 use App\Models\Sessions;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +27,6 @@ class SessionsController extends Controller
         {
             $join->on('connexions.id','=','sessions.connexion_id')->where('connexions.mentore_id',Auth::user()->mentore->id);
         })->get(['sessions.*']);
-
 
         return view('sessions.mentore', compact('sessions'));
     }
@@ -51,6 +52,16 @@ class SessionsController extends Controller
         $session->fill($input);
         $session->status = 'en cours';
         $session->save();
+        
+        $connexion = Connexion::findOrFail($session->connexion_id);
+
+        $notification = new Notification();
+        $notification->titre = "Le mentor " . $connexion->mentor->user->prenom . " " . $connexion->mentor->user->nom . " vous a planifié une session ";
+        $notification->date = Carbon::now();
+        $notification->user_id = $connexion->mentore->user_id;
+        $notification->lien = "/mes-sessions" ;
+        $notification->save();
+
         return redirect('/sessions')->with('flash-message', 'Votre sessions à été bien enregistré');
     }
 
@@ -87,4 +98,5 @@ class SessionsController extends Controller
         $session = Sessions::findOrFail($id);
         return view('sessions.voirplus', compact('session'));
     }
+    
 }

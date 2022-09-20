@@ -41,7 +41,7 @@ Route::middleware(['authentification', 'notification'])->group(
     function () 
     {
 
-        Route::get('/mentors/liste', [MentorController::class, 'index']);
+        Route::get('/mentors/liste', [MentorController::class, 'index'])->name("mentor.liste");
         Route::get('/mentors/{id}/details', [MentorController::class, 'details'])->where('id', '[0-9]+');
         Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
         Route::get('/mentors/{id}/mentores', [MentorController::class, 'mentores'])->name('mentors.mentores')->where('id', '[0-9]+');
@@ -54,7 +54,7 @@ Route::middleware(['authentification', 'notification'])->group(
 
         Route::get('/mentores', [MentoreController::class, 'accueil']);
         Route::get('/mentores/{id}/mentors', [MentoreController::class, 'mentors'])->name('mentores.mentors')->where('id', '[0-9]+');
-        Route::get('/mentores/liste', [MentoreController::class, 'index']);
+        Route::get('/mentores/liste', [MentoreController::class, 'index'])->name("mentore.liste");
         Route::get("/mentores/edit/{id}", [MentoreController::class, 'edit'])->where('id', '[0-9]+');
         Route::post("/mentores/edit/{id}", [MentoreController::class, 'update'])->where('id', '[0-9]+');
         Route::get('/mentores/{id}/connecte/{idMentor}', [MentoreController::class, 'connecte'])->where('id', '[0-9]+')->where('idMentor', '[0-9]+');
@@ -68,6 +68,7 @@ Route::middleware(['authentification', 'notification'])->group(
 
         Route::get('/niveaux/create', [NiveauController::class, 'create']);
         Route::post('/niveaux/create', [NiveauController::class, 'store']);
+        Route::get('/niveaux', [NiveauController::class, 'index'])->name('niveaux.index');
 
         Route::get('/domaines/create', [DomaineController::class, 'create']);
         Route::post('/domaines/create', [DomaineController::class, 'store']);
@@ -75,9 +76,13 @@ Route::middleware(['authentification', 'notification'])->group(
         Route::get('/admin/dashbord', [AdminController::class, 'dashbord']);
 
         Route::get('/notification/{id}/etat', [NotificationController::class, 'etat'])->where('id', '[0-9]+');
+        Route::get('/user/{id}/etat', [UtilisateurController::class, 'etat'])->where('id', '[0-9]+');
     }
 
 );
 
+Route::get("/acces-denied", function () {
+    return view('unauthorization');
+})->name('unauthorization');
 Route::get("/login", [UtilisateurController::class, 'formLogin'])->name('auth.formLogin');
 Route::post("/login", [UtilisateurController::class, 'login'])->name('auth.login');

@@ -116,6 +116,13 @@
         line-height: normal;
         margin: 0 auto;
     }
+
+    @media (min-width: 768px) {
+        .col-md-4 {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+        }
+    }
 </style>
 
 <body>
@@ -134,6 +141,7 @@
             <a href="/login" class="get-started-btn">Connexion</a>
         </div>
     </header>
+ 
     <main id="main">
         <section id="hero" class="d-flex justify-content-center align-items-center">
             <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
@@ -354,7 +362,6 @@
                     </div>
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Join Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Subscribe">
                         </form>

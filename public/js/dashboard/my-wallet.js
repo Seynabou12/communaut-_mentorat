@@ -15,94 +15,38 @@
 			new Chart(pieChart, {
 				type: 'doughnut',
 				data: {
-					weight: 5,	
+					weight: 3,	
 					defaultFontFamily: 'Poppins',
+					labels: [
+					  'Mentors',
+					  'Mentorés',
+					],
 					datasets: [{
-						data: [50, 30, 20],
+						data: [mentors, mentores],
 						borderWidth: 0, 
 						borderColor: "rgba(255,255,255,1)",
 						backgroundColor: [
 							"#8df05f",
-							"#ff4b4b",
-							"#e3e3e3"
+							"#ff4b4b"
 						],
 						hoverBackgroundColor: [
 							"#8df05f",
-							"#ff4b4b",
-							"#e3e3e3"
-						]
+							"#ff4b4b"
+						],
+						hoverOffset: 4
 
 					}],
 				},
 				options: {
-					weight: 1,	
-					cutoutPercentage: 70,
+					weight: 10,	
 					responsive: true,
-					maintainAspectRatio: false
+					maintainAspectRatio: true,
+					borderWidth: 10
 				}
 			});
 		}
 	}
 	
-	var lineChart = function(){
-		var options = {
-		  series: [
-		  {
-			name: "Income",
-			data: [10, 30, 20, 40, 20, 45, 10]
-		},
-		{
-			name: "Expense",
-			data: [10, 15, 10, 30, 15, 35, 5]
-		},
-		{
-			name: "Unknown",
-			data: [5, 15, 5, 15, 10, 25, 5]
-		}
-		],
-		  chart: {
-		  height: 170,
-		  type: 'line',
-		  toolbar:{
-			  show:false
-		  },
-		  zoom: {
-			enabled: false
-		  }
-		},
-		colors:['#68e365','#ff4b4b','#969ba0'],
-		dataLabels: {
-		  enabled: false
-		},
-		stroke: {
-		  curve: 'smooth',
-		  width:3
-		},
-		legend:{
-			show:false
-		},
-		grid: {
-		  /* row: {
-			colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-			opacity: 0.5
-		  }, */
-		   xaxis: {
-				lines: {
-					show: true
-				}
-			},  
-		},
-		xaxis: {
-		  categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-		},
-		yaxis:{
-			show:false
-		}
-		};
-
-		var chart = new ApexCharts(document.querySelector("#line-chart"), options);
-		chart.render();
-	}
  
 	/* Function ============ */
 		return {
@@ -113,7 +57,6 @@
 			load:function(){
 				
 				pieChart();
-				lineChart();
 			},
 			
 			resize:function(){

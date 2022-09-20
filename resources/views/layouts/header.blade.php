@@ -56,8 +56,7 @@
                                     <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
                                 </div>
                             </div>
-                            <a class="all-notification" href="javascript:void(0);">See all notifications <i
-                                    class="ti-arrow-end"></i></a>
+                            <a class="all-notification" href="javascript:void(0);">Voir toutes les notifications <i class="ti-arrow-end"></i></a>
                         </div>
                     </li>
                     <li class="nav-item">
