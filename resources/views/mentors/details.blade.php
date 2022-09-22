@@ -394,7 +394,7 @@
                                         <h4 class="text-muted mb-0"
                                             style="font-family: 'Times New Roman', Times, serif;">
                                             {{ $mentor->user->telephone }}</h4>
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
                         </div>
@@ -426,10 +426,11 @@
                             </div>
                         </div>
                         <div class="col-xl-12">
-                            <div class="card">
+                            <div class="card" style="margin-bottom: 10px">
                                 <div class="card-body">
                                     <div class="profile-news">
-                                        <h5 class="text-primary d-inline">Mes Mentorés</h5>
+                                        <h5 class="text-primary d-inline" style="color: #C15DFB!important;">Liste de mes Mentorés
+                                        </h5>
                                         @foreach ($connexions as $connexion)
                                             <div class="media pt-3 pb-3">
                                                 <img src="{{ asset($connexion->mentore->user->photo) }}" alt="image"
@@ -457,7 +458,8 @@
                                         <div class="col-lg-12">
                                             <div class="mb-3">
                                                 <a href="/mentores/{{ Auth::user()->mentore->id }}/connecte/{{ $mentor->id }}"
-                                                    class="btn btn-primary mb-1" data-bs-target="#sendMessageModal">Se
+                                                    class="btn btn-primary mb-1" data-bs-target="#sendMessageModal"
+                                                    style="background-color: #C15DFB;">Se
                                                     Connecter</a>
                                             </div>
                                         </div>
@@ -486,11 +488,9 @@
                             </div>
                             <div class="profile-skills mb-5">
                                 <h4 class="text-primary mb-2" style="color:#C15DFB !important;">Domaines</h4>
-                                <a href="javascript:void(0);"
-                                    class="btn btn-primary light btn-xs mb-1">Mathematique</a>
-                                <a href="javascript:void(0);" class="btn btn-primary light btn-xs mb-1">Physique
-                                    Chimie</a>
-                                <a href="javascript:void(0);" class="btn btn-primary light btn-xs mb-1">SVT</a>
+                                    <a href="#"
+                                        class="btn  light btn-xs mb-1">{{ $mentor->domaine->nomDomaine }}</a>
+
                             </div>
                             <div class="profile-personal-info">
                                 <h4 class="text-primary mb-4" style="color:#C15DFB !important;">Informations

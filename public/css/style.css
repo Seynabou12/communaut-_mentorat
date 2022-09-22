@@ -1051,8 +1051,7 @@ progress {
     flex: 0 0 auto;
     width: 33.33333%; }
   .col-md-5 {
-    flex: 0 0 auto;
-    width: 41.66667%; }
+    flex: 0 0 auto;}
   .col-md-6 {
     flex: 0 0 auto;
     width: 50%; }
@@ -8346,7 +8345,7 @@ margin-top: 100px;}
 	background:$color_pallate_6 !important;
 } */
 .bg-blue {
-  background: #496ecc !important; }
+  background: #a901ef !important; }
 
 .bg-orange {
   background: #ed8030 !important; }
@@ -26307,7 +26306,7 @@ table.dataTable.display tbody td {
   margin-left: 10px; }
 
 .error-page .error-text {
-  font-size: 150px;
+  font-size: 100px;
   line-height: 1; }
   @media only screen and (max-width: 575px) {
     .error-page .error-text {
@@ -27268,11 +27267,10 @@ table.dataTable.display tbody td {
     display: flex;
     align-items: center;
     color: #000;
-    margin-bottom: 15px;
-    font-weight: 600; }
+    margin-bottom: 25px; }
     .card-list li span {
       color: #969ba0;
-      margin-left: auto; }
+      margin-left: 50px; }
     .card-list li .circle {
       display: inline-block;
       height: 19px;

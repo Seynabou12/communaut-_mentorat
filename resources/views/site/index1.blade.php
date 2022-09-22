@@ -131,22 +131,23 @@
             <img src="/images/wim-sbg.png" alt="" srcset="" style="width: 100px; height: auto;">
             <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
                 <ul>
-                    <li><a class="active" href="/">Acceuil</a></li>
-                    <li><a href="/mentors/create">Devenir Mentor</a></li>
-                    <li><a href="/mentores/create">Devenir Mentoré</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><a class="" href="/">Acceuil</a></li>
+                    <li><a href="/mentor">Devenir Mentor</a></li>
+                    <li><a href="/mentore">Devenir Mentoré</a></li>
+                    <li><a href="/mentores">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
+            <a href="/choix" class="get-started-btn">S'inscrire</a>
             <a href="/login" class="get-started-btn">Connexion</a>
         </div>
     </header>
- 
+
     <main id="main">
         <section id="hero" class="d-flex justify-content-center align-items-center">
             <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
                 <h1>Trouvez le mentor <br><span>qui vous fera grandir</span></h1>
-                <h2>Nos services de mentorat sont disponibles pour <br> les filliéres scientifiques quels que soient
+                <h2>Nos services de mentorat sont disponibles pour <br> les filiéres scientifiques quels que soient
                     votre
                     âge.</h2>
                 <a href="/login" class="btn-get-started" style="border:1px solid #C15DFB">Connexion</a>
@@ -157,39 +158,39 @@
                 <div class="section-title">
                     <p style="text-align: center;">Quel est le role du Mentor ???</p>
                 </div>
-                <p style="text-align: center;">Étudiant, alternant, peu importe ton cursus, ta filière ou ton niveau,
-                    notre programme est gratuit et pensé pour tous les profils.Nous sommes
-                    là pour te présenter le Mentor qui te comprend et qui saura t’accompagner
-                    dans ta réussite.</p>
+                <p style="text-align: center;">Étudiant, alternant, peu importe votre cursus, vote filière ou votre niveau,
+                    notre programme est gratuit et pensé pour tous les profils. Nous sommes
+                    là pour vous confier le Mentor qui vous convient et qui saura vous accompagner
+                    dans votre réussite.</p>
                 <br>
                 <div class="row">
                     <div class="col-lg-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-boxes d-flex flex-column justify-content-center">
                             <div class="row">
                                 <div class="col-xl-3 d-flex align-items-stretch">
-                                    <div class="icon-box mt-4 mt-xl-0">
+                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
                                         <i class="bx bx-receipt"></i>
                                         <h4>L’ACCOMPAGNER</h4>
                                         <p>L’accompagner sans prendre les décisions à sa place mais dire les choses
                                             telles qu’elles sont.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 d-flex align-items-stretch">
-                                    <div class="icon-box mt-4 mt-xl-0">
+                                <div class="col-xl-3 d-flex align-items-stretch" >
+                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
                                         <i class="bx bx-cube-alt"></i>
                                         <h4>LE SOUTENIR</h4>
                                         <p>Sortir le scientifique de sa solitude de dirigeant.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 d-flex align-items-stretch">
-                                    <div class="icon-box mt-4 mt-xl-0">
-                                        <i class="bx bx-images"></i>
+                                <div class="col-xl-3 d-flex align-items-stretch" >
+                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                        <i class="bi bi-info-circle bx"></i>
                                         <h4>L’AIDER</h4>
                                         <p>À accroître son développement en tant que scientifique.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 d-flex align-items-stretch">
-                                    <div class="icon-box mt-4 mt-xl-0">
+                                <div class="col-xl-3 d-flex align-items-stretch" >
+                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)"  >
                                         <i class="bx bx-receipt"></i>
                                         <h4>LE CONDUIRE</h4>
                                         <p>À identifier les différentes solutions et à discerner les avantages et les
@@ -217,12 +218,11 @@
                             <li><i class="bi bi-check-circle"></i> d’être accompagné / pour réussir mes etudes.</li>
                             <li><i class="bi bi-check-circle"></i> de faire les bons choix / pour décrocher le job
                                 parfait.</li>
-                            <li><i class="bi bi-check-circle"></i> de s’améliorer / en dans le domaine de la science.
+                            <li><i class="bi bi-check-circle"></i> de s’améliorer / dans le domaine de la science.
                             </li>
-                            <li><i class="bi bi-check-circle"></i> de s’améliorer / en dans le domaine de la science.
+                            <li><i class="bi bi-check-circle"></i> de s’améliorer / dans le domaine de la science.
                             </li>
                         </ul>
-
                     </div>
                 </div>
 
@@ -361,9 +361,9 @@
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Join Our Newsletter</h4>
+                        <h4>Rejoignez notre newsletter</h4>
                         <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                            <input type="email" name="email"><input type="submit" value="Soumettre">
                         </form>
                     </div>
                 </div>

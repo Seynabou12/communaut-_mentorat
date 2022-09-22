@@ -19,19 +19,19 @@
 					defaultFontFamily: 'Poppins',
 					labels: [
 					  'Mentors',
-					  'Mentorés',
+					  'Mentorés'
 					],
 					datasets: [{
 						data: [mentors, mentores],
 						borderWidth: 0, 
 						borderColor: "rgba(255,255,255,1)",
 						backgroundColor: [
-							"#8df05f",
-							"#ff4b4b"
+							"#C15DFB",
+							"#000"
 						],
 						hoverBackgroundColor: [
-							"#8df05f",
-							"#ff4b4b"
+							'#C15DFB',
+							'#000'
 						],
 						hoverOffset: 4
 

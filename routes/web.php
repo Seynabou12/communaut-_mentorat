@@ -34,8 +34,12 @@ Route::post("/mentors/create", [MentorController::class, 'store']);
 Route::get('/mentores/create', [MentoreController::class, 'create']);
 Route::post('/mentores/create', [MentoreController::class, 'store']);
 
-Route::get('/blog', [MentoreController::class, 'blog']);
+// Route::get('/blog', [MentoreController::class, 'blog']);
+Route::get('/blog', [SiteController::class, 'blog']);
 Route::get('/', [SiteController::class, 'index1']);
+Route::get('/mentore', [SiteController::class, 'mentore']);
+Route::get('/mentor', [SiteController::class, 'mentor']);
+Route::get('/choix', [SiteController::class, 'choix']);
 
 Route::middleware(['authentification', 'notification'])->group(
     function () 

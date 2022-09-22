@@ -685,12 +685,13 @@ section {
 }
 
 .why-us .icon-boxes .icon-box i {
-  font-size: 32px;
+  font-size: 40px;
   padding: 18px;
-  color: #C15DFB;
+  color: #000;
   margin-bottom: 30px;
-  background: #000;
+  background: #C15DFB;;
   border-radius: 50px;
+  
 }
 
 .why-us .icon-boxes .icon-box h4 {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Connexion;
+use App\Models\Domaine;
 use App\Models\Mentor;
 use App\Models\Mentore;
 use App\Models\Niveau;
@@ -99,6 +100,7 @@ class MentoreController extends Controller
 
     public function accueil(Request $request)
     {
+        $domaines= Domaine::all();
         $connexions = Connexion::where('mentore_id',Auth::user()->mentore->id)->get();
 
         if(isset($request->domaine)){
@@ -115,7 +117,7 @@ class MentoreController extends Controller
         if ( $connexions->count()>0) {
             $mentors = $mentors->diff($m);
         }
-        return view('mentores.accueil', compact('mentors','connexions'));
+        return view('mentores.accueil', compact('mentors','connexions', 'domaines'));
     }
   
     public function mentors($id)

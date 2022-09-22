@@ -43,17 +43,13 @@
                                 <table id="example5" class="display" style="min-width: 845px">
                                     <thead style="background-color: #C15DFB;">
                                         <tr>
-                                            <th style="color: white;">Id</th>
                                             <th style="color: white;">Libelle</th>
                                             <th style="color: white;">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        <?php $no = 1; ?>
                                         @foreach ($niveaux as $niveau)
                                             <tr>
-                                                <td>{{ $no++ }}</td>
                                                 <td>{{ $niveau->libelle }}</td>
                                                 <td>
                                                     <div class="d-flex">

@@ -151,5 +151,5 @@ class MentorController extends Controller
         $notification->save();
         return redirect()->route('mentors.mentores', ['id' => $connexion->mentor_id]);
     }
-
+    
 }

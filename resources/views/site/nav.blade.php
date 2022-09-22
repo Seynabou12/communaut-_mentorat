@@ -21,34 +21,25 @@
     <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
     <link href="/assets/css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-
             <img src="/images/wim-sbg.png" alt="" srcset="" style="width: 100px; height: auto;">
-            {{-- <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1> --}}
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
             <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
                 <ul>
-                    <li><a class="active" href="/">Acceuil</a></li>
+                    <li><a class="" href="/">Acceuil</a></li>
                     <li><a href="/mentors/create">Devenir Mentor</a></li>
                     <li><a href="/mentores/create">Devenir Mentoré</a></li>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
+            </nav>
+            <a href="/choix" class="get-started-btn">S'inscrire</a>
             <a href="/login" class="get-started-btn">Connexion</a>
-
         </div>
     </header>
     <!-- Vendor JS Files -->
