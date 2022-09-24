@@ -32,8 +32,8 @@
             <nav id="navbar" class="navbar order-last order-lg-0" style="margin-left: 100px;">
                 <ul>
                     <li><a class="" href="/">Acceuil</a></li>
-                    <li><a href="/mentors/create">Devenir Mentor</a></li>
-                    <li><a href="/mentores/create">Devenir Mentoré</a></li>
+                    <li><a href="/mentor">Devenir Mentor</a></li>
+                    <li><a href="/mentore">Devenir Mentoré</a></li>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>

@@ -10,6 +10,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UtilisateurController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,6 @@ Route::post("/mentors/create", [MentorController::class, 'store']);
 Route::get('/mentores/create', [MentoreController::class, 'create']);
 Route::post('/mentores/create', [MentoreController::class, 'store']);
 
-// Route::get('/blog', [MentoreController::class, 'blog']);
 Route::get('/blog', [SiteController::class, 'blog']);
 Route::get('/', [SiteController::class, 'index1']);
 Route::get('/mentore', [SiteController::class, 'mentore']);
@@ -46,6 +46,7 @@ Route::middleware(['authentification', 'notification'])->group(
     {
 
         Route::get('/mentors/liste', [MentorController::class, 'index'])->name("mentor.liste");
+        Route::get('/mentors/dashbord', [MentorController::class, 'dashbord']);
         Route::get('/mentors/{id}/details', [MentorController::class, 'details'])->where('id', '[0-9]+');
         Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
         Route::get('/mentors/{id}/mentores', [MentorController::class, 'mentores'])->name('mentors.mentores')->where('id', '[0-9]+');
@@ -81,6 +82,12 @@ Route::middleware(['authentification', 'notification'])->group(
 
         Route::get('/notification/{id}/etat', [NotificationController::class, 'etat'])->where('id', '[0-9]+');
         Route::get('/user/{id}/etat', [UtilisateurController::class, 'etat'])->where('id', '[0-9]+');
+
+
+        Route::get("/logout", function () {
+            Auth::logout();
+            return redirect("/");
+        });
     }
 
 );

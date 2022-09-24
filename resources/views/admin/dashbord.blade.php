@@ -93,8 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid"
-            style=" padding-top: 0px;
+        <div class="container-fluid" style=" padding-top: 0px;
                     padding-right: 0px;
                     padding-left: 0px;
                     margin-top: 100px;">

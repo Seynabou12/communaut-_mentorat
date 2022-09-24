@@ -347,7 +347,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <select class="form-select" aria-label="Default select example"
+                        <select class="form-select" id="domaines" aria-label="Default select example"
                             style=" padding: 10px;
                                 position: relative;
                                 background-color: #fff;
@@ -359,9 +359,9 @@
                                 width: 100%;
                                 font-weight: 400;
                                 line-height: 1.5;">
-                            <option selected>Domaine du mentors</option>
+                            <option selected value="0">Domaine du mentors</option>
                             @foreach ($domaines as $domaine)
-                                <option value="{{ $domaine->id }}">
+                                <option  {{$item == $domaine->id ? 'selected' : '' }}  value="{{ $domaine->id }}">
                                     {{ $domaine->nomDomaine }}</option>
                             @endforeach
                         </select>
@@ -370,11 +370,9 @@
                     <div class="col-md-8">
 
                         <div class="input-group">
-                            <input type="search" class="form-control rounded"
-                                placeholder="Rechercher un mentor ou un domaine" aria-label="Search"
-                                aria-describedby="search-addon" />
-                            <button type="button" class="btn btn-outline"
-                                style="background: #C15DFB;color: white">Recherche</button>
+
+                            <button type="button" class="btn btn-outline" style="background: #C15DFB;color: white"
+                                onclick="search();">Recherche</button>
                         </div>
 
 
@@ -428,22 +426,29 @@
                                             data-toggle="button" aria-pressed="false"
                                             style=" background-color: #C15DFB;color: #fff" autocomplete="off">
                                             Voir Profil
-                                        </button></a>
-
+                                        </button>
+                                    </a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-
         </div>
     </section>
 
-
-
     @include('site.footer')
+
+    <script>
+        function search() {
+            var domaines = document.getElementById('domaines').value;
+            if(domaines != 0){
+                document.location.href = document.location.origin+"/blog?domaine="+domaines
+            } else {
+                document.location.href = document.location.origin+"/blog"
+            }
+        }
+    </script>
 
 </body>
 

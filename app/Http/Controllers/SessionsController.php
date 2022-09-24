@@ -8,6 +8,7 @@ use App\Models\Mentore;
 use App\Models\Notification;
 use App\Models\Sessions;
 use Carbon\Carbon;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +17,10 @@ class SessionsController extends Controller
 
     public function index()
     {
-        $sessions = Sessions::all();
+        $sessions = Sessions::join('connexions', function ($join)
+        {
+            $join->on('connexions.id','=', 'sessions.connexion_id')->where('connexions.mentor_id',Auth::user()->mentor->id);
+        })->get();
         $mentores = Mentore::all();
         return view('sessions.index', compact('sessions', 'mentores'));
     }

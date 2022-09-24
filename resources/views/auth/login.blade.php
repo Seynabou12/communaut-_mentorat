@@ -34,6 +34,9 @@
                                         <a href="/"><img src="/images/wim-sbg.png" alt=""
                                                 style="height: 50%; width:50%; margin-bottom: 20px;"></a>
                                     </div>
+                                    @if (Session::has('message'))
+                                        <p class="alert {{Session::get('class-alert')}}">{{Session::get('message')}}</p>
+                                    @endif
                                     <h3 class="text-center mb-4" style="font-weight:bold;">CONNECTEZ-VOUS</h3>
                                     <form action="/login" method="POST">
                                         @csrf

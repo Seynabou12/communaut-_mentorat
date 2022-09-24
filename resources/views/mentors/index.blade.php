@@ -5,14 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="content-body" style="margin-top: -70px;">
+    <div class="content-body" style="margin-top: -100px;">
         <div class="container-fluid">
-            <div class="row page-titles">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Table</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Bootstrap</a></li>
-                </ol>
-            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="card">

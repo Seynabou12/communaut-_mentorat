@@ -24,11 +24,18 @@ class SiteController extends Controller
     {
         return view('site.choix');
     }
-    public function blog()
+    public function blog(Request $request)
     {
-        $mentors = Mentor::all();
+        $item = 0;
+        if (isset($request->domaine)) {
+            $mentors = Mentor::where("domaine_id", $request->domaine)->get();
+            $item = $request->domaine;
+        } else {
+            $mentors = Mentor::all();
+        }
         $domaines = Domaine::all();
-        return view('site.blog', compact('mentors', 'domaines'));
+        
+        return view('site.blog', compact('mentors', 'domaines', 'item'));
     }
 
     public function mentore()

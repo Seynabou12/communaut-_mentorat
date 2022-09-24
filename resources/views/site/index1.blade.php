@@ -134,7 +134,7 @@
                     <li><a class="" href="/">Acceuil</a></li>
                     <li><a href="/mentor">Devenir Mentor</a></li>
                     <li><a href="/mentore">Devenir Mentoré</a></li>
-                    <li><a href="/mentores">Blog</a></li>
+                    <li><a href="/blog">Blog</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -328,6 +328,7 @@
         </section>
     </main>
     <footer id="footer" style=" box-shadow: 0 3px 6px rgb(0 0 0 / 10%);">
+
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -342,15 +343,7 @@
                             <strong>Email:</strong> contact@wimsenegal.org<br>
                         </p>
                     </div>
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Pages</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Acceuil</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Devenir Mentoré</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Devenir Mentor</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
+    
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Mentorés</h4>
                         <ul>
@@ -360,22 +353,23 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">A propos</a></li>
                         </ul>
                     </div>
+    
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Rejoignez notre newsletter</h4>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Soumettre">
                         </form>
                     </div>
+    
                 </div>
             </div>
         </div>
+    
         <div class="container-fluid d-md-flex py-4" style="background-color: #C15DFB">
             <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    Designed by <a href="https://bootstrapmade.com/">Nabouze@</a>
+                <div class="copyright" style="color: white;">
+                    <strong> © WIM Sénégal 2022 Mentor</strong>
+                   
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">

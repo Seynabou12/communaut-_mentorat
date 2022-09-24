@@ -7,6 +7,7 @@ use App\Models\Mentore;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class UtilisateurController extends Controller
 {
@@ -35,6 +36,10 @@ class UtilisateurController extends Controller
             } else if ($user->profil == 'admin') {
                 return redirect('/admin/dashbord');
             }
+        } else {
+            Session::flash('message','Email ou mot de passe Incorrect');
+            Session::flash('class-alert','alert-danger');
+            return back();
         }
     }
 

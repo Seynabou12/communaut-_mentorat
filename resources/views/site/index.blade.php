@@ -536,8 +536,6 @@
         </div>
         
     </div>
-  
-
 
     <section class="allcourse-section bg-grey">
         <div class="container">

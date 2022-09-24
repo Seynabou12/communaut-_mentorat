@@ -19,17 +19,7 @@
                         </svg>
                         <span class="ms-2">Profile </span>
                     </a>
-                    <a href="email-inbox.html" class="dropdown-item ai-icon">
-                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18"
-                            height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span class="ms-2">Inbox </span>
-                    </a>
-                    <a href="page-error-404.html" class="dropdown-item ai-icon">
+                    <a href="/logout" class="dropdown-item ai-icon">
                         <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"
                             height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -50,7 +40,7 @@
                     </li>
                 @endif
                 @if (Auth::user()->profil == 'mentor')
-                    <li><a href="#" class="ai-icon" aria-expanded="false">
+                    <li><a href="/mentors/dashbord" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-025-dashboard" ></i>
                             <span class="nav-text" style="color: black">Dashbord</span>
                         </a>

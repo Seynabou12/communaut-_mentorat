@@ -18,7 +18,6 @@
 <body style="background-color:rgb(245, 244, 244) ">
     @include('site.header')
 
-
     <main  class="v-main pa-0 ma-0" 
         style="padding: 100px 0px 0px;margin: 0!important;padding: 0!important;     display: flex;
             flex: 1 0 auto;
@@ -27,7 +26,7 @@
         data-booted="true">
         <div class="v-main__wrap" style="flex: 1 1 auto;
                 max-width: 100%;
-                    margin-top: -4%;
+                    margin-top: -10%;
                 position: relative;">
             <div   class="container container--desktop"
                 style="width: 1200px;

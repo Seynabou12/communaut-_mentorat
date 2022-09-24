@@ -10,6 +10,7 @@ use App\Models\Notification;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class MentorController extends Controller
 {
@@ -51,7 +52,9 @@ class MentorController extends Controller
             'domaine_id' => $input['domaine_id'],
         ]);
     
-        return redirect('/')->with('flash-message', 'Votre inscription à été bien enregistré');
+        Session::flash("message","Votre inscription à été bien enregistré");
+        Session::flash("class-alert","alert-success");
+        return redirect('/login');
     }
 
     public function show($id)
@@ -102,6 +105,11 @@ class MentorController extends Controller
     public function accueil()
     {
         return view('mentors.accueil');
+    }
+    public function dashbord()
+    {
+        $connexions = Connexion::all();
+        return view('mentors.dashbord', compact('connexions'));
     }
 
     public function details($id)
