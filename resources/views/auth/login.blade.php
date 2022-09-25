@@ -59,9 +59,7 @@
                                                         de moi</label>
                                                 </div>
                                             </div>
-                                            <div class="mb-3">
-                                                <a href="#">Mot de passe oublié</a>
-                                            </div>
+                                        
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-block"
@@ -70,7 +68,7 @@
                                     </form>
                                     <div class="new-account mt-3">
                                         <p>Vous n'avez pas de compte? <a class="text-primary"
-                                                href="/mentors/create">inscrivez-vous</a></p>
+                                                href="/choix">inscrivez-vous</a></p>
                                     </div>
                                 </div>
                             </div>

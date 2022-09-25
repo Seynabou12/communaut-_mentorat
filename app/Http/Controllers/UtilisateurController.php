@@ -32,7 +32,7 @@ class UtilisateurController extends Controller
             if ($user->profil == 'mentor') {
                 return redirect()->route('mentors.mentores',['id'=>$user->mentor->id]);
             } else if ($user->profil == 'mentore') {
-                return redirect('/mentores');
+                return redirect('/mes-sessions');
             } else if ($user->profil == 'admin') {
                 return redirect('/admin/dashbord');
             }

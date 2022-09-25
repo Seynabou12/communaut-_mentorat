@@ -46,7 +46,6 @@ Route::middleware(['authentification', 'notification'])->group(
     {
 
         Route::get('/mentors/liste', [MentorController::class, 'index'])->name("mentor.liste");
-        Route::get('/mentors/dashbord', [MentorController::class, 'dashbord']);
         Route::get('/mentors/{id}/details', [MentorController::class, 'details'])->where('id', '[0-9]+');
         Route::get('/mentors/accueil', [MentorController::class, 'accueil']);
         Route::get('/mentors/{id}/mentores', [MentorController::class, 'mentores'])->name('mentors.mentores')->where('id', '[0-9]+');
@@ -70,6 +69,7 @@ Route::middleware(['authentification', 'notification'])->group(
         Route::post('/sessions/create', [SessionsController::class, 'store']);
         Route::get('/sessions/{id}/voirplus', [SessionsController::class, 'voirplus'])->where('id', '[0-9]+');;
         Route::get('/session/{id}/status', [SessionsController::class, 'status'])->where('id', '[0-9]+');
+        Route::post('/sessions/{id}/rendu', [SessionsController::class, 'rendu'])->where('id', '[0-9]+');
 
         Route::get('/niveaux/create', [NiveauController::class, 'create']);
         Route::post('/niveaux/create', [NiveauController::class, 'store']);

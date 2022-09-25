@@ -420,7 +420,6 @@
                                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae
                                     dolores
                                     dolorem tempore.</p>
-
                                 <div class="trainer d-flex justify-content-center align-items-center">
                                     <a href="/mentors/{{ $mentor->id }}/details"><button type="button" class="btn "
                                             data-toggle="button" aria-pressed="false"

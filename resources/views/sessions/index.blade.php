@@ -22,6 +22,7 @@
                                         <th style="color: white;">Date</th>
                                         <th style="color: white;">Titre</th>
                                         <th style="color: white;">Mentoré</th>
+                                        <th style="color: white;">Rendu</th>
                                         <th style="color: white;">Status</th>
                                         <th style="color: white;">Actions</th>
                                     </tr>
@@ -36,8 +37,13 @@
                                             <td>{{ $session->titre }}</td>
                                             <td>{{ $session->connexion->mentore->user->nom }}
                                                 {{ $session->connexion->mentore->user->prenom }}</td>
+                                            <td> 
+                                                @if ($session->pdf)
+                                                <a href="{{$session->pdf}}">Voir Rendu</a> 
+                                                @endif
+                                            </td>
                                             <td>
-                                                @if ($session->status == 'en cours')
+                                                @if ($session->status == 'rendu')
                                                     <div class="dropdown">
                                                         <a href="javascript:void(0);" class="btn-link"
                                                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,7 +68,10 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <button type="button" class="btn btn-outline-primary">Détails</button>
+                                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                                        <button type="button" class="btn btn-outline-primary">Détails</button>
+                                                    </a>
+                                                    
                                                     
                                                 </div>
                                             </td>

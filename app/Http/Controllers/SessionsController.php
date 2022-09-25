@@ -20,7 +20,7 @@ class SessionsController extends Controller
         $sessions = Sessions::join('connexions', function ($join)
         {
             $join->on('connexions.id','=', 'sessions.connexion_id')->where('connexions.mentor_id',Auth::user()->mentor->id);
-        })->get();
+        })->get("sessions.*");
         $mentores = Mentore::all();
         return view('sessions.index', compact('sessions', 'mentores'));
     }
@@ -43,6 +43,28 @@ class SessionsController extends Controller
         return redirect()->route('session.accueil', []);
     }
 
+    public function rendu(Request $request, $id)
+    {
+        $session = Sessions::findOrFail($id);
+        $session->status = 'rendu' ;
+        $fileName = time() . $request->file('pdf')->getClientOriginalName();
+        $path = $request->file('pdf')->storeAs('pdf', $fileName, 'public');
+        $session->pdf =  '/storage/' . $path;
+        $session->save();
+
+
+
+        $notification = new Notification();
+        $notification->titre = "Le mentoré " . $session->connexion->mentore->user->prenom . " " . $session->connexion->mentore->user->nom . " a rendu sa session ";
+        $notification->date = Carbon::now();
+        $notification->user_id = $session->connexion->mentor->user_id;
+        $notification->lien = "/sessions" ;
+        $notification->save();
+
+
+        return redirect("/mes-sessions");
+    }
+
     public function create()
     {
         $connexions = Connexion::where('mentor_id', Auth::user()->mentor->id)->where('status','accepté')->get();
@@ -51,6 +73,7 @@ class SessionsController extends Controller
 
     public function store(Request $request)
     {
+       
         $input = $request->all();
         $session = new Sessions();
         $session->fill($input);
@@ -99,6 +122,8 @@ class SessionsController extends Controller
 
     public function voirplus($id)
     {
+        $mentores = Mentore::all();
+        $mentors = Mentor::all();
         $session = Sessions::findOrFail($id);
         return view('sessions.voirplus', compact('session'));
     }

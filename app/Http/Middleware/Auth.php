@@ -17,6 +17,7 @@ class Auth
      */
     public function handle(Request $request, Closure $next)
     {
+       
         if (!FacadesAuth::check()) {
             return redirect()->route('auth.login');
         }

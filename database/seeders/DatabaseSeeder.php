@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'prenom' => 'Seynabou',
             'nom' => 'Dione',
             'email' => 'dioneseynabou0@gmail.com',
-            'photo' => '../../public/images/news-3.jpg',
+            'photo' => '/images/news-3.jpg',
             'password' => 'password',
             'profil' => 'admin'
         ]);

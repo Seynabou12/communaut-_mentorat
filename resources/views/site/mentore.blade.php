@@ -123,10 +123,9 @@
                                         mieux évaluer ses options et prendre des décisions éclairées.</span>
                                 </span>
                             </p>
-                            <a href="#footer" class="btn get-quote"
+                            <a href="/mentores/create" class="btn get-quote"
                                 style="    background-color: #C15DFB;
                             color: #fff;
-                            
                             transition: all 0.3s ease-in-out;
                             margin-top: 10px;">
                                 <span style="vertical-align: inherit;">
@@ -204,7 +203,165 @@
             </div>
         </div>
     </div>
-  
+
+
+
+    <section id="features" class="features">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <p style="text-align: center;">Le Mentorat en 4 Etapes</p>
+            </div>
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                        <h1 style="color: #ffbb2c; font-weight: bold; font-size: 100px;">1</h1>
+                        <h3 style="margin-left: 20px;lettre-spacing: 120%; line-height: 2;"><a href="">Je
+                                m’inscris en renseignant mes besoins et mon parcours</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <h1 style="color: #5578ff; font-weight: bold; font-size: 100px;">2</h1>
+                        <h3 style="margin-left: 15px; lettre-spacing: 120%; line-height: 2;"><a href="">
+                                Ton référent Article 1 te trouve le Mentor
+                                qui te correspond</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <h1 style="color: #e80368; font-weight: bold; font-size: 100px;">3</h1>
+                        <h3 style="margin-left: 15px; lettre-spacing: 120%; line-height: 2;"><a href="">
+                                Discute et échange librement avec ton Mentor</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <h1 style="color: #e361ff; font-weight: bold; font-size: 100px;">4</h1>
+                        <h3 style="margin-left: 15px; lettre-spacing: 120%; line-height: 2;"><a href="">
+                                Progresse et atteins tes objectifs grâce au suivi de ton mentor</a></h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <main id="main">
+        <section id="about" class="about" style="background-color: #fafafa;">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-4 order-1 order-lg-2 " data-aos="fade-left" data-aos-delay="100">
+                        <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                        
+                    </div>
+                    <div class="col-lg-4 order-1 order-lg-2 " data-aos="fade-left" data-aos-delay="100">
+                        <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h3 style="font-weight: bold; font-size: 30px;">TON PROGRAMME, TES BESOINS, TA RÉUSSITE</h3>
+                        <p class="fst-italic">
+                            Un programme à ta mesure, pensé pour te voir réussir. Conçu autour de tes besoins et adapté
+                            à ton emploi du temps et tes objectifs de réussite. Progresse librement avec ton mentor au
+                            rythme que vous vous fixez !
+                        </p>
+
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+
+    </main>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-xl-3">
+            <img src="/images/h.svg" alt="" srcset="">
+        </div>
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header d-block">
+                    <h1 class="card-title" style="text-align: center; font-weight: bold;">QUESTIONS COURANTES</h1>
+
+                </div>
+                <div class="card-body">
+
+                    <div class="accordion accordion-active-header" id="accordion-nine">
+                        <div class="accordion-item">
+                            <div class="accordion-header  rounded-lg" id="accord-9One" data-bs-toggle="collapse"
+                                data-bs-target="#collapse9One" aria-controls="collapse9One" aria-expanded="true"
+                                role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold;font-size: 20px;">Est ce
+                                    vraiment gratuit ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9One" class="collapse accordion__body show"
+                                aria-labelledby="accord-9One" data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    Oui c’est 100% gratuit et ça le restera ! Les personnes qui t’accompagnent sont des
+                                    professionnels du monde du travail qui sont tous bénévoles. </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed rounded-lg" id="accord-9Two"
+                                data-bs-toggle="collapse" data-bs-target="#collapse9Two" aria-controls="collapse9Two"
+                                aria-expanded="true" role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold;font-size: 20px;">Tout
+                                    est digitalisé ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9Two" class="collapse accordion__body" aria-labelledby="accord-9Two"
+                                data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    L’inscription, la mise en relation et le suivi sont digitalisés mais les rencontres
+                                    et les échanges avec ton bénévole sont bien réels ! Tu es libre de t’organiser avec
+                                    ton binôme pour discuter avec lui de la façon la plus pratique pour vous deux.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed rounded-lg" id="accord-9Three"
+                                data-bs-toggle="collapse" data-bs-target="#collapse9Three"
+                                aria-controls="collapse9Three" aria-expanded="true" role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold;font-size: 20px;">Combien
+                                    de temps ça dure ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9Three" class="collapse accordion__body" aria-labelledby="accord-9Three"
+                                data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    La mise en relation avec ton binôme dure 6 mois et + afin qu’il puisse t’aider dans
+                                    tes défis et challenges concrets. Si tu as apprécié l’expérience, tu as la
+                                    possibilité de t’engager avec lui sur une durée plus longue ! Dans le cas où tu
+                                    estimerais que ton accompagnement n'est pas terminé, tu peux reconduire ton
+                                    accompagnement pour une durée plus longue.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed rounded-lg" id="accord-9Three"
+                                data-bs-toggle="collapse" data-bs-target="#collapse9Three"
+                                aria-controls="collapse9Three" aria-expanded="true" role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold; font-size: 20px;">Qu’est
+                                    ce qu’on attend de moi ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9Three" class="collapse accordion__body" aria-labelledby="accord-9Three"
+                                data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    Un engagement personnel dans la durée de l'accompagnement pour être impliqué,
+                                    régulier et respectueux du bénévole et du dispositif tout en promouvant des valeurs
+                                    comme le respect, la politesse, la bienveillance, l’ouverture, et l’intégrité dans
+                                    la relation de confiance que tu vas construire avec ton bénévole !</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     @include('../site/footer')
 </body>
 

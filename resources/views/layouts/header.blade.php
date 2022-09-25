@@ -35,7 +35,7 @@
                                 style="height:380px;">
                                 <ul class="timeline">
                                     @foreach ($notifications as $notification)
-                                    <div class="timeline-panel">
+                                    <div class="timeline-panel row">
                                         <li>
                                             <a href="/notification/{{ $notification->id }}/etat">
                                                 <div class="timeline-panel">

@@ -32,7 +32,7 @@
         }
     }
 
-  
+
 
     @media (min-width: 960px) {
         .v-application .d-md-flex {
@@ -210,49 +210,6 @@
                 Devenir mentor </h2>
         </div>
     </section>
-    <div  class="d-flex">
-        <div class="container-fluid row">
-            <div class="col-md-6">
-                <div data-v-6e28144e="" class="photos">
-                    <div data-v-6e28144e="" class="illus-1"><img data-v-6e28144e=""
-                            src="/img/DA/illustrations/1A1_controlrocks-20.svg" alt="" class="photo"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-
-                <div data-v-6e28144e="" class="text">
-                    <div data-v-6e28144e="" class="relative title-left-right title-font mb-3">
-                        <h3 data-v-6e28144e="" class="mb-0 left"><span data-v-6e28144e="">Disponibilité</span>
-                            <strong data-v-6e28144e="" class="bg-ampersand"> &amp; </strong></h3>
-                        <h3 data-v-6e28144e="" class="mt--6 right"><span data-v-6e28144e="">Bienveillance…</span>
-                        </h3>
-                    </div>
-                    <p data-v-6e28144e="" class="home-body pr-6">
-                        Sont les seuls prérequis pour faire partie du programme DEMA1N.org.
-                    </p>
-                    <div data-v-6e28144e="" class="relative title-left-right mt-12 title-font">
-                        <h3 data-v-6e28144e="" class="mb-0 text-left">
-                            Un engagement
-                        </h3>
-                        <h3 data-v-6e28144e="" class="mt--2 right mb-3">
-                            sur mesure
-                        </h3>
-                    </div>
-                    <p data-v-6e28144e="" class="home-body pr-6">
-                        Qui suit mon emploi du temps, 2 échanges recommandés par mois et un
-                        programme que je gère comme je l’entends…
-                    </p> <a data-v-6e28144e="" href="/inscription/benevole"
-                        class="my-10 v-btn v-btn--has-bg v-btn--router theme--light elevation-0 v-size--default jaune"><span
-                            class="v-btn__content">
-                            Je deviens mentor
-                        </span></a>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
     <div class="section pp-scrollable" style="text-align: center; ">
         <div class="wrap content" style="padding-top: 0px;">
             <div class="wrap content" id="wrapper">
@@ -281,17 +238,7 @@
                                             <div class="portlet-body">
                                                 <div class="journal-content-article">
                                                     <div class="bloc-contenu-blanc container">
-                                                        <p class="heading"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                id="pyramids" viewBox="0 0 150 70.48"
-                                                                style="width: 24px;
-                                                                    height: 11px; fill: #C15DFB;
-                                                                    display: block;
-                                                                    margin: 40px auto 0 auto;"
-                                                                class="injected-svg inject-svg icon-pyramids">
-                                                                <path
-                                                                    d="M109.31,0L75,59.43,40.69,0,0,70.48H150ZM12.13,63.47L40.69,14,69.25,63.47H12.13Zm68.62,0L109.31,14l28.56,49.47H80.75Z">
-                                                                </path>
-                                                            </svg>Devenir mentor</p>
+
                                                         <h2>Osez le mentorat !</h2>
                                                         <p><span style="font-size:18px;">Être mentor,
                                                                 c’est épauler et accompagner des entrepreneurs de votre
@@ -351,34 +298,42 @@
         </section>
     </main>
     <section data-v-e37e6fb6="" class="py-10 relative"
-        style="padding-top: 40px!important;
-            padding-bottom: 40px!important; position: relative;">
-        <div data-v-e37e6fb6="" class="illus illus-jeune d-none d-md-block"
-            style="position: absolute;
-                top: 0;
-               
-                right: 0;
-                pointer-events: none;background-image: url(/img/DA/illustrations/1A1_controlrocks-61.svg);">
-        </div>
+        style="padding-top: 10px!important;
+         background-color: rgba(245, 245, 245, 0.849)!important;
+            padding-bottom: 40px!important; position: relative; ">
+
+
         <div data-v-e37e6fb6="" class="d-md-flex relative">
+            <div data-v-e37e6fb6="" class="illus illus-jeune d-none d-md-block"
+                style="position: absolute;
+                top: 0;
+                right: 0;
+                pointer-events: none;
+                background-image: url(../images/h.svg);">
+            </div>
             <div data-v-e37e6fb6="" class="text">
                 <h2 data-v-e37e6fb6="" class="title-font text-uppercase subtxitle mb-0 mb-md-6 text-center"
                     style="text-align: center!important; font-family: 'Poppins',sans-serif!important; font-weight:
                     700!important; line-height: 1.3!important;">
                     Votre expérience fait<br data-v-e37e6fb6="">grandir nos étudiants </h2>
                 <p data-v-e37e6fb6="" class="home-accroche col-lg-10 ma-auto mb-4 pa-8"
-                    style="padding: 32px!important;margin-bottom: 16px!important;">Parce que votre vécu et vos conseils
+                    style="padding: 32px!important;margin-bottom: 16px!important; margin-left: 70px; line-height: 2!important;">
+                    Parce que votre vécu et vos conseils
                     sont une ressource précieuse. WIMS met en relation professionnels et étudiants afin que vous
                     partagiez vos connaissances en accompagnant nos jeunes dans leur parcours scolaire et professionnel.
                 </p>
                 <div data-v-e37e6fb6="" class="text-center d-none d-md-block"><a data-v-e37e6fb6=""
-                        href="/inscription/benevole"
+                        href="/mentors/create"
                         class="v-btn v-btn--is-elevated v-btn--has-bg v-btn--router theme--light v-size--default jaune"><span
-                            class="v-btn__content">S'inscrire
+                            class="v-btn__content btn"
+                            style="background-color: #C15DFB;
+                            color: #fff;
+                            transition: all 0.3s ease-in-out;
+                            margin-top: 10px;">S'inscrire
                         </span></a></div>
             </div>
             <div data-v-e37e6fb6="" class="photos">
-                <div data-v-e37e6fb6="" class="photo-1"><img data-v-e37e6fb6="" src="../images/classe.png"
+                <div data-v-e37e6fb6="" class="photo-1"><img data-v-e37e6fb6="" src="/images/classe.png"
                         alt="" class="d-md-none photo photo-border-right" style="width: 100%;"><img
                         data-v-e37e6fb6="" src="/images/enfant.webp" alt="" class="photo d-none d-md-block"
                         style="width: 100%;
@@ -388,128 +343,53 @@
                         style="    width: 100%;
                         border-radius: 6px;"></div>
             </div>
-            <div data-v-e37e6fb6="" class="relative">
-                <div data-v-e37e6fb6="" class="illus illus-geo-milieu d-md-none"></div>
-                <div data-v-e37e6fb6="" class="text-center d-md-none inscription-mobile pt-16 pb-2"><a
-                        data-v-e37e6fb6="" href="/inscription/benevole"
-                        class="mt-6 v-btn v-btn--is-elevated v-btn--has-bg v-btn--router theme--light v-size--default jaune"><span
-                            class="v-btn__content">S'inscrire
-                        </span></a></div>
-            </div>
+
         </div>
     </section>
-
-    <section data-v-1e10c9e0="" class="py-8 py-md-16 relative">
-        <div data-v-1e10c9e0="" class="illus illus-jeune"></div>
-        <div data-v-1e10c9e0="" class="illus illus-balancoire d-none d-md-block"></div>
-        <div data-v-1e10c9e0="" class="illus illus-confettis-sombres d-none d-md-block"></div>
-        <div data-v-1e10c9e0="" class="container"
-            style="max-width: 984px;    width: 100%;
-                padding: 12px;
-                margin-right: auto;
-                margin-left: auto;">
-            <h2 data-v-1e10c9e0="" class="title-font text-uppercase subtitle mb-6 text-center"
-                style="text-align: center!important; margin-bottom: 24px!important;">
-                Questions courantes
-            </h2>
-            <div data-v-0e86c385="" data-v-1e10c9e0="" class="row justify-center pa-5 ma-auto faq"
-                style="max-width: 837px; margin: auto;">
-                <div data-v-0e86c385="" class="background-yel col-md-11 col-lg-10 col-12">
-                    <div data-v-0e86c385=""
-                        class="no-shadow shadow-0 shadow-none elevation-0 v-item-group theme--light v-expansion-panels v-expansion-panels--accordion v-expansion-panels--flat v-expansion-panels--tile"
-                        style="display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        list-style-type: none;
-                        padding: 0;
-                        width: 100%;
-                        z-index: 1;
-                        flex: 0 1 auto;
-                        position: relative;
-                        max-width: 100%;
-                        transition: .3s cubic-bezier(.25,.8,.5,1);">
-                        <div data-v-0e86c385="" aria-expanded="false" class="v-expansion-panel transparent"><button
-                                data-v-0e86c385="" type="button" class="v-expansion-panel-header mt-2 px-0">
-                                <h3 data-v-0e86c385="" class="title-font">
-                                    Qui sont les jeunes bénéficiaires qui ont besoin d’être accompagnés ?
-                                </h3>
-                                <div
-                                    class="v-expansion-panel-header__icon v-expansion-panel-header__icon--disable-rotate">
-                                    <i aria-hidden="true" class="v-icon notranslate mdi mdi-plus theme--light"></i>
-                                </div>
-                            </button>
-                            <div data-v-0e86c385="" class="v-expansion-panel-content" style="display: none;">
-                                <div class="v-expansion-panel-content__wrap">
-                                    <div data-v-0e86c385="">Les jeunes sont des élèves ou étudiants de 18 à 25 ans,
-                                        boursiers et/ou en situation fragile ayant besoin d’être accompagnés sur une
-                                        courte durée sur un challenge spécifique auxquels ils font face.</div>
+    <section id="why-us" class="why-us" style="">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <p style="text-align: center;">ÊTRE MENTOR EN 4 ÉTAPES</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-xl-3 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 " style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                    <h1 style="color: #C15DFB; font-weight: bold; font-size: 90px;">1</h1>
+                                    <h4>Inscription</h4>
+                                    <p style="color: black">Vous partagez avec nous votre cursus et votre parcours
+                                        professionnel en quelques
+                                        questions afin de pouvoir vous mettre en contact avec l’étudiant en demande de
+                                        votre expertise.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div data-v-0e86c385="" aria-expanded="false" class="v-expansion-panel transparent"><button
-                                data-v-0e86c385="" type="button" class="v-expansion-panel-header mt-2 px-0">
-                                <h3 data-v-0e86c385="" class="title-font">
-                                    Suis-je formé et équipé pour accompagner un jeune ?
-                                </h3>
-                                <div
-                                    class="v-expansion-panel-header__icon v-expansion-panel-header__icon--disable-rotate">
-                                    <i aria-hidden="true" class="v-icon notranslate mdi mdi-plus theme--light"></i>
-                                </div>
-                            </button>
-                            <div data-v-0e86c385="" class="v-expansion-panel-content" style="display: none;">
-                                <div class="v-expansion-panel-content__wrap">
-                                    <div data-v-0e86c385="">Pour valider l’inscription, chaque mentor doit participer à
-                                        une courte formation en ligne afin d’obtenir les bases de la posture
-                                        d’accompagnant. Cette courte formation comprend: <br>
-                                        <ul>
-                                            <li>Un outil de microlearning sur la posture de l’accompagnant : Artips
-                                            </li>
-                                            <li>Des ressources dédiées classées par thématiques </li>
-                                        </ul>En outre, en tant que mentor, vous avez accès au sein de votre espace
-                                        connecté à des fiches pratiques vous donnant des conseils et astuces sur votre
-                                        organisation, votre posture ainsi que la construction de la relation avec votre
-                                        binôme
-                                    </div>
+                            <div class="col-xl-3 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 " style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                    <h1 style="color: #C15DFB; font-weight: bold; font-size: 90px;">2</h1>
+                                    <h4>Mise en relation</h4>
+                                    <p style="color: black">
+                                        Grâce à ces informations et à notre algorithme, un membre de l'équipe Article 1
+                                        s'occupe de vous mettre en relation avec un étudiant..</p>
                                 </div>
                             </div>
-                        </div>
-                        <div data-v-0e86c385="" aria-expanded="false" class="v-expansion-panel transparent"><button
-                                data-v-0e86c385="" type="button" class="v-expansion-panel-header mt-2 px-0">
-                                <h3 data-v-0e86c385="" class="title-font">
-                                    Je ne suis pas sûr d’avoir les bons outils ni la légitimité pour accompagner un
-                                    jeune
-                                </h3>
-                                <div
-                                    class="v-expansion-panel-header__icon v-expansion-panel-header__icon--disable-rotate">
-                                    <i aria-hidden="true" class="v-icon notranslate mdi mdi-plus theme--light"></i>
-                                </div>
-                            </button>
-                            <div data-v-0e86c385="" class="v-expansion-panel-content" style="display: none;">
-                                <div class="v-expansion-panel-content__wrap">
-                                    <div data-v-0e86c385="">Ne vous inquiétez pas! La meilleur approche à avoir est
-                                        celle d’une écoute bienveillante, de la disponibilité tout en donnant
-                                        régulièrement du feedback constructif au jeune afin de l'encourager au maximum
-                                        sur ses objectifs. Vous n'êtes évidemment ni enseignant, ni expert et ce n’est
-                                        pas grave si vous n’avez pas réponse à tout. L’objectif est de le rendre acteur
-                                        de son apprentissage grâce aux différents outils et connaissances que vous
-                                        pouvez lui transmettre.</div>
+                            <div class="col-xl-3 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 " style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                    <h1 style="color: #C15DFB; font-weight: bold; font-size: 90px;">3</h1>
+                                    <h4>Prise de contact</h4>
+                                    <p style="color: black">Les informations de contact de votre étudiant vous sont
+                                        transmises, suivez notre
+                                        formation rapide pour contacter votre jeune et débuter son accompagnement..</p>
                                 </div>
                             </div>
-                        </div>
-                        <div data-v-0e86c385="" aria-expanded="false" class="v-expansion-panel transparent"><button
-                                data-v-0e86c385="" type="button" class="v-expansion-panel-header mt-2 px-0">
-                                <h3 data-v-0e86c385="" class="title-font">
-                                    Combien de temps dure l’accompagnement ?
-                                </h3>
-                                <div
-                                    class="v-expansion-panel-header__icon v-expansion-panel-header__icon--disable-rotate">
-                                    <i aria-hidden="true" class="v-icon notranslate mdi mdi-plus theme--light"></i>
-                                </div>
-                            </button>
-                            <div data-v-0e86c385="" class="v-expansion-panel-content" style="display: none;">
-                                <div class="v-expansion-panel-content__wrap">
-                                    <div data-v-0e86c385="">L’accompagnement dure 6 mois et + selon le besoin du jeune,
-                                        votre disponibilité et votre engagement</div>
+                            <div class="col-xl-3 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 " style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                    <h1 style="color: #C15DFB; font-weight: bold; font-size: 90px;">4</h1>
+                                    <h4>Suivi</h4>
+                                    <p style="color: black">Tout au long de votre mission, nous sommes à vos côtés pour
+                                        répondre à vos
+                                        questions et résoudre vos problèmes..</p>
                                 </div>
                             </div>
                         </div>
@@ -518,6 +398,104 @@
             </div>
         </div>
     </section>
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-xl-3">
+            <img src="/images/h.svg" alt="" srcset="">
+        </div>
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header d-block">
+                    <h1 class="card-title" style="text-align: center; font-weight: bold;">QUESTIONS COURANTES</h1>
+
+                </div>
+                <div class="card-body">
+
+                    <div class="accordion accordion-active-header" id="accordion-nine">
+                        <div class="accordion-item">
+                            <div class="accordion-header  rounded-lg" id="accord-9One" data-bs-toggle="collapse"
+                                data-bs-target="#collapse9One" aria-controls="collapse9One" aria-expanded="true"
+                                role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold;font-size: 20px;">Qui
+                                    sont les jeunes bénéficiaires qui ont besoin d’être accompagnés ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9One" class="collapse accordion__body show"
+                                aria-labelledby="accord-9One" data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    Les jeunes sont des élèves ou étudiants de 18 à 25 ans, boursiers et/ou en situation
+                                    fragile ayant besoin d’être accompagnés sur une courte durée sur un challenge
+                                    spécifique auxquels ils font face. </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed rounded-lg" id="accord-9Two"
+                                data-bs-toggle="collapse" data-bs-target="#collapse9Two" aria-controls="collapse9Two"
+                                aria-expanded="true" role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold;font-size: 20px;">Suis-je
+                                    formé et équipé pour accompagner un jeune ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9Two" class="collapse accordion__body" aria-labelledby="accord-9Two"
+                                data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    Pour valider l’inscription, chaque mentor doit participer à une courte formation en
+                                    ligne afin d’obtenir les bases de la posture d’accompagnant. Cette courte formation
+                                    comprend:
+                                    Un outil de microlearning sur la posture de l’accompagnant : Artips
+                                    Des ressources dédiées classées par thématiques
+                                    En outre, en tant que mentor, vous avez accès au sein de votre espace connecté à des
+                                    fiches pratiques vous donnant des conseils et astuces sur votre organisation, votre
+                                    posture ainsi que la construction de la relation avec votre binôme</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed rounded-lg" id="accord-9Three"
+                                data-bs-toggle="collapse" data-bs-target="#collapse9Three"
+                                aria-controls="collapse9Three" aria-expanded="true" role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold;font-size: 20px;">Combien
+                                    de temps ça dure ?</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9Three" class="collapse accordion__body" aria-labelledby="accord-9Three"
+                                data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    La mise en relation avec ton binôme dure 6 mois et + afin qu’il puisse t’aider dans
+                                    tes défis et challenges concrets. Si tu as apprécié l’expérience, tu as la
+                                    possibilité de t’engager avec lui sur une durée plus longue ! Dans le cas où tu
+                                    estimerais que ton accompagnement n'est pas terminé, tu peux reconduire ton
+                                    accompagnement pour une durée plus longue.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed rounded-lg" id="accord-9Three"
+                                data-bs-toggle="collapse" data-bs-target="#collapse9Three"
+                                aria-controls="collapse9Three" aria-expanded="true" role="button">
+                                <span class="accordion-header-icon"></span>
+                                <span class="accordion-header-text" style="font-weight: bold; font-size: 20px;">Je ne
+                                    suis pas sûr d’avoir les bons outils ni la légitimité pour accompagner un
+                                    jeune</span>
+                                <span class="accordion-header-indicator"></span>
+                            </div>
+                            <div id="collapse9Three" class="collapse accordion__body" aria-labelledby="accord-9Three"
+                                data-bs-parent="#accordion-nine">
+                                <div class="accordion-body-text">
+                                    Ne vous inquiétez pas! La meilleur approche à avoir est celle d’une écoute
+                                    bienveillante, de la disponibilité tout en donnant régulièrement du feedback
+                                    constructif au jeune afin de l'encourager au maximum sur ses objectifs. Vous n'êtes
+                                    évidemment ni enseignant, ni expert et ce n’est pas grave si vous n’avez pas réponse
+                                    à tout. L’objectif est de le rendre acteur de son apprentissage grâce aux différents
+                                    outils et connaissances que vous pouvez lui transmettre.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @include('site.footer');
 </body>

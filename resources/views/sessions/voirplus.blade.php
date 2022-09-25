@@ -12,9 +12,7 @@
 @endsection
 
 @section('content')
-    <div class="content-body">
-
-        <div class="bspy4f-6 dKLozd"
+    {{-- <div class="bspy4f-6 dKLozd"
             style="width: 100%;
                 display: flex;
                 flex-direction: column;">
@@ -306,8 +304,125 @@
                         </svg></button>
                 </div>
             </div>
-        </form>
+        </form> --}}
 
+    <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+
+                        <div
+                            class="card-body pb-3 transaction-details d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="user-bx-2 me-3 mb-3">
+                                <img src="{{ asset($session->connexion->mentor->user->photo) }}" class="rounded"
+                                    alt="">
+                                <div>
+                                    <h3>{{ $session->connexion->mentor->user->prenom }}
+                                        {{ $session->connexion->mentor->user->nom }}</h3>
+                                    <span>{{ $session->connexion->mentor->user->email }}</span>
+                                </div>
+                            </div>
+
+
+                            <div class="me-3 mb-3">
+                                <div>
+                                    <p class="mb-2">Telephone</p>
+                                    <h4 class="mb-0">{{ $session->connexion->mentor->user->telephone }}</h4>
+                                </div>
+                            </div>
+
+                            <div class="me-3 mb-3">
+                                <div>
+                                    <p class="mb-2">Adresse</p>
+                                    <h4 class="mb-0">{{ $session->connexion->mentor->user->adresse }}</h4>
+                                </div>
+                            </div>
+                            <div class="amount-bx mb-3">
+                                <div>
+                                    <div>
+                                        <h2 class="mb-2">NB</h2>
+                                        <h4 class="mb-0">N'hésiter pas de m'appeler en cas de besoin je suis disponible à
+                                            100% , Bonne chance et du Courage, votre mentor
+                                            {{ $session->connexion->mentor->user->prenom }}
+                                            {{ $session->connexion->mentor->user->nom }} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-xl-flex d-block align-items-start description-bx">
+                                <div>
+                                    <h4 class="card-title">Titre de la session</h4>
+                                    <h4 class="description mt-4">{{ $session->titre }}</h4>
+                                </div>
+
+
+                            </div>
+                            <div class="d-xl-flex d-block align-items-start description-bx">
+                                <div>
+                                    <h4 class="card-title">Description</h4>
+                                    <p class="description mt-4">{!! $session->description !!}</p>
+                                    <p class="description mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                </div>
+                                <div class="card-bx bg-dark-blue ms-xl-5 ms-0">
+                                    <img class="pattern-img" src="/images/pattern/pattern11.png" alt="">
+                                    <div class="card-info text-white">
+                                        <img src="images/pattern/circle.png" class="mb-4" alt="">
+                                        <h4 style="color: white;">Session planifiée le:</h4>
+                                        <h2 class="text-white card-balance">{{ $session->date }}</h2>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            @if ($session->status != "realisé")
+                            <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModalCenter">Rendu</button>
+                            @endif
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Rendu</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                            </button>
+                                        </div>
+                                        <form action="/sessions/{{ $session->id }}/rendu" method="post" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="form-group">
+                                                <div class="mb-3">
+                                                    <label for="">Rendu Pdf</label>
+                                                    <input class="form-control form-control-sm" type="file"  name="pdf" accept=".pdf" required>
+                                                </div>
+
+                                                <div class="btn btn-danger light"
+                                                    data-bs-dismiss="modal">Annuler</div>
+                                                <input type="submit" class="btn btn-primary" value="Enregistrer"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     </div>
 @endsection
 

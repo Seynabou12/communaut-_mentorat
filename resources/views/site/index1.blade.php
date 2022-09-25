@@ -158,7 +158,8 @@
                 <div class="section-title">
                     <p style="text-align: center;">Quel est le role du Mentor ???</p>
                 </div>
-                <p style="text-align: center;">Étudiant, alternant, peu importe votre cursus, vote filière ou votre niveau,
+                <p style="text-align: center;">Étudiant, alternant, peu importe votre cursus, vote filière ou votre
+                    niveau,
                     notre programme est gratuit et pensé pour tous les profils. Nous sommes
                     là pour vous confier le Mentor qui vous convient et qui saura vous accompagner
                     dans votre réussite.</p>
@@ -168,29 +169,33 @@
                         <div class="icon-boxes d-flex flex-column justify-content-center">
                             <div class="row">
                                 <div class="col-xl-3 d-flex align-items-stretch">
-                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                    <div class="icon-box mt-4 mt-xl-0"
+                                        style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
                                         <i class="bx bx-receipt"></i>
                                         <h4>L’ACCOMPAGNER</h4>
                                         <p>L’accompagner sans prendre les décisions à sa place mais dire les choses
                                             telles qu’elles sont.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 d-flex align-items-stretch" >
-                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                <div class="col-xl-3 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0"
+                                        style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
                                         <i class="bx bx-cube-alt"></i>
                                         <h4>LE SOUTENIR</h4>
                                         <p>Sortir le scientifique de sa solitude de dirigeant.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 d-flex align-items-stretch" >
-                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
+                                <div class="col-xl-3 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0"
+                                        style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
                                         <i class="bi bi-info-circle bx"></i>
                                         <h4>L’AIDER</h4>
                                         <p>À accroître son développement en tant que scientifique.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 d-flex align-items-stretch" >
-                                    <div class="icon-box mt-4 mt-xl-0" style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)"  >
+                                <div class="col-xl-3 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0"
+                                        style="box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)">
                                         <i class="bx bx-receipt"></i>
                                         <h4>LE CONDUIRE</h4>
                                         <p>À identifier les différentes solutions et à discerner les avantages et les
@@ -213,16 +218,26 @@
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3>Trouvez des mentors qui vous accompagnerons dans la science.</h3>
                         <br>
+                        <h4>PARCE QU’ON A TOUS LE DROIT...
+                        </h4>
+                        <br>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i> d’être écouté / pour se motiver.</li>
-                            <li><i class="bi bi-check-circle"></i> d’être accompagné / pour réussir mes etudes.</li>
+                            <li class="h5"><i class="bi bi-check-circle"></i> d’être écouté / pour se motiver.</li>
+                            <li class="h5"><i class="bi bi-check-circle"></i> d’être accompagné / pour réussir mes
+                                etudes.</li>
                             <li><i class="bi bi-check-circle"></i> de faire les bons choix / pour décrocher le job
                                 parfait.</li>
-                            <li><i class="bi bi-check-circle"></i> de s’améliorer / dans le domaine de la science.
+                            <li class="h5"><i class="bi bi-check-circle"></i> de s’améliorer / dans le domaine de
+                                la science.
                             </li>
-                            <li><i class="bi bi-check-circle"></i> de s’améliorer / dans le domaine de la science.
+                            <li class="h5"><i class="bi bi-check-circle"></i> de s’améliorer / dans le domaine de
+                                la science.
                             </li>
                         </ul>
+
+                        <p>Étudiant, alternant, peu importe ton cursus, ta filière ou ton niveau, notre programme est
+                            gratuit et pensé pour tous les profils.Nous sommes là pour te présenter le Mentor qui te
+                            comprend et qui saura t’accompagner dans ta réussite.</p>
                     </div>
                 </div>
 
@@ -297,7 +312,7 @@
                                                     style="font-size: 40px; padding: 4px 0px; margin: 0; color: white; margin: 0px;">
                                                     Vous voulez avoir un suivi par un mentor dans des domaines</h2>
                                                 <div class="talim_button" style="margin-top: 45px;">
-                                                    <a href="#"
+                                                    <a href="/blog"
                                                         style="border-radius: 3px;
                                                             font-size: 17px;
                                                             font-weight: 700;
@@ -327,6 +342,7 @@
             </div>
         </section>
     </main>
+    
     <footer id="footer" style=" box-shadow: 0 3px 6px rgb(0 0 0 / 10%);">
 
         <div class="footer-top">
@@ -343,7 +359,7 @@
                             <strong>Email:</strong> contact@wimsenegal.org<br>
                         </p>
                     </div>
-    
+
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Mentorés</h4>
                         <ul>
@@ -353,23 +369,23 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">A propos</a></li>
                         </ul>
                     </div>
-    
+
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Rejoignez notre newsletter</h4>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Soumettre">
                         </form>
                     </div>
-    
+
                 </div>
             </div>
         </div>
-    
+
         <div class="container-fluid d-md-flex py-4" style="background-color: #C15DFB">
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright" style="color: white;">
                     <strong> © WIM Sénégal 2022 Mentor</strong>
-                   
+
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -380,6 +396,7 @@
             </div>
         </div>
     </footer>
+
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>

@@ -39,20 +39,7 @@
                         </a>
                     </li>
                 @endif
-                @if (Auth::user()->profil == 'mentor')
-                    <li><a href="/mentors/dashbord" class="ai-icon" aria-expanded="false">
-                            <i class="flaticon-025-dashboard" ></i>
-                            <span class="nav-text" style="color: black">Dashbord</span>
-                        </a>
-                    </li>
-                @endif
-                @if (Auth::user()->profil == 'mentore')
-                    <li><a href="#" class="ai-icon" aria-expanded="false">
-                            <i class="flaticon-025-dashboard" ></i>
-                            <span class="nav-text" style="color: black">Dashbord</span>
-                        </a>
-                    </li>
-                @endif
+            
                 @if (Auth::user()->profil == 'admin')
                     <li><a href="/mentores/liste" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-043-menu" ></i>

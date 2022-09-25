@@ -29,17 +29,19 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="description">Description de la Session</label>
-                                    <textarea class="form-control" type="text" placeholder="Description de la session" name="description"></textarea>
+                                    <textarea class="form-control" id="ckeditor" type="text" rows="5" name="description"></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label for="">Date de la session"</label>
                                     <input class="form-control form-control-sm" type="date" placeholder="Date de la session" name="date">
                                 </div>
+                               
                                 <div class="mb-3 row">
                                     <div class="col-lg-8 ms-auto">
                                         <button type="submit" class="btn " style="background-color: #C15DFB; color: white;">Enregistrer</button>
                                     </div>
                                 </div>
+                                
                             </form>
                         </div>
                     </div>
@@ -52,5 +54,6 @@
 @section('js')
     <!-- Datatable -->
     <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="/js/plugins-init/datatables.init.js"></script>
+    <script src="/js/plugins-init/datatables.init.js"></script>vendor/ckeditor/ckeditor.js
+    <script src="/vendor/ckeditor/ckeditor.js"></script>
 @endsection

@@ -122,6 +122,7 @@ class MentoreController extends Controller
   
     public function mentors($id)
     {
+        
         $connexions = Connexion::where('mentore_id',$id)->get();
         return view('mentores.mentors', compact('connexions'));
     }

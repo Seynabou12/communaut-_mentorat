@@ -17,7 +17,8 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->date('date');
             $table->string('titre');
-            $table->string('description');
+            $table->text('description')->nullable();
+            $table->string('pdf')->nullable();
             $table->string('status');
             $table->foreignId('connexion_id')->constrained('connexions');
             $table->timestamps();

@@ -25,7 +25,7 @@ class MentorController extends Controller
         $domaines = Domaine::all();
         return view('mentors.create', compact('domaines'));
     }
-
+    
     public function store(Request $request)
     {
         $input = $request->all();
@@ -106,12 +106,8 @@ class MentorController extends Controller
     {
         return view('mentors.accueil');
     }
-    public function dashbord()
-    {
-        $connexions = Connexion::all();
-        return view('mentors.dashbord', compact('connexions'));
-    }
 
+  
     public function details($id)
     {
         $mentor = Mentor::findOrFail($id);
