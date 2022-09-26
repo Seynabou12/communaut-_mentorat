@@ -29,7 +29,6 @@
         @include('layouts.sidebar')
 
         @yield('content')
-
         @include('layouts.footer')
 
     </div>
@@ -49,7 +48,7 @@
     <script src="/js/custom.min.js"></script>
     <script src="/js/dlabnav-init.js"></script>
     <script src="/js/demo.js"></script>
-    <script src="/js/styleSwitcher.js"></script>
+    {{-- <script src="/js/styleSwitcher.js"></script> --}}
 
     @yield('js')
 

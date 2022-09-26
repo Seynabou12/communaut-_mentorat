@@ -400,10 +400,7 @@
     </section>
 
     <div class="row" style="margin-top: 30px;">
-        <div class="col-xl-3">
-            <img src="/images/h.svg" alt="" srcset="">
-        </div>
-        <div class="col-xl-6">
+        <div class="col-xl-6 container">
             <div class="card">
                 <div class="card-header d-block">
                     <h1 class="card-title" style="text-align: center; font-weight: bold;">QUESTIONS COURANTES</h1>

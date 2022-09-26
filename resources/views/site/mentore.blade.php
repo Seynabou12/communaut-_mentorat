@@ -251,13 +251,11 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
-                    <div class="col-lg-4 order-1 order-lg-2 " data-aos="fade-left" data-aos-delay="100">
-                        <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                    <div class="col-lg-6 order-1 order-lg-2 " data-aos="fade-left" data-aos-delay="100">
+                        <img src="/images/gg.avif" class="img-fluid" alt="">
                         
                     </div>
-                    <div class="col-lg-4 order-1 order-lg-2 " data-aos="fade-left" data-aos-delay="100">
-                        <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                    </div>
+                    
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3 style="font-weight: bold; font-size: 30px;">TON PROGRAMME, TES BESOINS, TA RÉUSSITE</h3>
                         <p class="fst-italic">
@@ -274,11 +272,9 @@
         </section>
 
     </main>
-    <div class="row" style="margin-top: 30px;">
-        <div class="col-xl-3">
-            <img src="/images/h.svg" alt="" srcset="">
-        </div>
-        <div class="col-xl-6">
+    <div class="row " style="margin-top: 30px;">
+        
+        <div class="col-xl-6 container">
             <div class="card">
                 <div class="card-header d-block">
                     <h1 class="card-title" style="text-align: center; font-weight: bold;">QUESTIONS COURANTES</h1>

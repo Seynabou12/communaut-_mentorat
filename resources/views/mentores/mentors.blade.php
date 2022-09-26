@@ -5,8 +5,10 @@
 @endsection
 
 @section('content')
+   
     <div class="content-body" style="margin-top: -70px;">
         <div class="container-fluid">
+            <a href="/mentores" class="btn btn-primary d-sm-inline-block d-none " style="margin-left: 1200px; margin-bottom: 10px;">Rechercher un mentor</a>
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -17,13 +19,13 @@
                             <div class="table-responsive">
                                 <table id="example3" class="display">
                                     <thead style="background-color: #C15DFB;">
-                                        <tr >
+                                        <tr>
                                             <th style="color: white">Profil</th>
                                             <th style="color: white">Prenom et Nom</th>
                                             <th style="color: white">Email</th>
                                             <th style="color: white">Telephone</th>
                                             <th style="color: white">Status</th>
-                                            <th style="color: white">Actions</th>
+                                            {{-- <th style="color: white">Actions</th> --}}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -60,10 +62,10 @@
                                                         @endif
                                                     @endif
                                                 </td>
-                                                <td>
+                                                {{-- <td>
                                                     <button type="button" class="btn btn-outline-warning"><a
                                                             href="#">Voir Profil</a></button>
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @endforeach
                                     </tbody>

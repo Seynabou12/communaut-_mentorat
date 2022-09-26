@@ -39,7 +39,7 @@
                                                 {{ $session->connexion->mentore->user->prenom }}</td>
                                             <td> 
                                                 @if ($session->pdf)
-                                                <a href="{{$session->pdf}}">Voir Rendu</a> 
+                                                <a href="{{$session->pdf}}" style="color: blue;">Voir Rendu</a> 
                                                 @endif
                                             </td>
                                             <td>
@@ -68,14 +68,11 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                                    <a href="/sessions/{{ $session->id }}/voirplus" target="_blank" rel="noopener noreferrer">
                                                         <button type="button" class="btn btn-outline-primary">Détails</button>
                                                     </a>
-                                                    
-                                                    
                                                 </div>
                                             </td>
-                                           
                                         </tr>
                                     @endforeach
                                 </tbody>

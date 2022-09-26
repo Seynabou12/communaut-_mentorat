@@ -54,7 +54,6 @@
                                                 <td >{{ $mentor->user->etat ? 'Actif' : 'Bloqué'}}</td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <button type="button" class="btn btn-outline-primary">Voir Profil</button>
                                                         <a href="/user/{{$mentor->user->id}}/etat" ><button type="button" class="btn btn-outline-primary">{{$mentor->user->etat ? 'Bloqué' : 'Débloqué'}}</button></a>
                                                     </div>
                                                 </td>

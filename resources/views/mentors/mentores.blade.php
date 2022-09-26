@@ -23,7 +23,6 @@
                                             <th style="color: white;">Email</th>
                                             <th style="color: white;">Telephone</th>
                                             <th style="color: white;">Status</th>
-                                            <th style="color: white;">Actions</th>
                                         </tr>
                                     </thead>
                                    
@@ -72,12 +71,7 @@
                                                         @endif
                                                     @endif
                                                 </td>
-                                                <td>
-                                                    <div class="d-flex">
-                                                        <button type="button" class="btn btn-outline-primary">Voir Mentoré</button>
-                                                        
-                                                    </div>
-                                                </td>
+                                                
                                             </tr>
                                         @endforeach
                                     </tbody>

@@ -333,8 +333,8 @@
                 style="text-align: center!important;     margin: auto!important;">
                 <div class="banner-header" style="margin-bottom: 30px;     font-weight: 600;">
                     <h1
-                        style="font-weight: 600;color: #544D85; max-width: 425px; margin: 0 auto 15px; line-height: 1.2;">
-                        Recherche enseignant en rendez-vous de <span style=" color: #C15DFB;">Mentorat</span> </h1>
+                    style="font-weight: 600;color: #544D85; max-width: 425px; margin: 0 auto 15px; line-height: 1.2;"> <span style=" color: #C15DFB;">Avec Mentorat</span>
+                    Recherche experts dans des domaines de la science</h1>
                     <p
                         style=" margin-bottom: 35px;
                             color: #544D85;       display: block;
@@ -342,7 +342,7 @@
                             margin-block-end: 1em;
                             margin-inline-start: 0px;
                             margin-inline-end: 0px;">
-                        Découvrez les meilleurs mentors et &amp; institutions de la ville la plus proche de chez vous.
+                        Découvrez les meilleurs mentors  &amp; institutions de la ville la plus proche de chez vous.
                     </p>
                 </div>
                 <div class="row">

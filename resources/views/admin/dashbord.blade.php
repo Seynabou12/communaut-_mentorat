@@ -62,11 +62,7 @@
                                     </path>
                                 </svg>
                             </div>
-                            <div>
-                                <h2 class="text-white invoice-num" style="color: black!important;">{{ $sessions->count() }}
-                                </h2>
-                                <span class="text-white fs-18" style="color: black!important;">Users Bloqués</span>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

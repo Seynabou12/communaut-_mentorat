@@ -102,7 +102,16 @@ class MentoreController extends Controller
     {
         $domaines= Domaine::all();
         $connexions = Connexion::where('mentore_id',Auth::user()->mentore->id)->get();
-
+        $item = 0;
+        if (isset($request->domaine)) {
+            $mentors = Mentor::where("domaine_id", $request->domaine)->get();
+            $item = $request->domaine;
+        } else {
+            $mentors = Mentor::all();
+        }
+        $domaines = Domaine::all();
+        
+        return view('site.blog', compact('mentors', 'domaines', 'item'));
         if(isset($request->domaine)){
             $mentors = Mentor::where("domaine_id", $request->domaine)->get();
         } else {
